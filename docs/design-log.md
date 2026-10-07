@@ -50,3 +50,10 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Below-fold photographs use native lazy loading; hero loads eagerly.
 - Removed irrelevant Bhangarh licensing boilerplate from other detail pages.
 - Publication preparation follows local verification. This log records evidence rather than claiming unperformed checks.
+
+## 2026-10-07 — approved local foundation
+- User approved the first design as the quality baseline and requested local Git-based development.
+- Confirmed the full implementation, photographs, sources, and design log already exist in the local odd-atlas folder and are tracked in its own repository.
+- Preserve the first design commit (259d14f) under design-baseline-v1 rather than copying the project into a second working location.
+- Rename the package to odd-atlas and document local commands and project standards.
+- Keep future changes local until the user requests publishing. No external Git repository was created or pushed in this step.

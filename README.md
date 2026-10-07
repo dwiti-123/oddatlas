@@ -6,6 +6,22 @@ A small, research-led directory of forgotten places, local legends, and extraord
 
 Run `npm install`, then `npm run dev`. The portable preview uses port 5173. Run `npx tsc --noEmit` for type checking and `npm run build` for the deployment build.
 
+On this Windows machine, if the npm launcher fails, use the direct commands:
+
+```powershell
+node scripts/run-framework.mjs dev
+node node_modules/typescript/bin/tsc --noEmit
+node scripts/run-framework.mjs build
+```
+
+## Local project and Git
+
+This folder contains the complete project and its own Git history. Run commands from this folder, rather than the parent workspace.
+
+The first approved design is preserved at `design-baseline-v1` (commit `259d14f`). Compare future changes against it with `git diff design-baseline-v1`. Start focused work on a branch such as `git switch -c codex/place-details`. The tag provides a stable reference without duplicating the project.
+
+Consult `AGENTS.md` for the design, content, and validation standards. Local edits stay local until publication is requested. No GitHub remote is configured.
+
 ## Content
 
 Place records live in `lib/places.ts`. Every entry includes factual sources, visit/stay context, image attribution, and a permanent detail URL. Folklore is labelled separately. Four initial entries are included; Lavasa awaits research.

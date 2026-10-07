@@ -44,3 +44,7 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Local build archives and TypeScript cache
+*.tar.gz
+*.tsbuildinfo
