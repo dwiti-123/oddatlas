@@ -2,6 +2,19 @@
 
 Research date: 2026-10-07. Sources below were consulted, not copied. Search results that were not used are excluded.
 
+## Candidate research
+See [place-candidates.md](place-candidates.md) for the original 30 researched candidates, supporting links, provisional access assessments and the Lavasa qualification. The selected collection below records the implemented subset. The remaining candidates are research options.
+
+## Selected collection — 8 October 2026
+The user selected five places per category. The complete factual and image-source list for those 15 entries is in [selected-place-sources.md](research/selected-place-sources.md), generated from the actual collection data. Sources are also linked on every detail page and the public Sources page.
+
+- Eight new photographs use Wikimedia Commons licences verified through file metadata. Exact file URLs, creators, dates and licences are preserved in lib/image-provenance.json and docs/research/image-candidates.json. Original files are retained in public/images.
+- Eleven selected places use real photographs, including the three retained foundation entries.
+- Skylodge, Whichaway, Deep Sleep and Palacio de Sal use AI-generated editorial illustrations. They are labelled on cards, in alt text, in captions and in the credit sections. They are conceptual drawings, not precise room or building representations. Official operator links provide actual imagery.
+- Illustrations were generated using textured gouache-and-pencil prompts, a restrained natural palette, no text or logos, and an explicit instruction to avoid photographic or exact architectural representations. Originals are in docs/research/illustration-originals; compressed WebP versions are used on the site.
+- The Palacio de Sal Commons category was consulted, but its older salt-hotel photographs were not used because the precise current property identification was insufficiently clear.
+- Hashima's history includes a link to the UNESCO/ICOMOS 2021 full-history interpretation mission. Whichaway's location is supported by the operator's published fact sheet. Practical guidance avoids unverified rates or live booking inventory.
+
 ## Design inspiration
 1. [Another Escape](https://anotherescape.com/) — viewed homepage content and a browser screenshot; photography-led introduction and editorial story hierarchy.
 2. [Atlas Obscura](https://www.atlasobscura.com/) — read homepage content; place/location/hook structure and discovery routes. No visual layout claims based on text inspection.

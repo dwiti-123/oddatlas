@@ -24,7 +24,11 @@ Consult `AGENTS.md` for the design, content, and validation standards. Local edi
 
 ## Content
 
-Place records live in `lib/places.ts`. Every entry includes factual sources, visit/stay context, image attribution, and a permanent detail URL. Folklore is labelled separately. Four initial entries are included; Lavasa awaits research.
+Place records live in `lib/places.ts`. The selected collection contains 15 places, five per category. Every entry includes factual sources, visit/stay context, image attribution, and a permanent detail URL. Folklore is labelled separately. Treehotel is represented by Mirrorcube alone. The initial Bodie URL remains accessible but is outside the selected collection.
+
+Eleven entries use licensed photographs. Four extraordinary stays use clearly labelled AI-generated editorial illustrations; these are not exact representations of rooms or facilities. `lib/image-provenance.json` records the new image credits. `docs/research/selected-place-sources.md` lists every selected entry's sources and image provenance.
+
+Run `node scripts/collection-audit.mjs` to check the collection and decode its images. With a local preview running, `node scripts/collection-audit.mjs http://127.0.0.1:5173` also checks every story/image URL, the sources page, sitemap, robots, the preserved Bodie URL, and missing-place handling. This audit also refreshes the source register and visual contact sheet.
 
 ## Design and provenance
 

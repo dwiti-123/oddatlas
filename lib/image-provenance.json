@@ -1,0 +1,110 @@
+{
+  "hashima": {
+    "imageKind": "photo",
+    "credit": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Hashima,_Nagasaki,_Japan,_20240814_1424_3412.jpg",
+    "photoDate": "14 August 2024, 14:24:50",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "dhanushkodi": {
+    "imageKind": "photo",
+    "credit": "Rangan Datta Wiki",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Dhanushkodi_Ruined_Church_2.jpg",
+    "photoDate": "2021-10-04 21:20:08",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "kayakoy": {
+    "imageKind": "photo",
+    "credit": "Wikitestaccountlogin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Kayak%C3%B6y_Turkey.jpg",
+    "photoDate": "2021-03-30",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "kuldhara": {
+    "imageKind": "photo",
+    "credit": "कृष्ण कान्त शर्मा",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Kuldhara_2.jpg",
+    "photoDate": "12 January 2024 (according to Exif data)",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "island-of-the-dolls": {
+    "imageKind": "photo",
+    "credit": "Eneas De Troya",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Xochimilco_isla_de_las_munecas_cropped.jpg",
+    "photoDate": "2008-08-10",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "paris-catacombs": {
+    "imageKind": "photo",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Catacumbas,_Par%C3%ADs,_Francia,_2022-11-01,_DD_111-113_HDR.jpg",
+    "photoDate": "2022-11-01 19:25:05",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "port-arthur": {
+    "imageKind": "photo",
+    "credit": "JJ Harrison (https://www.jjharrison.com.au/)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Port_Arthur_Panorama.jpg",
+    "photoDate": "09/11/08",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "stanley-hotel": {
+    "imageKind": "photo",
+    "credit": "lojjic",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Stanley_Hotel,_nighttime.jpg",
+    "photoDate": "2007-09-01 20:37",
+    "imageNote": "Photograph resized, compressed, and cropped for display."
+  },
+  "skylodge": {
+    "imageKind": "illustration",
+    "credit": "Odd Atlas · AI-generated editorial illustration",
+    "license": "Concept illustration",
+    "licenseUrl": "",
+    "photoUrl": "",
+    "photoDate": "8 October 2026",
+    "imageNote": "Concept illustration, not a photograph or an exact representation of the accommodation. See the operator’s website for actual images."
+  },
+  "whichaway": {
+    "imageKind": "illustration",
+    "credit": "Odd Atlas · AI-generated editorial illustration",
+    "license": "Concept illustration",
+    "licenseUrl": "",
+    "photoUrl": "",
+    "photoDate": "8 October 2026",
+    "imageNote": "Concept illustration, not a photograph or an exact representation of the accommodation. See the operator’s website for actual images."
+  },
+  "deep-sleep": {
+    "imageKind": "illustration",
+    "credit": "Odd Atlas · AI-generated editorial illustration",
+    "license": "Concept illustration",
+    "licenseUrl": "",
+    "photoUrl": "",
+    "photoDate": "8 October 2026",
+    "imageNote": "Concept illustration, not a photograph or an exact representation of the accommodation. See the operator’s website for actual images."
+  },
+  "palacio-de-sal": {
+    "imageKind": "illustration",
+    "credit": "Odd Atlas · AI-generated editorial illustration",
+    "license": "Concept illustration",
+    "licenseUrl": "",
+    "photoUrl": "",
+    "photoDate": "8 October 2026",
+    "imageNote": "Concept illustration, not a photograph or an exact representation of the accommodation. See the operator’s website for actual images."
+  }
+}

@@ -1,5 +1,87 @@
+// Image provenance is joined from the verified local manifest in places.ts.
+const collectionAdditions = [
+ {slug:'hashima',name:'Hashima',region:'Nagasaki',country:'Japan',category:'ghost',stay:false,
+ hook:'A coal-mining island left behind, with the silhouette of a battleship.',alt:'Abandoned concrete buildings on Hashima island',storyTitle:'An island built around coal',
+ story:'Off the coast of Nagasaki, Hashima is a small island with an outsized industrial history. Coal mining supported a densely built community of apartment blocks and working infrastructure. When mining ended, the community left; the concrete buildings remained. Its outline earned it the name Gunkanjima, or “Battleship Island”.',
+ today:'Parts of the island are open through organised tours. The surviving buildings are fragile, so visiting does not mean wandering freely through the apartments. Its industrial story also requires context about the people who worked here, including the history of forced labour during Japan’s wartime period.',
+ access:'Visit only, on an authorised group tour from Nagasaki. Landings depend on sea and weather conditions, and visitors follow a restricted route. Check the operator’s conditions before booking.',legend:'',
+ sources:[{title:'Japan National Tourism Organization — Hashima',url:'https://www.japan.travel/en/spot/752/'},{title:'UNESCO — Sites of Japan’s Meiji Industrial Revolution',url:'https://whc.unesco.org/en/list/1484/'},{title:'UNESCO / ICOMOS — full-history interpretation mission, 2021',url:'https://whc.unesco.org/document/188249'}]},
+ {slug:'dhanushkodi',name:'Dhanushkodi',region:'Near Rameswaram, Tamil Nadu',country:'India',category:'ghost',stay:false,
+ hook:'The ruins of a coastal town, shaped by a cyclone and two seas.',alt:'The ruined church at Dhanushkodi',storyTitle:'What the storm left behind',
+ story:'At the far end of Rameswaram island, Dhanushkodi’s ruined church and other remains tell the story of a coastal settlement devastated by the 1964 cyclone. The district government records the destruction. The setting is striking, but the ruins are also traces of a disaster that changed people’s lives.',
+ today:'Dhanushkodi is a visitor destination at the tip of the island. The “ghost town” description refers to the old settlement’s ruins; it should not erase the people who live or work in the surrounding area.',
+ access:'Visit the ruins and coastal area within current local access arrangements. Check road, weather and visiting restrictions locally. This entry does not offer accommodation in the ruined settlement; use Rameswaram as a planning base.',legend:'',
+ sources:[{title:'Ramanathapuram District — Dhanushkodi',url:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/'}]},
+ {slug:'kayakoy',name:'Kayaköy',region:'Near Fethiye, Muğla',country:'Türkiye',category:'ghost',stay:false,
+ hook:'Roofless hillside homes, carrying a history of displacement.',alt:'Roofless stone houses on the hillside at Kayaköy',storyTitle:'The houses remain. The community changed.',
+ story:'South of Fethiye, the old settlement of Kayaköy spreads across a hillside in stone houses, chapels and churches. Türkiye’s Culture Ministry connects its abandonment to the population exchange in the early years of the republic. The missing roofs and empty rooms are the visible part of a much larger story of people leaving their homes.',
+ today:'The old settlement is an archaeological visitor site. Distinguish these historic ruins from the surrounding modern village: the name Kayaköy does not mean the whole area is deserted.',
+ access:'Visit only within the archaeological site’s current arrangements. Confirm opening hours and admission locally. Nearby accommodation does not mean visitors can stay inside the ruined houses.',legend:'',
+ sources:[{title:'Türkiye Culture Ministry — Kayaköy archaeological site',url:'https://www.kulturportali.gov.tr/turkiye/mugla/gezilecekyer/kayakoy'}]},
+ {slug:'kuldhara',name:'Kuldhara',region:'Near Jaisalmer, Rajasthan',country:'India',category:'ghost',stay:false,
+ hook:'An abandoned desert village, with a departure wrapped in legend.',alt:'Sandstone ruins in the abandoned village of Kuldhara',storyTitle:'A village, and an unanswered departure',
+ story:'Near Jaisalmer, Kuldhara’s sandstone ruins preserve the outline of a former village. Rajasthan Tourism describes the site and recounts a dramatic story about its residents leaving. That story is part of the place’s reputation, but a visitor-facing legend should not be treated as a settled historical explanation.',
+ today:'A tourist destination where the remains of homes and village structures invite exploration. Its attraction lies in both the surviving settlement and the questions surrounding its abandonment.',
+ access:'Visit only. Check current admission, opening hours and local arrangements before travelling. The ruins are not offered as overnight accommodation.',
+ legend:'Rajasthan Tourism recounts a tale involving minister Salim Singh, a threatened marriage and the villagers’ departure. Versions include a curse on future settlement. We present this as folklore, not evidence of supernatural events or a verified account of why everyone left.',
+ sources:[{title:'Rajasthan Tourism — Kuldhara',url:'https://www.tourism.rajasthan.gov.in/kuldhara.html'}]},
+ {slug:'island-of-the-dolls',name:'Island of the Dolls',region:'Xochimilco, Mexico City',country:'Mexico',category:'mystery',stay:false,
+ hook:'Dolls hanging among the trees, deep in Xochimilco’s canals.',alt:'Weathered dolls hanging on the Island of the Dolls in Xochimilco',storyTitle:'A collection that became a legend',
+ story:'In the canal landscape of Xochimilco, the Island of the Dolls is known for dolls suspended from trees. Mexico City’s tourism authority describes the display as a place where a local legend draws curious visitors. The unsettling objects are real; the supernatural explanations attached to them belong to storytelling.',
+ today:'A distinctive canal destination within Xochimilco’s wider cultural and agricultural landscape. Its appeal is the encounter with the display and the stories told about it, rather than a verified haunting.',
+ access:'Visit only by arranging an appropriate boat route. Confirm the exact destination with the operator: a trip described as a doll-island visit should identify which site it reaches. Journey times and access need direct confirmation. No overnight stay is established by this listing.',
+ legend:'Stories connect the dolls with spirits and the intentions of the island’s former caretaker. These accounts vary. We do not present a reported death or supernatural activity as a verified fact.',
+ sources:[{title:'Mexico City Tourism — Xochimilco and the Island of the Dolls',url:'https://www.mexicocity.cdmx.gob.mx/locations/xochimilco/?lang=en'}]},
+ {slug:'paris-catacombs',name:'Paris Catacombs',region:'Paris',country:'France',category:'mystery',stay:false,
+ hook:'Beneath the city, an ossuary gives the streets another history.',alt:'Human remains arranged along the official Paris Catacombs visitor route',storyTitle:'The city beneath the city',
+ story:'The Paris Catacombs are an underground ossuary. Their power comes from a documented history of the city and the care of human remains, rather than needing a ghost story. Below the streets, the official route moves through a place that asks visitors to encounter death, public health and urban history together.',
+ today:'A managed museum site with an official visitor route. The wider underground network is not part of the public attraction. These are human remains, so the experience calls for respect as well as curiosity.',
+ access:'Visit only through official museum admission. The operator lists stairs down and back up, and specific health and accessibility conditions. Read those conditions before booking. Do not enter unofficial tunnels.',legend:'',
+ sources:[{title:'Paris Catacombs — official visitor information',url:'https://www.catacombes.paris.fr/en/visit'},{title:'Paris Catacombs — conditions before visiting',url:'https://www.catacombes.paris.fr/en/visit/please-read-your-visit'}]},
+ {slug:'port-arthur',name:'Port Arthur',region:'Tasmania',country:'Australia',category:'mystery',stay:false,
+ hook:'A former penal settlement, explored by lantern light and remembered stories.',alt:'Historic buildings and ruins at Port Arthur in Tasmania',storyTitle:'After the visitors leave',
+ story:'Port Arthur’s historic buildings and ruins preserve the setting of a former penal settlement. Its official ghost tour explores another layer of that history after dark, with guides recounting stories of unexplained events. The site says ghost stories have been associated with it since 1870; records of stories do not establish the events as supernatural.',
+ today:'A managed historic site with daytime interpretation and a separate lantern-lit ghost tour. Its penal history and the lives affected by it deserve attention alongside its eerie reputation.',
+ access:'Visit only. Book the official tour for after-dark access rather than entering independently. The operator describes a walking route with limited access through historic buildings; check mobility conditions, departure times and age suitability directly.',
+ legend:'Guides recount reports of unexplained encounters associated with the settlement. These are historical accounts and ghost stories, not independently established evidence that the site is haunted.',
+ sources:[{title:'Port Arthur Historic Site — official ghost tour',url:'https://portarthur.org.au/ghost-tour/'}]},
+ {slug:'stanley-hotel',name:'The Stanley Hotel',region:'Estes Park, Colorado',country:'United States',category:'mystery',stay:true,
+ hook:'A historic mountain hotel with ghost stories and a connection to The Shining.',alt:'The exterior of the Stanley Hotel in Estes Park',storyTitle:'A hotel with stories after dark',
+ story:'The Stanley Hotel combines an operating hotel with a reputation for spirited storytelling. Its official tours explore the grounds, the hotel’s history and its connection to Stephen King’s The Shining. That literary association is part of its appeal, alongside the stories told about particular places on the property.',
+ today:'A hotel and tour destination. The operator offers history, ghost and Shining-related tours; tour access and hotel accommodation are separate arrangements.',
+ access:'A temporary hotel stay is possible through booking, and tours can be arranged separately. Confirm room availability, tour requirements and the areas included directly. The operator states that tours do not enter guest rooms.',
+ legend:'The hotel recounts purported hauntings and local stories through its ghost tours. We label these as reported experiences and folklore, rather than accepting promotional claims as proof of paranormal activity.',
+ sources:[{title:'The Stanley Hotel — official tours',url:'https://www.stanleyhotel.com/tours/'},{title:'The Stanley Hotel — official website',url:'https://www.stanleyhotel.com/'}]},
+ {slug:'skylodge',name:'Skylodge Adventure Suites',region:'Sacred Valley, near Ollantaytambo',country:'Peru',category:'stays',stay:true,
+ hook:'A transparent sleeping capsule attached to a Sacred Valley cliff.',alt:'Concept illustration of a transparent sleeping capsule on an Andean cliff',storyTitle:'A night on the rock face',
+ story:'Natura Vive’s Skylodge places transparent sleeping capsules on a cliff in Peru’s Sacred Valley. The experience joins a night in a small capsule with an organised mountain adventure. The landscape is the central feature: the room opens visually onto the valley while remaining attached to the rock.',
+ today:'A bookable adventure stay operated by Natura Vive. The transparent capsules make the valley part of the experience, from arrival on the rock face to the following morning.',
+ access:'Book the specific Skylodge overnight experience through Natura Vive. Routes can involve via ferrata and zip lines; confirm the chosen itinerary, fitness requirements, equipment, age limits and weather arrangements with the operator. This is a temporary adventure stay.',legend:'',
+ sources:[{title:'Natura Vive — Skylodge Adventure Suites',url:'https://naturavive.com/web/skylodge-adventure-suites/'},{title:'Natura Vive — booking and itineraries',url:'https://naturavive.com/web/booknow/'}]},
+ {slug:'whichaway',name:'Whichaway Camp',region:'Schirmacher Oasis',country:'Antarctica',category:'stays',stay:true,
+ hook:'Heated sleeping pods in an ice-free corner of Antarctica.',alt:'Concept illustration of an Antarctic sleeping pod beside exposed rock and ice',storyTitle:'An outpost at the edge of the ice',
+ story:'White Desert’s Whichaway Camp sits in one of Antarctica’s rare ice-free landscapes, where exposed rock and freshwater lakes meet glacial ice. Its sleeping pods create a small base in an environment that feels far removed from an ordinary hotel stay.',
+ today:'A seasonal expedition camp operated by White Desert. Heated pods provide an overnight base for organised Antarctic journeys.',
+ access:'Arrange a temporary stay through White Desert’s expedition itineraries. Confirm operating season, flights, medical and insurance requirements, itinerary inclusions and weather contingencies directly. Access requires substantially more planning than a standard hotel booking.',legend:'',
+ sources:[{title:'White Desert — Whichaway Camp',url:'https://white-desert.com/camps/whichaway-camp'},{title:'White Desert — Whichaway location fact sheet',url:'https://white-desert.com/wp-content/uploads/2023/07/Whichaway-flyer-2023.pdf'},{title:'White Desert — expedition operator',url:'https://white-desert.com/'}]},
+ {slug:'deep-sleep',name:'Deep Sleep',region:'Near Blaenau Ffestiniog, Wales',country:'United Kingdom',category:'stays',stay:true,
+ hook:'An underground night reached through a former slate mine.',alt:'Illustration of an underground sleeping cabin in a slate cavern',storyTitle:'Leave daylight at the entrance',
+ story:'Go Below’s Deep Sleep is an overnight adventure camp reached through the workings of a former slate mine. The operator places it 1,375 vertical feet below the mountains of Eryri, also known as Snowdonia. The journey underground is part of the stay, with a guide leading the descent and remaining at the camp overnight.',
+ today:'A guided underground experience with sleeping cabins and a grotto. Guests reach the camp on a journey through the mine, accompanied by an instructor who remains overnight.',
+ access:'Book directly with Go Below. The descent includes steep sections, stairways and scrambles. Confirm age, fitness, equipment and medical suitability with the operator. The overnight trip returns to the surface the following morning.',legend:'',
+ sources:[{title:'Go Below — Deep Sleep overnight experience',url:'https://www.go-below.co.uk/deep-sleep.asp'}]},
+ {slug:'palacio-de-sal',name:'Palacio de Sal',region:'Near Uyuni',country:'Bolivia',category:'stays',stay:true,
+ hook:'A salt-built stay beside the vast white landscape of Salar de Uyuni.',alt:'Concept illustration of a salt-block bedroom with a view of salt flats',storyTitle:'A night shaped by salt',
+ story:'On the edge of Salar de Uyuni, Palacio de Sal makes salt part of the architecture as well as the surrounding landscape. The contrast is its draw: an inhabited interior beside a vast salt flat that can appear almost without scale.',
+ today:'An operating hotel near the salt flats, with salt-built interiors that connect the overnight experience to the surrounding landscape.',
+ access:'Book a temporary stay directly with Palacio de Sal. Confirm transport, the room included, current facilities and conditions for visiting the salt flats. Treat hotel availability and a salt-flat excursion as separate details to verify.',legend:'',
+ sources:[{title:'Palacio de Sal — official hotel information',url:'https://palaciodesal.com.bo/en/'}]},
+];
+
+import imageProvenance from './image-provenance.json';
+
 export const categories = [{ id:'all',label:'All places' },{ id:'ghost',label:'Ghost towns & forgotten cities' },{ id:'mystery',label:'Mystery & haunted places' },{ id:'stays',label:'Extraordinary stays' }];
-export const places = [
+const foundationPlaces = [
  { slug:'kolmanskop',name:'Kolmanskop',region:'Near Lüderitz',country:'Namibia',category:'ghost',categoryName:'Ghost towns & forgotten cities',stay:false,
  hook:'A former diamond town, with sand drifting through its empty rooms.', alt:'Sand-covered floors and peeling walls inside a house in Kolmanskop',storyTitle:'When the desert comes indoors',
  story:'Kolmanskop is a former diamond settlement near Lüderitz. Empty buildings now frame a landscape of drifting sand. The former town is managed as a visitor attraction by Ghost Town Tours.',
@@ -24,6 +106,15 @@ export const places = [
  story:'At Treehotel in Harads, the Mirrorcube uses reflective exterior walls to blend into the surrounding trees. Inside is a small guest room for one or two people, with a double bed and a balcony.',
  today:'An operating hotel room, rather than a permanent residence. “You can live here” means a bookable temporary stay for this entry.',
  access:'Book through Treehotel. The operator lists a toilet in the room and shower access in a nearby building. Confirm availability, current facilities, and accessibility directly before booking.',legend:'',
- sources:[{title:'Treehotel — official accommodation information',url:'https://agents.treehotel.se/'},{title:'Treehotel — official website',url:'https://treehotel.se/'}],credit:'steffen l',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:The_Mirrorcube,_Treehotel_in_Harads,_Sweden_1_-_Jan_3,_2019.jpg',photoDate:'2019' },
+ sources:[{title:'Treehotel — official accommodation information',url:'https://treehotel.se/treerooms/mirrorcube/'},{title:'Treehotel — official website',url:'https://treehotel.se/'}],credit:'steffen l',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:The_Mirrorcube,_Treehotel_in_Harads,_Sweden_1_-_Jan_3,_2019.jpg',photoDate:'2019' },
 ];
-export type Place = typeof places[number];
+export type Place = (typeof foundationPlaces)[number] & {imageKind: string; imageNote: string};
+const names:Record<string,string>={ghost:'Ghost towns & forgotten cities',mystery:'Mystery & haunted places',stays:'Extraordinary stays'};
+const provenance = imageProvenance as Record<string,{imageKind:string;imageNote:string;credit:string;license:string;licenseUrl:string;photoUrl:string;photoDate:string}>;
+const foundation=foundationPlaces.map(p=>({...p,imageKind:'photo',imageNote:'Photograph resized, compressed, and cropped for display.'}));
+const additions:Place[]=collectionAdditions.map(p=>({...p,categoryName:names[p.category],...provenance[p.slug]}));
+const all=[...foundation,...additions];
+const order=['hashima','dhanushkodi','kayakoy','kuldhara','kolmanskop','island-of-the-dolls','bhangarh','paris-catacombs','port-arthur','stanley-hotel','skylodge','mirrorcube','whichaway','deep-sleep','palacio-de-sal'];
+export const places:Place[]=order.map(slug=>{const place=all.find(p=>p.slug===slug);if(!place)throw new Error('Missing collection place: '+slug);return place;});
+// Preserve the original Bodie story URL without including it in the selected collection.
+export const findPlace=(slug:string)=>all.find(p=>p.slug===slug);

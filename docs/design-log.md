@@ -57,3 +57,26 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Preserve the first design commit (259d14f) under design-baseline-v1 rather than copying the project into a second working location.
 - Rename the package to odd-atlas and document local commands and project standards.
 - Keep future changes local until the user requests publishing. No external Git repository was created or pushed in this step.
+
+## 2026-10-07 — collection candidates
+- Researched ten candidates for each established category using operators, tourism bodies, heritage institutions and reporting.
+- Recorded sources and access uncertainties in docs/place-candidates.md; no public entries changed.
+- Suggested five per category for story, visual and geographic variety, pending user selection.
+- Kept folklore distinct from evidence and temporary hotel stays distinct from permanent residence.
+- Retained Lavasa as an unfinished-city research option because describing it as completely abandoned would obscure residents.
+
+## 2026-10-08 — selected 15-place collection
+- Implemented the user's exact five selections per established category, on codex/curated-collection.
+- Kept the approved magazine hierarchy, Kolmanskop feature, typography, colours, card layout, motion and reduced-motion behaviour. Added only a restrained illustration label to the existing cards.
+- Kept Mirrorcube as one specific stay; added no hotel catalogue or room-selection interface.
+- Added 12 sourced stories, retained Kolmanskop, Bhangarh and Mirrorcube, and preserved the original Bodie story URL outside the collection.
+- Compared licensed photographs with unverified operator/archival images. Selected eight new Commons photographs with recorded licences; used explicitly drawn AI illustrations for four stays where exact reusable images were not established. Original generation files remain in the project.
+- Labelled illustrations in cards, alt text, detail captions, credit sections and Sources. Link to operators for real accommodation imagery. No concept image is presented as a location photograph.
+- Kept documented history separate from local legends and temporary bookings separate from permanent residence. Included source context for Hashima's wartime labour history.
+- Updated collection numbering, sitemap dates and credit/licence handling for all ShareAlike images. Added accent-normalised search so kayakoy finds Kayaköy.
+- Compressed selected image assets to roughly 32–355 KB; retained lazy-loaded cards and eager story images.
+- Validation: TypeScript passed; production build passed; asset audit verified exactly 15 unique entries, five per category, complete source/credit fields and decodable images.
+- HTTP audit passed for all 15 story pages and images, homepage, Sources, sitemap, robots, preserved Bodie URL and unknown-place 404.
+- Browser checks passed for all category counts, India search (three results), accent-normalised search, empty-result recovery and Skylodge card-to-story navigation.
+- Desktop and narrow mobile collection/story layouts were visually inspected; document width matched viewport content width without horizontal page overflow. Category tabs scroll within their own strip on mobile. Screenshots are in docs/research.
+- Changes remain local; no deployment performed.
