@@ -85,3 +85,12 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Hid the category-strip scrollbar at widths up to 1050px, retaining overflow scrolling and the selected-tab underline.
 - Verified hidden scrollbar styles and reachable end tabs at 390px; visually checked the strip at 768px. Production build passed.
 - Saved mobile-category-scrollbar.jpg as visual evidence.
+
+### 8 October 2026 — personal list and optional story context
+- Added restrained bookmark controls on collection cards and story headers, with a shared Your list navigation link and browser-local persistence. No account is required.
+- Kept card links and save buttons separate for accessible navigation. Disabled saves until hydration; handle blocked storage with a session-only notice.
+- Added a personal saved collection with remove and empty states. Excluded this private browser-specific page from search indexing.
+- Used native details/summary to reveal existing sourced context, folklore and visiting guidance. No fabricated longer story or new location claims were added. Sources remain visible outside the disclosure.
+- Deferred postcards and characters as agreed. Preserved the editorial baseline, mobile navigation and reduced-motion support.
+- Verified desktop save/navigation, persistence after reload, mobile removal/empty state, keyboard story expansion/collapse, and mobile document width. Screenshots: saved-list-desktop.jpg and story-interaction-mobile.jpg.
+- Final validation: TypeScript and production build passed; git diff whitespace check passed. Changes remain local.

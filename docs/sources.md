@@ -52,3 +52,6 @@ Photographs are resized, compressed, and cropped for display; Bhangarh image ada
 ### Consulted image candidates not used
 - [Kolmanskop theatre](https://commons.wikimedia.org/wiki/File:Kolmanskop,_Namibia_(3147308849).jpg): Joachim Huber, CC BY-SA 2.0; replaced with sand-filled interior.
 - [Bhangarh excavated site](https://commons.wikimedia.org/wiki/File:EXCAVTED_SITE_OF_BHANGARH.jpg) and [entire view](https://commons.wikimedia.org/wiki/File:Bhangarh_fort_entire_view.jpg): reviewed search previews only, not used.
+
+### Personal-list interaction update, 8 October 2026
+Uses existing project components and previously sourced place text. No new external inspiration, imagery or factual sources used.
