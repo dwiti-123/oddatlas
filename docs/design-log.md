@@ -80,3 +80,8 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Browser checks passed for all category counts, India search (three results), accent-normalised search, empty-result recovery and Skylodge card-to-story navigation.
 - Desktop and narrow mobile collection/story layouts were visually inspected; document width matched viewport content width without horizontal page overflow. Category tabs scroll within their own strip on mobile. Screenshots are in docs/research.
 - Changes remain local; no deployment performed.
+
+### 8 October 2026 — mobile category scrollbar
+- Hid the category-strip scrollbar at widths up to 1050px, retaining overflow scrolling and the selected-tab underline.
+- Verified hidden scrollbar styles and reachable end tabs at 390px; visually checked the strip at 768px. Production build passed.
+- Saved mobile-category-scrollbar.jpg as visual evidence.

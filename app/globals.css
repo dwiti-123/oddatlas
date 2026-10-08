@@ -9,3 +9,4 @@
 @media(max-width:420px){nav{gap:12px}nav a:last-child{display:none}.place-grid{grid-template-columns:1fr}.place-card h3{font-size:30px}.card-meta{display:flex}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 .image-label{position:absolute;top:12px;left:12px;background:#f9f9f6e8;padding:3px 8px;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--foreground)}
+@media(max-width:1050px){.category-tabs{scrollbar-width:none}.category-tabs::-webkit-scrollbar{display:none}}
