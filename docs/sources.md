@@ -55,3 +55,8 @@ Photographs are resized, compressed, and cropped for display; Bhangarh image ada
 
 ### Personal-list interaction update, 8 October 2026
 Uses existing project components and previously sourced place text. No new external inspiration, imagery or factual sources used.
+
+### Full stories and save motion — 8 October 2026
+- All story chapters, including folklore and disputed interpretation, have a linked source register: [Full-story research register](research/story-research.md).
+- Updated complete entry sources and existing image credits: [Selected collection register](research/selected-place-sources.md).
+- Reviewed [Paper Shaders](https://shaders.paper.design/), [Paper roadmap](https://paper.design/roadmap) and [Motion for Three.js](https://motion.dev/docs/three). The roadmap lists Three.js islands as planned; Motion documents an available integration. Chose original SVG/CSS motion for this small interaction; no animation assets or library code copied.

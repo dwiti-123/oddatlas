@@ -94,3 +94,16 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Deferred postcards and characters as agreed. Preserved the editorial baseline, mobile navigation and reduced-motion support.
 - Verified desktop save/navigation, persistence after reload, mobile removal/empty state, keyboard story expansion/collapse, and mobile document width. Screenshots: saved-list-desktop.jpg and story-interaction-mobile.jpg.
 - Final validation: TypeScript and production build passed; git diff whitespace check passed. Changes remain local.
+
+### 8 October 2026 — a story for every place, and an ink bookmark
+- Developed an original opening and three distinct chapters for all fifteen selected places. Added history, turning points, architecture and experience using cited research rather than expanding the former practical-information toggle.
+- Sources include official cultural and tourism bodies, museum accounts, UNESCO documents, operator/architect descriptions, Stephen King's own account, and the published Kuldhara research debate. Kayaköy's account stays within the Culture Ministry evidence; additional sources were not added just to inflate its bibliography.
+- Labelled folklore and disputed interpretations. Added colonial context for Kolmanskop and retained Hashima's wartime labour context. No invented firsthand observations, supernatural events, facility claims or superlative hotel rankings.
+- Kept the same canonical place URLs. Full text is server-rendered inside a native disclosure; opening it moves reading focus to the first chapter with reduced-motion handling. Numbered citation links point to an ordered source list at the end, followed by existing image credits.
+- Preserved the short introduction, made visiting guidance independently available, and moved the mobile sidebar below the reading column.
+- Reviewed Paper Shaders, Paper's roadmap and Motion's Three.js integration. Chose a custom 480ms SVG bookmark stamp, check stroke and brief ink accent: appropriate scale for a save action, no GPU canvas or extra animation dependency, and no new postcard feature.
+- Save motion runs after a save action, not on load. Reduced-motion CSS keeps the static saved check visible.
+- Validation: all fifteen stories have three developed chapters and resolved source URLs; every full story and numbered citation is present in server HTML. HTTP audit passed for all collection entries and images, supporting routes, preserved Bodie URL and missing-place 404.
+- Browser checks: desktop Hashima expansion moves focus to the reader; citation 3 reaches the correct source. Mobile Skylodge expands by keyboard with no page overflow, saves with the 480ms gesture, persists after reload without replay, and removes cleanly. Kuldhara renders separate folklore/context labels and both sides of the published debate.
+- Captured full-story-desktop.jpg and full-story-mobile.jpg. Refreshed the preview server after detecting stale CSS; confirmed 36px desktop chapter headings and the intended mobile reading layout.
+- Final TypeScript check, production build and whitespace check passed. Changes remain local; no publishing performed.
