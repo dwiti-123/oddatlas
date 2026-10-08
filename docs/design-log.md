@@ -107,3 +107,8 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Browser checks: desktop Hashima expansion moves focus to the reader; citation 3 reaches the correct source. Mobile Skylodge expands by keyboard with no page overflow, saves with the 480ms gesture, persists after reload without replay, and removes cleanly. Kuldhara renders separate folklore/context labels and both sides of the published debate.
 - Captured full-story-desktop.jpg and full-story-mobile.jpg. Refreshed the preview server after detecting stale CSS; confirmed 36px desktop chapter headings and the intended mobile reading layout.
 - Final TypeScript check, production build and whitespace check passed. Changes remain local; no publishing performed.
+
+### 8 October 2026 — source note spacing
+- Added 28px top margin above the source-context note to separate it from the source list.
+- Verified computed spacing on desktop and mobile; mobile has no horizontal overflow.
+- Production build passed. Saved source-note-spacing.jpg as visual evidence.

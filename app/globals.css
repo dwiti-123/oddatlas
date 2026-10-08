@@ -21,3 +21,4 @@
 @media(max-width:700px){.detail-body aside{grid-row:auto}.story-chapter p{font-size:17px}.full-story summary{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.just-saved .bookmark-check{stroke-dashoffset:0}.bookmark-ink{display:none}}
 .save-place[aria-pressed=true] .bookmark-icon{animation:none}
+.detail-body article .source-context{margin-top:28px}
