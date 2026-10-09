@@ -60,3 +60,9 @@ Uses existing project components and previously sourced place text. No new exter
 - All story chapters, including folklore and disputed interpretation, have a linked source register: [Full-story research register](research/story-research.md).
 - Updated complete entry sources and existing image credits: [Selected collection register](research/selected-place-sources.md).
 - Reviewed [Paper Shaders](https://shaders.paper.design/), [Paper roadmap](https://paper.design/roadmap) and [Motion for Three.js](https://motion.dev/docs/three). The roadmap lists Three.js islands as planned; Motion documents an available integration. Chose original SVG/CSS motion for this small interaction; no animation assets or library code copied.
+
+### Native Next.js migration - 9 October 2026
+- https://nextjs.org/docs/app/getting-started/installation - native project scripts and installation.
+- https://nextjs.org/docs/app/api-reference/cli/next - development, build and production CLI.
+- https://vercel.com/docs/builds/configure-a-build - framework build and output settings.
+- https://vercel.com/docs/project-configuration/vercel-json - repository deployment configuration.

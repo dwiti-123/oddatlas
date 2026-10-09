@@ -4,14 +4,22 @@ A small, research-led directory of forgotten places, local legends, and extraord
 
 ## Development
 
-Run `npm install`, then `npm run dev`. The portable preview uses port 5173. Run `npx tsc --noEmit` for type checking and `npm run build` for the deployment build.
+Use Node.js 22. Run `npm ci`, then `npm run dev` to start native Next.js at http://127.0.0.1:5173.
+
+- `npm run build`: create the production build in `.next`.
+- `npm start`: serve the production build (port 3000 by default).
+- `npm run typecheck`: check TypeScript.
+- `npm run lint`: check application code.
+
+Development, builds and production all use native Next.js. The retired Vinext/Sites runtime is preserved in Git history.
 
 On this Windows machine, if the npm launcher fails, use the direct commands:
 
 ```powershell
-node scripts/run-framework.mjs dev
+node node_modules/next/dist/bin/next dev --hostname 127.0.0.1 --port 5173
 node node_modules/typescript/bin/tsc --noEmit
-node scripts/run-framework.mjs build
+node node_modules/next/dist/bin/next build
+node node_modules/next/dist/bin/next start
 ```
 
 ## Local project and Git
@@ -20,7 +28,13 @@ This folder contains the complete project and its own Git history. Run commands 
 
 The first approved design is preserved at `design-baseline-v1` (commit `259d14f`). Compare future changes against it with `git diff design-baseline-v1`. Start focused work on a branch such as `git switch -c codex/place-details`. The tag provides a stable reference without duplicating the project.
 
-Consult `AGENTS.md` for the design, content, and validation standards. Local edits stay local until publication is requested. No GitHub remote is configured.
+Consult `AGENTS.md` for the design, content, and validation standards. The repository is https://github.com/dwiti-123/oddatlas. This migration lives on `codex/native-nextjs`; do not merge it into `main` without the user's approval.
+
+## Vercel preview
+
+Import the repository using the Next.js framework preset. `vercel.json` selects `npm run build` and the `.next` output directory. Deploy `codex/native-nextjs` as a preview branch while reviewing the migration; keep the production branch set to `main`.
+
+Canonical URLs currently retain the original preview domain. Updating them to the final public domain is a separate deployment step.
 
 ## Content
 

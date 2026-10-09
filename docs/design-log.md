@@ -112,3 +112,13 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Added 28px top margin above the source-context note to separate it from the source list.
 - Verified computed spacing on desktop and mobile; mobile has no horizontal overflow.
 - Production build passed. Saved source-note-spacing.jpg as visual evidence.
+
+### 9 October 2026 - complete native Next.js migration
+- User explicitly requested native Next.js for the whole project on a separate branch. Work is isolated on codex/native-nextjs; main stays at the revert commit 2a955ed.
+- Replaced development, build and production commands with next dev, next build and next start. Pinned Node.js to 22.x; retained the existing Next.js and React versions.
+- Removed Vinext/Vite/Cloudflare dependencies, Sites worker/preview/auth/connector scaffolding and unused D1 examples. Retained the active place data, image research scripts, shadcn controls and browser-local saved list. Added sharp directly because asset scripts use it.
+- Added Vercel configuration for the same native Next.js build used locally. Updated internal navigation to Next.js Link/useRouter while preserving styling and content. Kept precompressed images and documented the focused image lint exception.
+- Updated README commands and preview-branch deployment guidance. Canonical URLs remain a separate domain configuration step.
+- Validation: npm run build, npm run typecheck and npm run lint passed. Both native development and production servers returned the homepage successfully. Production HTTP audit passed all fifteen stories/images, sitemap, robots, sources, Bodie and missing-place 404.
+- Browser checks: desktop categories, full-story expansion, save/list navigation, reload persistence and removal passed; mobile homepage and story had no horizontal overflow. All story images loaded and no browser console errors were recorded. Evidence: research/nextjs-desktop.png and research/nextjs-mobile.png.
+- Next.js development generated its standard agent-rules block in AGENTS.md while retaining all project standards. Retained that block to keep subsequent development checkouts consistent.

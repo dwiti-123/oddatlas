@@ -11,8 +11,19 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    "dist/**",
+    ".wrangler/**",
+    ".vinext/**",
+    ".sites-runtime/**",
     "next-env.d.ts",
   ]),
+  {
+    files: ["app/**/*.{ts,tsx}", "components/place-card.tsx"],
+    rules: {
+      // Place photographs are already resized and compressed by the asset scripts.
+      "@next/next/no-img-element": "off",
+    },
+  },
   {
     files: ["components/ui/**/*.{ts,tsx}", "hooks/use-mobile.ts"],
     rules: {

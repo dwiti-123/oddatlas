@@ -5,9 +5,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://odd-atlas.dwitimehta20.chatgpt.site'),
   title: { default:'Odd Atlas — Unusual places, carefully explored',template:'%s | Odd Atlas' },
   description: 'Explore a small collection of ghost towns, local legends, and extraordinary stays. Real photographs, clear context, and sources.',
-  other: {
-    "codex-preview": "development",
-  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

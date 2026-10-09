@@ -8,7 +8,7 @@ const files = [
   ['mirrorcube', 'The Mirrorcube, Treehotel in Harads, Sweden 1 - Jan 3, 2019.jpg', 1280],
 ];
 await mkdir('public/images', { recursive: true });
-for (const [slug, name, width] of files) {
+for (const [slug, name] of files) {
   try { await access(`public/images/${slug}.jpg`); continue; } catch {}
   const filename = name.replaceAll(' ', '_');
   const hash = createHash('md5').update(filename).digest('hex');
