@@ -71,3 +71,8 @@ Uses existing project components and previously sourced place text. No new exter
 - Live inspection: https://www.oddatlas.world/robots.txt and https://www.oddatlas.world/sitemap.xml.
 - Bundled Next.js metadata, robots and sitemap reference files in node_modules/next/dist/docs.
 - Google Search Console performance report: https://support.google.com/webmasters/answer/7576553
+
+### Vercel Web Analytics - 9 October 2026
+- https://vercel.com/docs/analytics/quickstart - official Next.js integration and dashboard activation.
+- https://vercel.com/docs/analytics/limits-and-pricing - plan limits and custom-event availability.
+- Bundled Next.js app analytics guide in node_modules/next/dist/docs/01-app/02-guides/analytics.md.

@@ -127,3 +127,9 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Read the live robots.txt and sitemap.xml at www.oddatlas.world; both still referenced the earlier Sites preview domain. Source inspection confirmed place canonicals and Article mainEntityOfPage did too.
 - Prepared a focused correction on codex/public-domain-seo: replaced the old domain in metadata, structured data, sitemap and crawler sitemap link; added the homepage's own canonical. Kept page titles, stories and design unchanged. Main and the live deployment remain unchanged until merge approval.
 - Validation: native production build and TypeScript passed. Production output checks confirmed the corrected robots sitemap link, all 17 public-domain sitemap entries, homepage and Hashima canonicals, and the Article URL. Temporary test server stopped.
+
+### 9 October 2026 - Vercel Web Analytics
+- User requested Vercel Analytics. Added the official @vercel/analytics Next.js component in the shared root layout on codex/vercel-analytics so pageviews cover all routes. No visual controls or custom events added.
+- Chose the existing hosting provider's basic visitor analytics to minimize setup. Search Console remains the source for Google search queries and ranking data.
+- Live collection requires dashboard activation and deployment; local integration does not enable the Vercel account setting. Main remains unchanged pending merge approval.
+- Validation: production build, lint and standalone TypeScript passed. Initial sandbox build encountered Windows path access denial; the retry outside the sandbox passed. Live event delivery remains unverified until activation and deployment.
