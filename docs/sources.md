@@ -66,3 +66,8 @@ Uses existing project components and previously sourced place text. No new exter
 - https://nextjs.org/docs/app/api-reference/cli/next - development, build and production CLI.
 - https://vercel.com/docs/builds/configure-a-build - framework build and output settings.
 - https://vercel.com/docs/project-configuration/vercel-json - repository deployment configuration.
+
+### Public-domain SEO review - 9 October 2026
+- Live inspection: https://www.oddatlas.world/robots.txt and https://www.oddatlas.world/sitemap.xml.
+- Bundled Next.js metadata, robots and sitemap reference files in node_modules/next/dist/docs.
+- Google Search Console performance report: https://support.google.com/webmasters/answer/7576553

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 import { Explorer } from '@/components/explorer';
 import { Header, Footer } from '@/components/site-shell';
 export default function Home() {
