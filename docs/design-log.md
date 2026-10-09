@@ -112,3 +112,9 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Added 28px top margin above the source-context note to separate it from the source list.
 - Verified computed spacing on desktop and mobile; mobile has no horizontal overflow.
 - Production build passed. Saved source-note-spacing.jpg as visual evidence.
+
+### 9 October 2026 - Vercel build compatibility
+- Deployment log showed a successful Vinext build followed by Vercel rejecting the missing .next/routes-manifest.json. The build output did not match Vercel's Next.js framework adapter.
+- Added vercel.json to select the Next.js framework, native next build command and .next output directory. Kept the existing local preview workflow and editorial design.
+- Used official Vercel and Next.js configuration documentation; no content or visual changes.
+- Validation: native Next.js production build and TypeScript passed; .next/routes-manifest.json generated. Production HTTP audit passed for all fifteen stories and images, homepage, sources, sitemap, robots, Bodie and missing-place 404.

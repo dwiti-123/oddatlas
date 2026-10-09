@@ -60,3 +60,8 @@ Uses existing project components and previously sourced place text. No new exter
 - All story chapters, including folklore and disputed interpretation, have a linked source register: [Full-story research register](research/story-research.md).
 - Updated complete entry sources and existing image credits: [Selected collection register](research/selected-place-sources.md).
 - Reviewed [Paper Shaders](https://shaders.paper.design/), [Paper roadmap](https://paper.design/roadmap) and [Motion for Three.js](https://motion.dev/docs/three). The roadmap lists Three.js islands as planned; Motion documents an available integration. Chose original SVG/CSS motion for this small interaction; no animation assets or library code copied.
+
+### Vercel build compatibility - 9 October 2026
+- Vercel build command and output configuration: https://vercel.com/docs/builds/configure-a-build
+- Vercel repository configuration: https://vercel.com/docs/project-configuration/vercel-json
+- Native Next.js CLI: https://nextjs.org/docs/app/api-reference/cli/next
