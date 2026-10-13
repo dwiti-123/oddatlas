@@ -76,3 +76,10 @@ Uses existing project components and previously sourced place text. No new exter
 - https://vercel.com/docs/analytics/quickstart - official Next.js integration and dashboard activation.
 - https://vercel.com/docs/analytics/limits-and-pricing - plan limits and custom-event availability.
 - Bundled Next.js app analytics guide in node_modules/next/dist/docs/01-app/02-guides/analytics.md.
+
+### Search guides - 13 October 2026
+- Rechecked https://www.japan.travel/en/spot/752/ for Hashima tour access and conditions.
+- Rechecked https://ramanathapuram.nic.in/tourist-place/dhanushkodi/ for location, cyclone history and road access. This official page is dated 2018; no current timetables, fees or transport availability inferred.
+- Rechecked https://www.tourism.rajasthan.gov.in/bhangarh-fort.html for folklore and the restriction before sunrise/after sunset.
+- Haunted/mysterious guide summaries reuse the sourced place records; original photo credits and licence links remain on each full entry.
+- Bundled Next.js generateMetadata and sitemap guides consulted for canonical metadata and sitemap generation.

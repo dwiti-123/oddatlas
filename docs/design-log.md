@@ -133,3 +133,12 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Chose the existing hosting provider's basic visitor analytics to minimize setup. Search Console remains the source for Google search queries and ranking data.
 - Live collection requires dashboard activation and deployment; local integration does not enable the Vercel account setting. Main remains unchanged pending merge approval.
 - Validation: production build, lint and standalone TypeScript passed. Initial sandbox build encountered Windows path access denial; the retry outside the sandbox passed. Live event delivery remains unverified until activation and deployment.
+
+### 13 October 2026 - first organic-search improvements
+- Work isolated on codex/search-guides. Improved homepage search wording and descriptive titles/descriptions for Bhangarh, Hashima and Dhanushkodi while retaining their URLs and editorial headings.
+- Added visible, server-rendered practical answers with official-source links for those three places. Avoided speculative prices, opening hours, firsthand claims and FAQ rich-result promises.
+- Added /guides/haunted-places with five existing mystery entries, access comparisons, real credited photographs, sources and clear folklore distinctions. Paris Catacombs are described as historically unsettling rather than claimed haunted.
+- Added homepage discovery link and return links from mystery entries, canonical/Open Graph metadata, CollectionPage/ItemList data and the guide in the sitemap. Updated modification dates only for changed pages.
+- Preserved the magazine typography, thin rules and restrained colours. No booking or Instagram features added. No publication performed.
+- Validation: production build, lint and TypeScript passed. Browser verification confirmed the three descriptive titles, Bhangarh and guide canonicals, three visible practical answers per selected story, five guide ItemList entries and working homepage-to-guide navigation. Guide and homepage had no mobile horizontal overflow at 390px; desktop guide layout checked. No browser console errors recorded.
+- Browser checks caught stale production CSS; clearing only the generated .next/cache and rebuilding restored the new styles. Evidence: research/seo-guide-desktop.png and research/seo-guide-mobile.png.

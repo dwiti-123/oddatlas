@@ -236,3 +236,36 @@ const order=['hashima','dhanushkodi','kayakoy','kuldhara','kolmanskop','island-o
 export const places:Place[]=order.map(slug=>{const place=all.find(p=>p.slug===slug);if(!place)throw new Error('Missing collection place: '+slug);return place;});
 // Preserve the original Bodie story URL without including it in the selected collection.
 export const findPlace=(slug:string)=>all.find(p=>p.slug===slug);
+
+export const searchDetails: Record<string, {title:string; description:string; reviewed:string; questions:{question:string;answer:string;source:string}[]}> = {
+ bhangarh: {
+  title:'Bhangarh Fort: History, Haunted Legends & Visiting Guide',
+  description:'Explore Bhangarh Fort in Rajasthan: the history behind its ruins, local curse legends, and the sunrise-to-sunset restriction to know before visiting.',
+  reviewed:'2026-10-13',
+  questions:[
+   {question:'Where is Bhangarh Fort?',answer:'Bhangarh Fort is a ruined historic site in Rajasthan, India. Its temples, market remains and palace are part of a former settlement.',source:'https://www.tourism.rajasthan.gov.in/bhangarh-fort.html'},
+   {question:'Can you visit Bhangarh Fort at night?',answer:'Rajasthan Tourism states that visitors cannot enter before sunrise or after sunset. Plan a daytime visit and confirm current access arrangements before travelling.',source:'https://www.tourism.rajasthan.gov.in/bhangarh-fort.html'},
+   {question:'Is Bhangarh Fort haunted?',answer:'Its reputation comes from local curse legends. These stories are folklore, not verified evidence of supernatural activity. The surviving ruins have a documented history of their own.',source:'https://www.tourism.rajasthan.gov.in/bhangarh-fort.html'}
+  ]
+ },
+ hashima: {
+  title:'Hashima Island (Gunkanjima): History & Visiting from Nagasaki',
+  description:'Discover Hashima Island, also called Gunkanjima: its coal-mining history, wartime labour context, and what to check before joining a tour from Nagasaki.',
+  reviewed:'2026-10-13',
+  questions:[
+   {question:'Where is Hashima Island?',answer:'Hashima, also known as Gunkanjima or Battleship Island, lies off Nagasaki in Japan. Its abandoned buildings were once part of a coal-mining community.',source:'https://www.japan.travel/en/spot/752/'},
+   {question:'How can you visit Hashima Island?',answer:'Join an organised tour departing from Nagasaki Port. Departure points and language, age and health conditions differ between operators; confirm the details of your chosen tour.',source:'https://www.japan.travel/en/spot/752/'},
+   {question:'Is landing on Hashima guaranteed?',answer:'No. Weather and sea conditions can affect the trip. Check the operator’s landing and cancellation conditions, and do not expect unrestricted access to the abandoned buildings.',source:'https://www.japan.travel/en/spot/752/'}
+  ]
+ },
+ dhanushkodi: {
+  title:'Dhanushkodi Ghost Town: History & Visiting from Rameswaram',
+  description:'Read the story of Dhanushkodi’s 1964 cyclone, its coastal ruins in Tamil Nadu, and practical context for visiting from Rameswaram.',
+  reviewed:'2026-10-13',
+  questions:[
+   {question:'Where is Dhanushkodi?',answer:'Dhanushkodi is at the southern tip of Rameswaram island in Tamil Nadu, India. The district visitor guide places it about 18 kilometres from Rameswaram.',source:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/'},
+   {question:'Why is Dhanushkodi called a ghost town?',answer:'The old settlement was devastated by the 1964 cyclone. Its ruins explain the ghost-town description; this does not mean nobody lives or works in the surrounding area.',source:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/'},
+   {question:'How do you reach Dhanushkodi?',answer:'The district guide describes road access from Rameswaram. Use Rameswaram as a planning base and confirm local road, weather and access conditions before setting out.',source:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/'}
+  ]
+ }
+};
