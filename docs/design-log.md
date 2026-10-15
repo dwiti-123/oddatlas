@@ -197,3 +197,10 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Added storage regression coverage for migration, duplicate names, rename/reload, independent membership, deletion, and unavailable storage.
 
 - Final validation: production build (Next.js webpack) and lint passed. Storage regression checks passed. Browser verified migration of the existing My weekend collection, field clearing, create-from-place, multi-list membership, rename/reload, remembered selection, copied sharing, snapshot stability, list-specific removal, delete/cancel, and 390px layouts without overflow. Test-created lists were removed; the original collection was preserved. Screenshots: multiple-lists-desktop.png, multiple-lists-mobile.png, multiple-lists-picker-mobile.png.
+
+## 2026-10-15 — Intentional list editing and tactile buttons
+- User requested Edit list beside Delete list instead of an always-visible rename form. Editing opens a prefilled, focused name input with Save changes and Cancel; Escape cancels and returns focus to Edit list.
+- List action buttons use the existing brick/cream palette with a second ink colour as a solid offset shadow. Hover slightly lowers the face; active presses it flush. Keyboard focus and reduced-motion support remain.
+- Scoped to saved-list actions and the existing list picker; no additional package or changes to stored data. Feature branch: codex/list-edit-buttons.
+
+- Validation: production webpack build, lint and existing device-storage regression checks passed. Browser checks confirmed prefilled/focused editing, Cancel without mutation, save/reload persistence, restored original name, Escape focus return, desktop and 390px mobile layout with no horizontal overflow. Screenshots: list-edit-desktop.png and list-edit-mobile.png.

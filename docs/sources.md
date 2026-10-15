@@ -115,3 +115,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - Installed Next.js forms guide and existing components/ui/dialog.tsx consulted for client form and accessible dialog integration. No external content or new libraries used.
 
 - Implementation uses browser localStorage, crypto.randomUUID and clipboard APIs; no server database or translation service was added.
+
+## 2026-10-15 — List editing UI
+- User-described two-colour pressed-button reference; implemented in CSS using the existing editorial palette. Installed Next.js forms guide consulted. No external visual assets used.
+
+- Native CSS box-shadow and transform implement the pressed state; no animation library or external script added.
