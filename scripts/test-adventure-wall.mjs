@@ -19,3 +19,15 @@ assert.equal(parseWall(JSON.stringify({traces:Array.from({length:40},(_,i)=>({..
 const roundTrip=parseWall(JSON.stringify({traces:[valid],votes:['test']}));
 assert.equal(roundTrip.traces[0].message,valid.message);assert.equal(roundTrip.votes[0],'test');
 console.log('Adventure wall: malformed data, duplicate IDs/votes, bounds, text limits, capacity and persistence round trip passed.');
+const inkTrace={...valid,noteMode:'handwrite',message:'',ink:[[{x:10,y:20},{x:40.123,y:70}]]};
+const inkRoundTrip=parseWall(JSON.stringify({traces:[inkTrace],votes:[]})).traces[0];
+assert.equal(inkRoundTrip.noteMode,'handwrite');
+assert.equal(inkRoundTrip.ink[0][1].x,40.1);
+const hostile=parseWall(JSON.stringify({traces:[{...inkTrace,ink:[[{x:-1,y:20}],[{x:1,y:null}],'<svg onload=alert(1)>',[{x:1,y:2,script:'ignored'}]]}],votes:[]})).traces[0];
+assert.equal(hostile.ink.length,1);assert.equal(Object.keys(hostile.ink[0][0]).join(','),'x,y');
+const bounded=parseWall(JSON.stringify({traces:[{...inkTrace,ink:Array.from({length:80},()=>[{x:1,y:1}])}],votes:[]})).traces[0];
+assert.equal(bounded.ink.length,32);
+const tooLong=parseWall(JSON.stringify({traces:[{...inkTrace,ink:[Array.from({length:161},()=>({x:1,y:1}))]}],votes:[]})).traces[0];
+assert.equal(tooLong.ink.length,0);
+assert.equal(parseWall(JSON.stringify({traces:[{...valid,ink:inkTrace.ink}],votes:[]})).traces[0].ink,undefined);
+console.log('Handwritten notes: legacy compatibility, numeric-only strokes, coordinate validation and bounded storage passed.');
