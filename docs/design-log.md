@@ -231,3 +231,10 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Replaced inline delete confirmation with the existing Radix/shadcn AlertDialog: named title/description, focus trap, Cancel-first default focus, Escape cancellation and trigger focus restoration. No new dependency. Branch codex/consistent-list-buttons.
 
 - Validation: production webpack build and lint passed. Browser confirmed identical default face/border/padding/44px height/shadow on Share/Edit/Delete, one-row mobile layout, modal Cancel-first focus, Cancel/Escape dismissal with trigger focus restoration, and actual deletion of a temporary test list only. Original list preserved after reload; checked 320px/390px/1280px layouts. Screenshots: consistent-list-mobile.png, consistent-list-desktop.png and list-delete-modal-mobile.png.
+
+## 2026-10-15 — Equal list action dimensions
+- User requested equal button sizes. Share/Edit/Delete now each use an 80px-wide, 44px-high face with identical spacing and press effect, preserving a single row at 320px.
+- Scoped to the main list action row; confirmation and form controls retain space for their longer labels. Branch codex/equal-list-action-sizes.
+
+- User then noted that the faces blended into the page. Increased the shared cream fill contrast and darkened the common border/shadow, preserving identical styling across the row.
+- Validation: production webpack build passed. Browser measured identical 80x44px faces on desktop and mobile, matching fill/border colours, a single row and no horizontal overflow at 320px. Screenshot: equal-contrast-buttons-mobile.png.

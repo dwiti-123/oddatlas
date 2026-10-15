@@ -140,3 +140,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - Existing components/ui/alert-dialog.tsx and installed Next.js forms documentation consulted. User feedback defines the unified button treatment; no external assets or dependencies added.
 
 - Delete confirmation uses the existing AlertDialog components without adding an installer or package.
+
+## 2026-10-15 — Equal action dimensions
+- User feedback; local CSS refinement only, no external reference or dependency.
+
+- Validation used the local production preview and computed button geometry/colours; no new external source.
