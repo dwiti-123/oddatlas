@@ -83,3 +83,91 @@ Uses existing project components and previously sourced place text. No new exter
 - Rechecked https://www.tourism.rajasthan.gov.in/bhangarh-fort.html for folklore and the restriction before sunrise/after sunset.
 - Haunted/mysterious guide summaries reuse the sourced place records; original photo credits and licence links remain on each full entry.
 - Bundled Next.js generateMetadata and sitemap guides consulted for canonical metadata and sitemap generation.
+# Discovery SEO implementation — 14 October 2026
+
+- Next.js installed documentation: `generate-static-params.md`, `generate-metadata.md`, and metadata `sitemap.md` under `node_modules/next/dist/docs/01-app/03-api-reference`. Used for static routes, async params, metadata and the single root sitemap.
+- Google Search Central: https://developers.google.com/search/docs/appearance/ai-features — standard SEO fundamentals apply; no special AI schema or citation guarantee.
+- OpenStreetMap attribution: https://wiki.openstreetmap.org/wiki/Attribution and https://www.openstreetmap.org/copyright. Interactive maps use the official export iframe with attribution.
+- Bodie source expansion and directions point: https://www.parks.ca.gov/?page_id=509 and https://www.parks.ca.gov/?page_id=31549. Original editorial prose; no invented first-hand visit.
+- Locator research: each `discoveryDetails` entry in `lib/places.ts` records its coordinate source. Sources include Wikidata (Hashima/Bhangarh/Paris), GeoNames (Dhanushkodi/Kolmanskop), Urban Academy research (Kayaköy), Wikipedia locator data (Kuldhara/Dolls/Stanley/Deep Sleep), UNESCO nomination (Port Arthur), OpenStreetMap Treehotel node, Palacio de Sal's operator contact page, White Desert's current itinerary and a property listing for Skylodge.
+- Approximate locators: Mirrorcube uses the Treehotel property point, Deep Sleep a non-precise regional point, Whichaway the current operator-published locator, and Skylodge an approximate listing locator. These are labelled and do not replace operator meeting-point instructions. No story/history claims were taken from coordinate-only sources.
+- Existing verified image manifest and place source records remain the authority for photographs, licences and factual stories. New image filenames are byte-identical aliases, not new imagery.
+# Place search title refinement — 14 October 2026
+
+Titles use only the existing sourced stories in `lib/places.ts`; no new factual claims or external sources added. Native Next.js `generate-metadata.md` was consulted to confirm that absolute titles avoid duplicating the root title suffix. Source links for history, folklore and operator information remain on each entry.
+
+## Map implementation references — 15 October 2026
+
+- React Leaflet v5 installation: https://react-leaflet.js.org/docs/start-installation/ and map API: https://react-leaflet.js.org/docs/api-map/. Used for React 19 integration, MapContainer and useMap. Installed stable exact package versions rather than documentation prerelease examples.
+- Leaflet reference: https://leafletjs.com/reference.html — map flyTo, fitBounds, CircleMarker and popup behaviour.
+- OpenStreetMap tile policy: https://operations.osmfoundation.org/policies/tiles/ — official HTTPS tile URL, visible attribution, normal browser caching/referrer, no bulk fetch or offline prefetch.
+- Installed Next.js lazy-loading guide: browser-only dynamic import lives inside a Client Component; the directory list and context stay server-rendered.
+- Location coordinates, folklore/history distinctions and image licences use the existing place records and their individual source links; no new location claims added.
+
+## 2026-10-15 — Lists and translation research
+- Installed Next.js page API documentation: asynchronous searchParams for shared-list URLs.
+- https://next-intl.dev/docs/routing/configuration — locale detection, preference cookies; translations supplied as messages.
+- https://developers.weglot.com/javascript/javascript — hosted automatic translation integration, an alternative to curated messages.
+
+- https://www.weglot.com/pricing and https://www.weglot.com/technical-presentation — hosted automatic translation plans and client-side versus server-side integration choices; research only.
+
+## 2026-10-15 — Multiple device lists
+- Installed Next.js forms guide and existing components/ui/dialog.tsx consulted for client form and accessible dialog integration. No external content or new libraries used.
+
+- Implementation uses browser localStorage, crypto.randomUUID and clipboard APIs; no server database or translation service was added.
+
+## 2026-10-15 — List editing UI
+- User-described two-colour pressed-button reference; implemented in CSS using the existing editorial palette. Installed Next.js forms guide consulted. No external visual assets used.
+
+- Native CSS box-shadow and transform implement the pressed state; no animation library or external script added.
+
+## 2026-10-15 — Pop-button reference
+- https://raw.githubusercontent.com/Ashutoshx7/VengeanceUI/main/public/r/pop-button.json — layered raised-button motion reference supplied by the user. Independently adapted using local CSS with square corners and a tilted lower layer; no dependency installed.
+
+- Only the visual layering concept was used; the final CSS uses the Odd Atlas colours, independent pseudo-element construction and reduced-motion rules.
+
+## 2026-10-15 — Inline list title
+- User feedback and installed Next.js forms guide. Implemented as a labelled native input styled like the existing heading; no new dependency or external visual source.
+
+- Title editing preserves native form submission and keyboard behaviour rather than using editable HTML.
+
+## 2026-10-15 — Responsive list UX refinement
+- User-approved senior UI review findings and existing editorial styles; installed Next.js forms documentation consulted. Native textarea, ResizeObserver and CSS handle the refinement; no external asset or package added.
+
+- Final browser evidence includes action geometry, keyboard flows and content-height checks for long list names.
+
+## 2026-10-15 — Delete confirmation
+- Existing components/ui/alert-dialog.tsx and installed Next.js forms documentation consulted. User feedback defines the unified button treatment; no external assets or dependencies added.
+
+- Delete confirmation uses the existing AlertDialog components without adding an installer or package.
+
+## 2026-10-15 — Equal action dimensions
+- User feedback; local CSS refinement only, no external reference or dependency.
+
+- Validation used the local production preview and computed button geometry/colours; no new external source.
+
+## 2026-10-15 — Tilted shadow adjustment
+- User visual feedback; CSS-only change using the existing button layers, with no new assets or dependencies.
+
+- Validated against the local production preview; no external visual asset used.
+
+## 2026-10-15 — Adventure Wall
+- User-approved combined concept: Codex generated image exec-158edafb-aefa-4e7a-9a8e-1ee922348be3.png. Used as visual direction; no external design copied.
+- Built-in image_gen generated the forest atlas, transparent sticker sprite and transparent landscape. Generation briefs and provenance are in docs/adventure-wall-prototype.md; these illustrations are not documentary destination imagery.
+- Installed Next.js use-client and page documentation; existing Radix/shadcn alert-dialog component. Native HTML drag/drop, keyboard placement and localStorage; no new package or external service added.
+
+- Final production preview verified local assets and noindex metadata; detailed prompt briefs and asset sizes remain in docs/adventure-wall-prototype.md.
+
+## Adventure Wall refinement — 2026-10-15
+The approved generated wall concept informed the explorer silhouette and stationery interactions. Ink seals and the updated walker are original inline SVG/CSS in components/adventure-wall.tsx and app/adventure-wall/wall.css. No additional external images, packages or sources were used.
+
+Wall focus adjustment (2026-10-15): original CSS only; no new assets, packages or external references.
+
+## Direct wall interaction — 2026-10-15
+Original React, pointer-event and SVG implementation; no new external assets or dependencies. The panorama remains the previously documented generated illustration. Hashima's example now mirrors an actual typed note, without an attached sticker.
+
+## Shared wall and reusable footer — 2026-10-15
+- Hashima visiting blog: https://www.discover-nagasaki.com/en/featured-topics/gunkanjima-landing-tour (operator directory, departure locations, visitor preparations); https://www.gunkan-jima.net/en/ (operator itinerary, landing conditions and refund terms); https://www.japan.travel/en/spot/752/ (guided visitor access). Read live on 15 October 2026. Existing verified Hashima photograph reused with its attribution and licence. No keyword-volume claims.
+- Interactive footer follow-up: installed Next.js documentation at node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md for the serializable client boundary. Reused existing wall assets and controls; no new external design source or package.
+- Supabase official documentation: https://supabase.com/docs/guides/auth/auth-anonymous, https://supabase.com/docs/guides/getting-started/api-keys, https://supabase.com/docs/guides/database/postgres/row-level-security, https://supabase.com/docs/guides/database/functions. Used for anonymous identity, publishable keys, RLS and constrained database functions.
+- Runtime: @supabase/supabase-js. Local test-only PostgreSQL engine: @electric-sql/pglite. No additional imagery or design template. Shared footer reuses the existing documented generated panorama.

@@ -142,3 +142,172 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Preserved the magazine typography, thin rules and restrained colours. No booking or Instagram features added. No publication performed.
 - Validation: production build, lint and TypeScript passed. Browser verification confirmed the three descriptive titles, Bhangarh and guide canonicals, three visible practical answers per selected story, five guide ItemList entries and working homepage-to-guide navigation. Guide and homepage had no mobile horizontal overflow at 390px; desktop guide layout checked. No browser console errors recorded.
 - Browser checks caught stale production CSS; clearing only the generated .next/cache and rebuilding restored the new styles. Evidence: research/seo-guide-desktop.png and research/seo-guide-mobile.png.
+# 14 October 2026 — Discovery tools and crawlable directories
+
+- Observation: the deployed architecture already had server-rendered location routes; the new request's map-only diagnosis did not match the code. Zero impressions alone cannot identify a rendering failure.
+- Decision: extend the native Next.js App Router with generated static place/category pages and daily ISR. Reuse built-in metadata and sitemap support rather than introduce a package.
+- Scope: preserve the selected 15-place collection and existing editorial design. Preserve Bodie's older route and include it in route generation. Add only three populated category directories; no fabricated border-anomaly entries or empty landing pages.
+- Interaction: one random-place button with an HTML list fallback, and a five-question country quiz using real records, explanations, links, score and restart. No account or new storage.
+- Content: question titles and headings, original image alt descriptions, sourced 300-word minimum location prose, and explicit separation of historical claims and folklore. Question headings and dwell time are not guarantees of rankings or rich-result placement.
+- Maps: lazy OpenStreetMap embeds with attribution, visible coordinates and source links. Approximate property/regional points are labelled; no routing or unrestricted-access implications.
+- Images: add descriptive compressed WebP aliases, keeping old image URLs working. Labels, credits and licence conditions stay visible.
+- Git: `codex/discovery-seo`; unfinished named-list changes preserved in a named Git stash, not folded into this work.
+- Validation: production build, TypeScript and lint passed. Production HTTP checks verified all 24 sitemap routes, 16 initial HTML articles/maps/images/canonicals and unknown-route 404s. Location prose counts range from 302 to 355 words, excluding navigation and credits. Browser checks covered the five-question quiz (four correct, one incorrect, 4/5 score and restart), random navigation, category links and an interactive OpenStreetMap zoom control. At 390px the quiz, random tool, location map and category page had no horizontal overflow. Fixed an existing global mobile navigation rule that hid the final category; verified all three category links visible. Screenshots: `docs/research/discovery-random-desktop.png`, `discovery-random-mobile.png`, `discovery-category-desktop.png`, `discovery-category-mobile.png`. Browser console reported no errors or warnings. Changes remain local, not merged or deployed.
+# 14 October 2026 — More inviting place search titles
+
+- User selected Google search titles for every place page. Updated all 15 collection entries and the preserved Bodie URL on `codex/discovery-seo`.
+- Formula: recognisable place name plus a question the existing story answers. Keep haunted reputations as questions and legends; avoid asserting supernatural events or an unexplained disappearance as fact.
+- Kept visible H1 headings, stories, descriptions, routes and design unchanged. Existing metadata also uses these titles for social previews and Article headlines.
+- Titles range from 56 to 69 characters including ` | Odd Atlas`; this is an editorial length check, not a guarantee of Google’s display width or wording.
+- Validation: production build and its TypeScript check passed. Inspected all 16 generated HTML files; each contains the exact updated title and its unchanged visible H1. No deployment or main-branch changes.
+
+## 15 October 2026 — Matching place titles
+
+Feature branch: `codex/place-title-consistency`, based on the preserved discovery draft. Place H1 headings now use the same title helper as metadata, social previews and Article headlines. Only the search title adds the brand suffix; map markers and cards retain short place names. Long headings use a restrained responsive type scale. Validation is performed with the integrated feature build.
+
+## 15 October 2026 — Visit/stay labels
+
+Feature branch: `codex/visit-stay-labels`, stacked on title consistency. A shared component gives every card and detail page the same accessible text and colours: terracotta Visit only, forest green You can stay here. Overnight stays remain temporary bookings; no residency claim. Saved cards inherit the shared component. Map cards will reuse it. Existing source records support the stay flag; no new external source used.
+
+## 15 October 2026 — Explore map
+
+Feature branch: `codex/explore-map`, stacked on visit/stay labels. Added a separate map/list experience with existing sourced coordinates, category/access/search filters, marker popups, story links, locator notes and mobile Map/List controls. Leaflet loads only on this route, with visible OpenStreetMap attribution. Existing homepage composition and Bhangarh story/access information are retained. A sidebar list and noscript links preserve non-map navigation. Final production build and TypeScript checks passed. Browser verification and evidence are recorded below.
+
+## 15 October 2026 — Surprise me on the map
+
+Feature branch: `codex/map-surprise-me`, stacked on Explore map. A single action picks from the current filtered results, avoids the current selection when alternatives exist, and uses the same pin/popup/mobile focus flow as a list card. Disabled for no results; a one-place result remains usable. Respects reduced motion. No new geographic data or external sources.
+
+Map verification findings: fixed popup clipping/reselection and a hidden-canvas animation failure found when resizing with a selected place. Map resize handling now checks that the canvas has non-zero dimensions before invalidating or animating, closes hidden popups and skips hidden-marker popup creation. These fixes were fast-forwarded only into the map feature branch, leaving main/dev untouched.
+
+Final feature validation: lint and production build passed. Existing HTTP verification passed for all 25 sitemap URLs, 16 place articles, image/canonical checks and unknown-route 404s. Compiled HTML checked for matching title/H1 text on all 16 places and 15 initial map cards. Browser checks covered direct pin selection, list-to-popup selection, accent-insensitive search, 6 stay and 9 visit-only results, category conflicts/no-results/reset, random selection without immediate repeat, popup story navigation, and matching Bhangarh heading/title. Repeated selected-place Map/List switching (three rounds), filter changes while hidden and tablet-to-phone resizing passed after the hidden-canvas fix. Width checks at 390px and 820px showed no horizontal overflow. Screenshots: `docs/research/agreed-map-desktop.png`, `agreed-map-mobile.png`, `agreed-title-mobile.png`. Main remains at d7f4d86; no dev branch exists, and nothing was pushed or deployed.
+
+## 2026-10-15 — Named, shareable saved list
+- Approved: rename the existing collection and share a fixed snapshot using an encoded URL; no account or extra dependency.
+- Shared views do not overwrite the visitor’s own list. Duplicate names are allowed. Names are bounded and rendered as text; slugs are validated against the curated collection.
+- Restored only the relevant draft files on codex/named-shareable-lists, preserving the stash and current map/title work.
+- Translation researched separately; no translation library installed.
+
+- Validation: lint passed; production webpack build passed after Turbopack worker startup failures. Browser checks passed for renaming/reload, fixed shared snapshots, invalid/duplicate slug filtering, personal-list isolation, native share completion, and a 390px layout with no horizontal overflow. Encoding/bounds checks passed; console had no errors. Screenshots: docs/research/named-list-mobile.png and shared-list-desktop.png.
+
+## 2026-10-15 — Multiple lists on this device
+- User approved separate named lists, device-only persistence, an immediate list picker, and clearing create/rename fields after submission.
+- One versioned localStorage record now keeps each unique list ID, name and place membership together. Existing saved places and name migrate into the first list; old keys are retained as a fallback, never reimported after an intentional empty collection.
+- Reused the existing Radix/shadcn dialog for accessible list selection. A place can belong to multiple lists, changes save immediately, and list-specific removal leaves other lists intact. Duplicate names are supported.
+- Sharing remains an encoded fixed snapshot, with an explicit copyable link. Deletion asks for confirmation inside the page. No accounts, new packages, or translation changes.
+- Added storage regression coverage for migration, duplicate names, rename/reload, independent membership, deletion, and unavailable storage.
+
+- Final validation: production build (Next.js webpack) and lint passed. Storage regression checks passed. Browser verified migration of the existing My weekend collection, field clearing, create-from-place, multi-list membership, rename/reload, remembered selection, copied sharing, snapshot stability, list-specific removal, delete/cancel, and 390px layouts without overflow. Test-created lists were removed; the original collection was preserved. Screenshots: multiple-lists-desktop.png, multiple-lists-mobile.png, multiple-lists-picker-mobile.png.
+
+## 2026-10-15 — Intentional list editing and tactile buttons
+- User requested Edit list beside Delete list instead of an always-visible rename form. Editing opens a prefilled, focused name input with Save changes and Cancel; Escape cancels and returns focus to Edit list.
+- List action buttons use the existing brick/cream palette with a second ink colour as a solid offset shadow. Hover slightly lowers the face; active presses it flush. Keyboard focus and reduced-motion support remain.
+- Scoped to saved-list actions and the existing list picker; no additional package or changes to stored data. Feature branch: codex/list-edit-buttons.
+
+- Validation: production webpack build, lint and existing device-storage regression checks passed. Browser checks confirmed prefilled/focused editing, Cancel without mutation, save/reload persistence, restored original name, Escape focus return, desktop and 390px mobile layout with no horizontal overflow. Screenshots: list-edit-desktop.png and list-edit-mobile.png.
+
+## 2026-10-15 — Sharp tilted pop-button refinement
+- User supplied VengeanceUI Pop Button as a motion reference, requesting sharp rather than soft corners and a tilted shadow.
+- Inspected the registry: one React component, no dependencies. Adapted the layered press effect directly in existing CSS: square face, skewed hard-edged lower ink layer, hover compression and a flush press; retained editorial colours and reduced-motion support.
+- No registry installer or new package needed. Separate branch codex/sharp-pop-buttons.
+
+- Validation: production webpack build passed; desktop and 390px browser checks confirmed square faces, transformed hard-edged lower layers, working edit/cancel controls and no horizontal overflow. Screenshots: sharp-pop-desktop.png and sharp-pop-mobile.png.
+
+## 2026-10-15 — Edit the list heading in place
+- User clarified that only the displayed list title should become editable, without a separate input panel.
+- Edit list now replaces the heading with a borderless, prefilled title field in the same position and typography. Save/Enter persists it; Cancel/Escape restores the heading without mutation and returns focus to Edit list.
+- Kept the sharp tilted button style, local storage and shared snapshots unchanged. Separate branch codex/inline-list-title.
+
+- Validation: production webpack build and lint passed. Browser confirmed editing replaces the title in place, current name/focus, Escape cancellation/focus return, Enter save, reload persistence, original name restored, and 1280px/390px layouts without horizontal overflow. Screenshots: inline-list-desktop.png and inline-list-mobile.png.
+
+## 2026-10-15 — Refine list action hierarchy and responsive editing
+- User approved one mobile action row and a quieter editorial treatment. Desktop actions sit beside the title; mobile uses one compact Share/Edit/Delete row with 44px targets. Share retains a 2px tactile shadow; Edit is outlined cream and Delete is understated text.
+- While editing, normal actions are absent and only Save/Cancel remain. This prevents stale-name sharing and accidental draft loss through Delete. A wrapping title textarea grows with content and width changes; Enter saves, Shift+Enter inserts a line, Escape cancels.
+- Added visible whitespace-name errors and corrected singular place counts in list tabs and the place picker. Removed superseded heavy-button/editor CSS. No dependencies or storage schema changes. Branch codex/refined-list-actions.
+
+- Validation: production webpack build and lint passed. Browser measured Share/Edit/Delete on the same row at 320px, each 44px high, with no horizontal overflow; checked 390px, 820px and 1280px layouts. Confirmed blank-name alerts, wrapping/resizing titles, keyboard Cancel, Enter save/reload, original name restored, Share/Delete absent while editing, copied current-name links and delete cancellation. Browser console clean. Screenshots: refined-list-desktop.png and refined-list-mobile.png.
+
+## 2026-10-15 — Consistent list buttons and deletion modal
+- User approved one cream, sharp-border button style for Share/Edit/Delete, with equal spacing, height and press behaviour. Delete gets a brick hover/focus cue without a different shape.
+- Replaced inline delete confirmation with the existing Radix/shadcn AlertDialog: named title/description, focus trap, Cancel-first default focus, Escape cancellation and trigger focus restoration. No new dependency. Branch codex/consistent-list-buttons.
+
+- Validation: production webpack build and lint passed. Browser confirmed identical default face/border/padding/44px height/shadow on Share/Edit/Delete, one-row mobile layout, modal Cancel-first focus, Cancel/Escape dismissal with trigger focus restoration, and actual deletion of a temporary test list only. Original list preserved after reload; checked 320px/390px/1280px layouts. Screenshots: consistent-list-mobile.png, consistent-list-desktop.png and list-delete-modal-mobile.png.
+
+## 2026-10-15 — Equal list action dimensions
+- User requested equal button sizes. Share/Edit/Delete now each use an 80px-wide, 44px-high face with identical spacing and press effect, preserving a single row at 320px.
+- Scoped to the main list action row; confirmation and form controls retain space for their longer labels. Branch codex/equal-list-action-sizes.
+
+- User then noted that the faces blended into the page. Increased the shared cream fill contrast and darkened the common border/shadow, preserving identical styling across the row.
+- Validation: production webpack build passed. Browser measured identical 80x44px faces on desktop and mobile, matching fill/border colours, a single row and no horizontal overflow at 320px. Screenshot: equal-contrast-buttons-mobile.png.
+
+## 2026-10-15 — Slightly deeper tilted shadows
+- User requested a larger dark shadow area and a small tilt. Shared button shadow now offsets 3px right/4px down with a 2-degree skew; hover and press still compress the layer. Equal button dimensions and face colours are unchanged. Branch codex/tilted-list-button-shadows.
+
+- Validation: production webpack build passed. Browser confirmed identical tilted shadow transforms on all three 80x44px buttons, desktop/mobile appearance, and no horizontal overflow at 320px. Used and removed a temporary preview list because the current collection was empty. Screenshot: tilted-button-shadows-mobile.png.
+
+## 2026-10-15 — Adventure Wall prototype
+- User approved an isolated, device-only implementation of the combined forest pinboard/atlas mockup. Built /adventure-wall on codex/adventure-wall-prototype, preserving the existing site footer and saved-list feature.
+- Generated three production illustration assets with image_gen, compressed to local WebP; real text, paper cards, writing form, stationery choices and placement controls overlay them. Art is labelled illustrative and example contributions are explicitly marked.
+- Notes/tickets/stamps/stickers can be written, signed, dragged, tapped onto the canvas, moved via keyboard or removed with confirmation. Device-only wishes and bounded local storage are independent of saved lists. Explorer has pause/play and reduced-motion support.
+- Details and generation briefs: docs/adventure-wall-prototype.md.
+
+- Validation: final production webpack build and lint passed. Storage regression tests passed. Browser verified note validation/signature, all four stationery types, native tray drag/drop and existing-trace drag, tap placement at 320px, keyboard placement/move, removal confirmation, persistence after hydration, local wish toggles and animation pause/play. Checked 320px/390px/1440px layouts with no horizontal page overflow; the map itself pans intentionally. Production console clean and robots noindex confirmed. Removed test contributions and wishes. Screenshots: adventure-wall-desktop.png, adventure-wall-mobile.png and adventure-wall-writing.png.
+
+## 2026-10-15 — A quieter, more tactile Adventure Wall
+- User approved a focused tray, real ink seals and a clearer animated explorer.
+- Only the chosen stationery drawer is visible. Three labelled examples replace the five-card starting layout; existing device entries retain their storage schema.
+- Native SVG circular destination seals replace postage-like paper stamps. Double rings, interrupted strokes and destination lettering distinguish them from illustrated peelable stickers.
+- Notes/stickers lift at the corner, tickets slide from the tray, seals press and settle. The explorer is larger, wears mustard and brick, starts visibly within the landscape and pauses during composition/placement. Reduced motion remains supported.
+- No dependencies, backend, publishing or shared-data changes. The explorer is a native vector interpretation of the approved mockup, not an exact bitmap conversion.
+- Validation: production webpack build and lint passed; storage parser checks passed. Browser checks covered desktop, tablet (768px), mobile (390px and 320px), drawer switching, seal placement/reload persistence, removal confirmation and automatic animation pause. Test contribution removed; existing device data preserved. No browser errors or page overflow observed.
+
+## 2026-10-15 — Smaller wall pieces and focused writing
+- Reduced all placed map pieces by 12%, preserving the tray choices and stored positions.
+- Added a softly dimmed, blurred page backdrop only while the writing card is open. The card stays sharp and its close/cancel controls remain available; the backdrop clears for map placement.
+- Scope is limited to these visual adjustments; prior uncommitted wall refinements remain preserved on the new branch.
+- Validation: production build passed. Desktop/mobile visual checks confirmed the writing card remains sharp, closing restores the page, and placement clears the blur. No preview contribution was saved. Screenshot: docs/research/adventure-wall-writing-focus.png.
+
+## 2026-10-15 — Place first, write on the paper
+- User approved replacing the form with direct pick/place interactions, plus typed and freehand notes. Stamps/stickers now place immediately; tickets offer an on-paper destination choice. Keyboard placement and mobile tap fallback remain available; touch supplies also use pointer capture for dragging.
+- Notes expose Type and Handwrite on the placed paper. Freehand supports pointer input, Undo and Clear. Empty notes cannot post. The drawing is bounded numeric stroke data, rendered as SVG; no uploaded HTML, SVG markup or image payload is accepted. Existing device records remain compatible.
+- Removed the walking character and its controls, retaining the landscape. Removed obsolete modal/backdrop and walker styles.
+- The Hashima example is now plain text on paper, because users cannot create a single combined note/sticker object. The example ink seal no longer has a caption users cannot compose in the new flow.
+- No packages, shared counts, backend, publication or main-branch changes. Work is on codex/direct-wall-notes, preserving all earlier local refinements.
+- Validation: production webpack build, TypeScript, lint and storage tests passed. Manual browser checks covered typed posting/empty validation, freehand strokes, Undo/Clear, handwriting reload persistence, keyboard seal placement, immediate native sticker drag/drop, ticket destination editing, desktop/mobile paper layout and cancellation. Production browser reported no warnings/errors; no horizontal page overflow. Mouse/pointer drawing was checked at mobile viewport dimensions; physical touch/stylus hardware was not available. All agent-created test contributions and drafts were removed without altering prior user records. Captures: adventure-wall-direct-desktop.png, adventure-wall-direct-note.png and adventure-wall-direct-mobile.png.
+
+## 2026-10-15 — Shared wall foundation, tactile paper, common footer
+- User approved connecting an existing Supabase project and will add environment values themselves. No remote project was modified; .env.local was created only if absent, with blank public connection fields. Added a tracked .env.example template.
+- Official Supabase client handles public reads and anonymous Auth at the time of posting/reporting. Database migration adds only odd_wall-prefixed objects: public traces, private reports, RLS, ownership checks, numeric drawing validation, idempotent posts, soft removal and bounded posting/report limits. Existing local notes remain private. Failed posts retain the draft rather than silently publishing locally.
+- Added a local PostgreSQL test dependency (PGlite) to exercise the actual migration without accessing the user's Supabase project. Ownership, policy and limit tests passed.
+- The editor now uses the actual small paper footprint at the selected coordinates; controls float beside it instead of expanding it into a writing card. The native drag image uses the peeled paper face, not the full stack. Typed/freehand modes, Undo/Clear and tap/keyboard placement remain available.
+- Extracted one illustrated AdventureFooter reused through the site shell and the dedicated wall, so the homepage, place stories, saved lists, categories, tools, sources, map and not-found page share the footer. The full interactive wall remains only at /adventure-wall. Footer artwork is lazy-loaded and makes no database requests.
+- SEO deployment check: live Hashima, Bhangarh and Kolmanskop returned their older titles/headings. Latest local curiosity titles and title/H1 consistency are not deployed. No publish or merge performed.
+- Validation: production webpack build/TypeScript and lint passed. Device-storage tests and local PostgreSQL shared-wall tests passed, including anonymous read, denied unauthenticated writes, cross-user mutation denial, report privacy, moderation hiding, payload bounds and rate limits. Production desktop/mobile checks verified small-paper controls, private posting/cancel, handwriting input, one common footer on homepage/place pages and no page overflow. No production browser warnings/errors. Supabase project connection, Auth configuration and cross-browser remote visibility remain unverified because the environment values/migration have not been supplied/applied. Existing user-created private traces were preserved; no automatic upload occurred.
+- Preview evidence: docs/research/shared-wall-small-paper-desktop.png, shared-landscape-footer-desktop.png, shared-landscape-footer-mobile.png. Database setup instructions: docs/shared-wall-setup.md.
+
+## 2026-10-15 — Release preparation and requested branch promotion
+- User explicitly requested smaller commits, push, feature-to-dev merge, then dev-to-main merge. Fetched origin; no local or remote dev existed, so create dev from current main before promotion. Preserve all existing feature commits and avoid history rewriting.
+- Split remaining implementation into Supabase backend/security tests, interactive wall/footer, card alignment, Hashima blog, and documentation/evidence commits. Unrelated untracked adventure-wall-concepts folder remains local.
+- Validation passed: production webpack build, ESLint, device list migration/persistence tests, wall parser tests, local PostgreSQL RLS/ownership/limits tests and production HTML discovery verification (26 sitemap routes, 16 location articles). Discovery used current port 5174; the older 5173 server had a stale route manifest.
+- .env.local is ignored. Only the blank .env.example is tracked; tracked source scan found no embedded Supabase key/JWT/private-key literals. Vercel still needs public Supabase environment values configured in its production build settings; local .env.local is not uploaded.
+
+## 2026-10-15 — First practical visiting journal
+- Approved Hashima visiting article implemented on codex/hashima-visiting-blog at /blog/how-to-visit-hashima-island. It answers tour-planning intent separately from the existing history page; target phrases are hypotheses, not measured search volumes.
+- Server-rendered article uses the established editorial type and real licensed Hashima photograph, a short answer, jump links, question headings, inline source references and a sources section. No first-hand experience or publication date invented.
+- Added matching title/H1, description, canonical, social metadata and BlogPosting structured data, sitemap entry, Hashima sidebar link and shared discovery-footer link. Reused existing photo attribution/licence; no new dependency or generated imagery.
+- Sources checked against official Nagasaki Tourism, Yamasa Shipping and JNTO pages. Kept volatile prices, schedules and refund percentages on operator sites; English/Japanese operator wording differed on refunds, so the article tells readers to check their booking terms instead of claiming a universal policy.
+- Validation: production webpack build and targeted ESLint passed. Desktop and 390px mobile browser checks showed readable layout and no document overflow; title/H1 match, canonical resolves to the www production article URL, and all internal anchors have targets. Screenshots: docs/research/hashima-blog-desktop.png and hashima-blog-mobile.png. Preview on port 5174 because 5173 was occupied. Local only; no push or deployment.
+
+## 2026-10-15 — Interactive footer and consistent collection cards
+- Approved direction: let visitors contribute directly at the end of browsing, retaining the dedicated wall as a larger view. Reused the existing wall with an embedded variant that omits its masthead, main landmark and nested footer. The illustrated footer remains below the interaction.
+- Deferred the wall module and Supabase read until its footer approaches the viewport using IntersectionObserver and Next dynamic loading. Mobile keeps a horizontally pannable board, rather than shrinking writing controls.
+- Reserved two lines for place names and four for descriptions; made card links flexible so category/save controls align. No text truncation, fabricated content or new dependency.
+- Created codex/interactive-wall-footer and codex/consistent-place-card-heights. Work remains uncommitted in the existing working tree; these branch pointers do not yet isolate separate feature commits. Main was not edited or deployed.
+- Validation: production build and full lint passed before the last description-spacing refinement. Desktop cards measured equal heights and category positions. Mobile footer showed no document overflow and one main/footer; peel, placement, inline editor and cancellation worked without posting test content. Mobile exposed one shorter description, addressed by the four-line minimum. Final production rebuild follows.
+- Final production rebuild passed. At 390px, all 15 cards measured the same 573px height with no document overflow. Local production preview restarted on port 5173.
+- Evidence: docs/research/interactive-footer-desktop.png and interactive-footer-mobile.png. No external design sources used; read installed Next.js use-client documentation.
+
+## 2026-10-15 — Live shared-wall connection verified
+- Owner added the public environment values, applied the SQL migration successfully and enabled anonymous sign-ins in the Odd Atlas-only Supabase project. The organization is shared; this project's database is dedicated to Odd Atlas.
+- Verified two isolated anonymous visitor sessions against the real project. Typed and handwritten test posts could be read with an unauthenticated public client, drawing strokes were preserved, and a second visitor could not move or remove the first visitor's traces (P0001 as expected).
+- Soft-removed both temporary test traces using their owner session and verified neither appeared in the public feed. Test anonymous Auth identities were not administratively deleted; no elevated credentials were used. No user-created private traces were uploaded or modified.
+- Rebuilt the local Next.js preview successfully with the supplied public environment values. Browser confirmation showed Shared traveller’s wall and Refresh wall after loading, without a shared-feed error. Production domain/deployment remains unchanged.
