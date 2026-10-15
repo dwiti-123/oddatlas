@@ -150,3 +150,10 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - User visual feedback; CSS-only change using the existing button layers, with no new assets or dependencies.
 
 - Validated against the local production preview; no external visual asset used.
+
+## 2026-10-15 — Adventure Wall
+- User-approved combined concept: Codex generated image exec-158edafb-aefa-4e7a-9a8e-1ee922348be3.png. Used as visual direction; no external design copied.
+- Built-in image_gen generated the forest atlas, transparent sticker sprite and transparent landscape. Generation briefs and provenance are in docs/adventure-wall-prototype.md; these illustrations are not documentary destination imagery.
+- Installed Next.js use-client and page documentation; existing Radix/shadcn alert-dialog component. Native HTML drag/drop, keyboard placement and localStorage; no new package or external service added.
+
+- Final production preview verified local assets and noindex metadata; detailed prompt briefs and asset sizes remain in docs/adventure-wall-prototype.md.

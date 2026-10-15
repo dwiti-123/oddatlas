@@ -243,3 +243,11 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - User requested a larger dark shadow area and a small tilt. Shared button shadow now offsets 3px right/4px down with a 2-degree skew; hover and press still compress the layer. Equal button dimensions and face colours are unchanged. Branch codex/tilted-list-button-shadows.
 
 - Validation: production webpack build passed. Browser confirmed identical tilted shadow transforms on all three 80x44px buttons, desktop/mobile appearance, and no horizontal overflow at 320px. Used and removed a temporary preview list because the current collection was empty. Screenshot: tilted-button-shadows-mobile.png.
+
+## 2026-10-15 — Adventure Wall prototype
+- User approved an isolated, device-only implementation of the combined forest pinboard/atlas mockup. Built /adventure-wall on codex/adventure-wall-prototype, preserving the existing site footer and saved-list feature.
+- Generated three production illustration assets with image_gen, compressed to local WebP; real text, paper cards, writing form, stationery choices and placement controls overlay them. Art is labelled illustrative and example contributions are explicitly marked.
+- Notes/tickets/stamps/stickers can be written, signed, dragged, tapped onto the canvas, moved via keyboard or removed with confirmation. Device-only wishes and bounded local storage are independent of saved lists. Explorer has pause/play and reduced-motion support.
+- Details and generation briefs: docs/adventure-wall-prototype.md.
+
+- Validation: final production webpack build and lint passed. Storage regression tests passed. Browser verified note validation/signature, all four stationery types, native tray drag/drop and existing-trace drag, tap placement at 320px, keyboard placement/move, removal confirmation, persistence after hydration, local wish toggles and animation pause/play. Checked 320px/390px/1440px layouts with no horizontal page overflow; the map itself pans intentionally. Production console clean and robots noindex confirmed. Removed test contributions and wishes. Screenshots: adventure-wall-desktop.png, adventure-wall-mobile.png and adventure-wall-writing.png.
