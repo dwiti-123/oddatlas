@@ -85,7 +85,7 @@ const foundationPlaces = [
  { slug:'kolmanskop',name:'Kolmanskop',region:'Near Lüderitz',country:'Namibia',category:'ghost',categoryName:'Ghost towns & forgotten cities',stay:false,
  hook:'A former diamond town, with sand drifting through its empty rooms.', alt:'Sand-covered floors and peeling walls inside a house in Kolmanskop',storyTitle:'When the desert comes indoors',
  story:'Kolmanskop is a former diamond settlement near Lüderitz. Empty buildings now frame a landscape of drifting sand. The former town is managed as a visitor attraction by Ghost Town Tours.',
- today:'A managed ghost-town attraction. Guided tours provide context for the buildings and their history.',
+ today:'A managed ghost-town attraction. Guided tours provide context for the buildings and their history. The changing rooms and drifting sand make the town’s physical transformation part of the visit, alongside its mining past.',
  access:'Visit through the operator’s permitted access arrangements. Check current tour times and permit conditions before travelling. Accommodation is in the surrounding region, rather than inside the ruins.',legend:'',
  sources:[{title:'Ghost Town Tours — visitor information',url:'https://kolmanskuppe.com/tours-prices/'},{title:'Namibia Tourism Board — Ghost Town Tours',url:'https://visitnamibia.com.na/directory/ghost_town_tours2038/'}],credit:'Damien du Toit',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:Kolmanskop_sand.jpg',photoDate:'2006' },
  { slug:'bodie',name:'Bodie',region:'California',country:'United States',category:'ghost',categoryName:'Ghost towns & forgotten cities',stay:false,
@@ -97,7 +97,7 @@ const foundationPlaces = [
  { slug:'bhangarh',name:'Bhangarh Fort',region:'Rajasthan',country:'India',category:'mystery',categoryName:'Mystery & haunted places',stay:false,
  hook:'Ruined passageways and a reputation built around stories of a curse.',alt:'A sequence of stone arches inside Bhangarh Fort',storyTitle:'Stone walls, and the stories around them',
  story:'Bhangarh is a ruined fort in Rajasthan, set among hills. Its surviving architecture is one part of the attraction; its association with haunting stories is another.',
- today:'An archaeological destination associated with local folklore. The ruins are real; supernatural claims are not established facts.',
+ today:'An archaeological destination associated with local folklore. The ruins are real; supernatural claims are not established facts. The site’s temples, roads and market remains offer a way to understand the former settlement alongside its famous stories.',
  access:'Visit only. Rajasthan Tourism states that entry is restricted before sunrise and after sunset. Check current arrangements before travelling; this is not an overnight stay.',
  legend:'Rajasthan Tourism recounts stories of a curse, including a wizard and a princess. These are local legends, not verified explanations for the site’s decline.',
  sources:[{title:'Rajasthan Tourism — Bhangarh Fort',url:'https://www.tourism.rajasthan.gov.in/bhangarh-fort.html'}],credit:'KalkiRaj',license:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:A_view_of_the_gallery_of_the_haunted_fort_of_Bhangarh.jpg',photoDate:'2016' },
@@ -112,6 +112,8 @@ export type StoryChapter = {title:string; text:string; references:string[]; kind
 export type LongStory = {opening:string; chapters:StoryChapter[]};
 // Original editorial writing. Chapter references point to the sources read for each claim.
 const storySources:Record<string,{title:string;url:string}> = {
+ bodiePark:{title:'California State Parks — Bodie State Historic Park',url:'https://www.parks.ca.gov/?page_id=509'},
+ bodieFAQ:{title:'California State Parks — Bodie commonly asked questions',url:'https://www.parks.ca.gov/?page_id=31549'},
  jnto:{title:'Japan National Tourism Organization — Hashima',url:'https://www.japan.travel/en/spot/752/'},
  hashimaHeritage:{title:'UNESCO — Japan’s Meiji industrial heritage',url:'https://whc.unesco.org/en/list/1484/'},
  hashimaHistory:{title:'UNESCO / ICOMOS — full-history interpretation mission, 2021',url:'https://whc.unesco.org/document/188249'},
@@ -145,6 +147,11 @@ const storySources:Record<string,{title:string;url:string}> = {
  saltHotel:{title:'Palacio de Sal — official hotel information',url:'https://palaciodesal.com.bo/en/'}
 };
 const longStories:Record<string,LongStory> = {
+ bodie:{opening:'Bodie is often imagined as a town where everyone simply vanished. Its official history tells a more gradual story: mining stopped, civic institutions closed, and a few people stayed to protect what remained.',chapters:[
+  {title:'Did everyone leave?',text:'California State Parks explains that Bodie was never completely abandoned. After the mining boom, people continued living there into the twentieth century. Mining ceased in 1942, and the school and post office closed. Caretakers remained until the town became a state park in 1962. Today, staff and their families live and work here. The distinction matters: the surviving town was protected by people, rather than preserved by an absence of people.',references:['bodieFAQ']},
+  {title:'What does preservation mean here?',text:'The park preserves the weathered town rather than presenting a rebuilt mining settlement. Visiting invites attention to the ordinary scale of a community: a street, a doorway, a building with a purpose. The empty spaces are part of its attraction, but they also mark changes in an economy that once sustained homes and work. Bodie is a historic park, so its atmosphere comes with rules and care. Look closely without assuming that a deserted appearance permits entering every building.',references:['bodiePark']},
+  {title:'What should you check before travelling?',text:'The park’s directions use State Route 270 from US 395, including a final unpaved stretch that can be rough. Its FAQ explains that snow can make access difficult and identifies summer and fall as generally more favourable visiting seasons. Conditions still require a current check. Consult the park before setting out, bring the supplies you need, and plan for a visitor destination rather than an overnight stay in the town. A map point is a starting place for planning, not a guarantee that the road is accessible.',references:['bodiePark','bodieFAQ']}
+ ]},
  hashima:{opening:'From the water, Hashima looks like a ship that never sailed. The concrete silhouette is only the beginning: inside it was a community built around coal, and a history that deserves more than a photograph of empty windows.',chapters:[
   {title:'A whole world on a small island',text:'Hashima’s nickname, Gunkanjima, comes from its battleship-like outline. But this was a working settlement, not a fortress. Mitsubishi developed its coal industry, and the island supported shops, a hospital, two schools and places of worship. Families lived beside the industry that kept them there. The empty buildings make more sense when you remember how many ordinary routines once fitted into this small space.',references:['jnto']},
   {title:'When the coal stopped',text:'As Japan’s energy needs changed, the mines closed around 1974 and the community departed. Buildings that had supported everyday life were left exposed to the sea and weather. Tourism returned in 2009; Hashima later became part of the Meiji industrial heritage property inscribed by UNESCO in 2015. The island’s new role is to help people understand the industrial world that produced it.',references:['jnto','hashimaHeritage']},
@@ -221,7 +228,27 @@ const longStories:Record<string,LongStory> = {
   {title:'A place to pause beside the salar',text:'Palacio de Sal now operates as a hotel, with salt-based architecture connecting its interiors to the surrounding landscape. The stay and a journey onto the salar remain separate arrangements to check. Our interest here is the architectural idea and the experience of pausing beside that vast setting. The attraction is that relationship between shelter and place: the material associated with a vast outdoor landscape is brought into the more intimate scale of a building.',references:['saltHotel','saltHistory']}
  ]}
 };
-export type Place = (typeof foundationPlaces)[number] & {imageKind: string; imageNote: string;longStory?:LongStory};
+export type DiscoveryDetails = {title:string; latitude:number; longitude:number; coordinateSource:string; mapNote?:string};
+// Locator points are for orientation, never a route or permission to enter.
+const discoveryDetails:Record<string,DiscoveryDetails> = {
+ bodie:{title:"Bodie Ghost Town: Did Everyone Really Leave?",latitude:38.21354,longitude:-119.0156,coordinateSource:'https://www.parks.ca.gov/?page_id=509',mapNote:'Park-published directions point; follow its current road advice.'},
+ hashima:{title:"Why Was Hashima Island Abandoned? Japan’s Ghost Island",latitude:32.62757,longitude:129.73832,coordinateSource:'https://www.wikidata.org/wiki/Q49640096'},
+ dhanushkodi:{title:"Dhanushkodi: What Happened to India’s Coastal Ghost Town?",latitude:9.18268,longitude:79.41012,coordinateSource:'https://www.geonames.org/1272906/dhanushkodi.html'},
+ kayakoy:{title:"Kayaköy: Why Are This Turkish Village’s Houses Empty?",latitude:36.57498,longitude:29.09109,coordinateSource:'https://dergipark.org.tr/tr/download/article-file/2783468'},
+ kuldhara:{title:"Why Was Kuldhara Abandoned? Behind the Curse Legend",latitude:26.87,longitude:70.785,coordinateSource:'https://en.wikipedia.org/wiki/Kuldhara'},
+ kolmanskop:{title:"Kolmanskop: How Did the Desert Move Into a Diamond Town?",latitude:-26.70389,longitude:15.23278,coordinateSource:'https://www.geonames.org/advanced-search.html?country=NA&q=Namibija&startRow=550'},
+ 'island-of-the-dolls':{title:"Island of the Dolls: Why Are Dolls Hanging in the Trees?",latitude:19.27289,longitude:-99.08811,coordinateSource:'https://en.wikipedia.org/wiki/Island_of_the_Dolls'},
+ bhangarh:{title:"Is Bhangarh Fort Haunted? History Behind the Legends",latitude:27.09472,longitude:76.29056,coordinateSource:'https://www.wikidata.org/wiki/Q861921'},
+ 'paris-catacombs':{title:"Paris Catacombs: Why Are There Bones Beneath the City?",latitude:48.83397,longitude:2.33245,coordinateSource:'https://www.wikidata.org/wiki/Q28924'},
+ 'port-arthur':{title:"Port Arthur: What’s Behind Tasmania’s Ghost Stories?",latitude:-43.14778,longitude:147.85139,coordinateSource:'https://whc.unesco.org/document/103439'},
+ 'stanley-hotel':{title:"Stanley Hotel: How Did One Night Inspire The Shining?",latitude:40.38288,longitude:-105.51921,coordinateSource:'https://en.wikipedia.org/wiki/The_Stanley_Hotel'},
+ skylodge:{title:"Skylodge: Would You Sleep on a Cliff in Peru?",latitude:-13.27042,longitude:-72.21805,coordinateSource:'https://www.gites.fr/gites_skylodge-adventure-suites_urubamba_h5043456.htm',mapNote:'Approximate property locator; confirm the meeting point with Natura Vive.'},
+ mirrorcube:{title:"Mirrorcube: Can a Treehouse Disappear Into the Forest?",latitude:66.07286,longitude:20.98187,coordinateSource:'https://www.openstreetmap.org/node/7796744419',mapNote:'Treehotel property locator, not the position of an individual room.'},
+ whichaway:{title:"Whichaway Camp: What’s It Like to Sleep in Antarctica?",latitude:-70.8,longitude:11.38333,coordinateSource:'https://white-desert.com/itineraries/the-long-stay',mapNote:'Operator-published regional locator; expedition arrangements come from White Desert.'},
+ 'deep-sleep':{title:"Deep Sleep: Would You Spend a Night Inside a Mountain?",latitude:52.99,longitude:-3.96,coordinateSource:'https://en.wikipedia.org/wiki/Deep_Sleep_(hotel)',mapNote:'Approximate regional locator, not an underground entrance or meeting point.'},
+ 'palacio-de-sal':{title:"Palacio de Sal: Can You Stay in a Hotel Built From Salt?",latitude:-20.30498,longitude:-66.974107,coordinateSource:'https://palaciodesal.com.bo/en/contact/'},
+};
+export type Place = (typeof foundationPlaces)[number] & {imageKind: string; imageNote: string;longStory?:LongStory;discovery?:DiscoveryDetails};
 const names:Record<string,string>={ghost:'Ghost towns & forgotten cities',mystery:'Mystery & haunted places',stays:'Extraordinary stays'};
 const provenance = imageProvenance as Record<string,{imageKind:string;imageNote:string;credit:string;license:string;licenseUrl:string;photoUrl:string;photoDate:string}>;
 const foundation=foundationPlaces.map(p=>({...p,imageKind:'photo',imageNote:'Photograph resized, compressed, and cropped for display.'}));
@@ -230,9 +257,10 @@ const all:Place[]=[...foundation,...additions].map(p=>{
  const longStory=longStories[p.slug];
  const sources=[...p.sources];
  for(const id of longStory?.chapters.flatMap(c=>c.references)??[]){const source=storySources[id];if(!source)throw new Error('Missing story source: '+id);if(!sources.some(s=>s.url===source.url))sources.push(source);}
- return {...p,sources,longStory:longStory?{...longStory,chapters:longStory.chapters.map(c=>({...c,references:c.references.map(id=>storySources[id].url)}))}:undefined};
+ return {...p,sources,discovery:discoveryDetails[p.slug],longStory:longStory?{...longStory,chapters:longStory.chapters.map(c=>({...c,references:c.references.map(id=>storySources[id].url)}))}:undefined};
 });
 const order=['hashima','dhanushkodi','kayakoy','kuldhara','kolmanskop','island-of-the-dolls','bhangarh','paris-catacombs','port-arthur','stanley-hotel','skylodge','mirrorcube','whichaway','deep-sleep','palacio-de-sal'];
+export const allPlaces:Place[]=all;
 export const places:Place[]=order.map(slug=>{const place=all.find(p=>p.slug===slug);if(!place)throw new Error('Missing collection place: '+slug);return place;});
 // Preserve the original Bodie story URL without including it in the selected collection.
 export const findPlace=(slug:string)=>all.find(p=>p.slug===slug);

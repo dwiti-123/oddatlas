@@ -142,3 +142,21 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Preserved the magazine typography, thin rules and restrained colours. No booking or Instagram features added. No publication performed.
 - Validation: production build, lint and TypeScript passed. Browser verification confirmed the three descriptive titles, Bhangarh and guide canonicals, three visible practical answers per selected story, five guide ItemList entries and working homepage-to-guide navigation. Guide and homepage had no mobile horizontal overflow at 390px; desktop guide layout checked. No browser console errors recorded.
 - Browser checks caught stale production CSS; clearing only the generated .next/cache and rebuilding restored the new styles. Evidence: research/seo-guide-desktop.png and research/seo-guide-mobile.png.
+# 14 October 2026 — Discovery tools and crawlable directories
+
+- Observation: the deployed architecture already had server-rendered location routes; the new request's map-only diagnosis did not match the code. Zero impressions alone cannot identify a rendering failure.
+- Decision: extend the native Next.js App Router with generated static place/category pages and daily ISR. Reuse built-in metadata and sitemap support rather than introduce a package.
+- Scope: preserve the selected 15-place collection and existing editorial design. Preserve Bodie's older route and include it in route generation. Add only three populated category directories; no fabricated border-anomaly entries or empty landing pages.
+- Interaction: one random-place button with an HTML list fallback, and a five-question country quiz using real records, explanations, links, score and restart. No account or new storage.
+- Content: question titles and headings, original image alt descriptions, sourced 300-word minimum location prose, and explicit separation of historical claims and folklore. Question headings and dwell time are not guarantees of rankings or rich-result placement.
+- Maps: lazy OpenStreetMap embeds with attribution, visible coordinates and source links. Approximate property/regional points are labelled; no routing or unrestricted-access implications.
+- Images: add descriptive compressed WebP aliases, keeping old image URLs working. Labels, credits and licence conditions stay visible.
+- Git: `codex/discovery-seo`; unfinished named-list changes preserved in a named Git stash, not folded into this work.
+- Validation: production build, TypeScript and lint passed. Production HTTP checks verified all 24 sitemap routes, 16 initial HTML articles/maps/images/canonicals and unknown-route 404s. Location prose counts range from 302 to 355 words, excluding navigation and credits. Browser checks covered the five-question quiz (four correct, one incorrect, 4/5 score and restart), random navigation, category links and an interactive OpenStreetMap zoom control. At 390px the quiz, random tool, location map and category page had no horizontal overflow. Fixed an existing global mobile navigation rule that hid the final category; verified all three category links visible. Screenshots: `docs/research/discovery-random-desktop.png`, `discovery-random-mobile.png`, `discovery-category-desktop.png`, `discovery-category-mobile.png`. Browser console reported no errors or warnings. Changes remain local, not merged or deployed.
+# 14 October 2026 — More inviting place search titles
+
+- User selected Google search titles for every place page. Updated all 15 collection entries and the preserved Bodie URL on `codex/discovery-seo`.
+- Formula: recognisable place name plus a question the existing story answers. Keep haunted reputations as questions and legends; avoid asserting supernatural events or an unexplained disappearance as fact.
+- Kept visible H1 headings, stories, descriptions, routes and design unchanged. Existing metadata also uses these titles for social previews and Article headlines.
+- Titles range from 56 to 69 characters including ` | Odd Atlas`; this is an editorial length check, not a guarantee of Google’s display width or wording.
+- Validation: production build and its TypeScript check passed. Inspected all 16 generated HTML files; each contains the exact updated title and its unchanged visible H1. No deployment or main-branch changes.

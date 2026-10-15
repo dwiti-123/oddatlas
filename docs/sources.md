@@ -83,3 +83,15 @@ Uses existing project components and previously sourced place text. No new exter
 - Rechecked https://www.tourism.rajasthan.gov.in/bhangarh-fort.html for folklore and the restriction before sunrise/after sunset.
 - Haunted/mysterious guide summaries reuse the sourced place records; original photo credits and licence links remain on each full entry.
 - Bundled Next.js generateMetadata and sitemap guides consulted for canonical metadata and sitemap generation.
+# Discovery SEO implementation — 14 October 2026
+
+- Next.js installed documentation: `generate-static-params.md`, `generate-metadata.md`, and metadata `sitemap.md` under `node_modules/next/dist/docs/01-app/03-api-reference`. Used for static routes, async params, metadata and the single root sitemap.
+- Google Search Central: https://developers.google.com/search/docs/appearance/ai-features — standard SEO fundamentals apply; no special AI schema or citation guarantee.
+- OpenStreetMap attribution: https://wiki.openstreetmap.org/wiki/Attribution and https://www.openstreetmap.org/copyright. Interactive maps use the official export iframe with attribution.
+- Bodie source expansion and directions point: https://www.parks.ca.gov/?page_id=509 and https://www.parks.ca.gov/?page_id=31549. Original editorial prose; no invented first-hand visit.
+- Locator research: each `discoveryDetails` entry in `lib/places.ts` records its coordinate source. Sources include Wikidata (Hashima/Bhangarh/Paris), GeoNames (Dhanushkodi/Kolmanskop), Urban Academy research (Kayaköy), Wikipedia locator data (Kuldhara/Dolls/Stanley/Deep Sleep), UNESCO nomination (Port Arthur), OpenStreetMap Treehotel node, Palacio de Sal's operator contact page, White Desert's current itinerary and a property listing for Skylodge.
+- Approximate locators: Mirrorcube uses the Treehotel property point, Deep Sleep a non-precise regional point, Whichaway the current operator-published locator, and Skylodge an approximate listing locator. These are labelled and do not replace operator meeting-point instructions. No story/history claims were taken from coordinate-only sources.
+- Existing verified image manifest and place source records remain the authority for photographs, licences and factual stories. New image filenames are byte-identical aliases, not new imagery.
+# Place search title refinement — 14 October 2026
+
+Titles use only the existing sourced stories in `lib/places.ts`; no new factual claims or external sources added. Native Next.js `generate-metadata.md` was consulted to confirm that absolute titles avoid duplicating the root title suffix. Source links for history, folklore and operator information remain on each entry.
