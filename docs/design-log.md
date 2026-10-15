@@ -211,3 +211,10 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - No registry installer or new package needed. Separate branch codex/sharp-pop-buttons.
 
 - Validation: production webpack build passed; desktop and 390px browser checks confirmed square faces, transformed hard-edged lower layers, working edit/cancel controls and no horizontal overflow. Screenshots: sharp-pop-desktop.png and sharp-pop-mobile.png.
+
+## 2026-10-15 — Edit the list heading in place
+- User clarified that only the displayed list title should become editable, without a separate input panel.
+- Edit list now replaces the heading with a borderless, prefilled title field in the same position and typography. Save/Enter persists it; Cancel/Escape restores the heading without mutation and returns focus to Edit list.
+- Kept the sharp tilted button style, local storage and shared snapshots unchanged. Separate branch codex/inline-list-title.
+
+- Validation: production webpack build and lint passed. Browser confirmed editing replaces the title in place, current name/focus, Escape cancellation/focus return, Enter save, reload persistence, original name restored, and 1280px/390px layouts without horizontal overflow. Screenshots: inline-list-desktop.png and inline-list-mobile.png.

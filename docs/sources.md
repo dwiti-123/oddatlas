@@ -125,3 +125,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - https://raw.githubusercontent.com/Ashutoshx7/VengeanceUI/main/public/r/pop-button.json — layered raised-button motion reference supplied by the user. Independently adapted using local CSS with square corners and a tilted lower layer; no dependency installed.
 
 - Only the visual layering concept was used; the final CSS uses the Odd Atlas colours, independent pseudo-element construction and reduced-motion rules.
+
+## 2026-10-15 — Inline list title
+- User feedback and installed Next.js forms guide. Implemented as a labelled native input styled like the existing heading; no new dependency or external visual source.
+
+- Title editing preserves native form submission and keyboard behaviour rather than using editable HTML.

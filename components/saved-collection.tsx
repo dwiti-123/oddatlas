@@ -17,7 +17,7 @@ function ListEditor({list,onDelete}:{list:DeviceList;onDelete:()=>void}) {
  const [confirmDelete,setConfirmDelete]=useState(false);
  const [editing,setEditing]=useState(false);
  const editButton=useRef<HTMLButtonElement>(null);
- function closeEditor() { setEditing(false); editButton.current?.focus(); }
+ function closeEditor() { setEditing(false); requestAnimationFrame(()=>editButton.current?.focus()); }
  function rename(event:FormEvent<HTMLFormElement>) {
   event.preventDefault(); const form=event.currentTarget;
   const name=String(new FormData(form).get('name')||'').trim(); if(!name)return;
@@ -31,9 +31,8 @@ function ListEditor({list,onDelete}:{list:DeviceList;onDelete:()=>void}) {
   try {await navigator.clipboard.writeText(url);setNotice('Link copied. Anyone with it can view this snapshot.');}
   catch {setNotice('Copy the link below to share this snapshot.');}
  }
- return <><div className="list-heading"><h2>{list.name}</h2><div className="list-heading-actions"><button ref={editButton} type="button" className="list-action" aria-expanded={editing} aria-controls="list-name-editor" onClick={()=>{setEditing(!editing);setConfirmDelete(false);setNotice('');}}>Edit list</button><button type="button" className="list-action list-action-secondary" onClick={()=>{setConfirmDelete(!confirmDelete);setEditing(false);}}>Delete list</button></div></div>
+ return <><div className="list-heading">{editing?<form id="list-name-editor" className="inline-list-title" onSubmit={rename} onKeyDown={event=>{if(event.key==='Escape'){event.preventDefault();closeEditor();}}}><label className="sr-only" htmlFor="rename-list">List name</label><input autoFocus id="rename-list" name="name" defaultValue={list.name} maxLength={listNameLimit} required/><div className="list-heading-actions"><button className="list-action" type="submit">Save changes</button><button className="list-action list-action-secondary" type="button" onClick={closeEditor}>Cancel</button></div></form>:<h2>{list.name}</h2>}<div className="list-heading-actions"><button ref={editButton} type="button" className="list-action" aria-expanded={editing} aria-controls={editing?'list-name-editor':undefined} hidden={editing} onClick={()=>{setEditing(true);setConfirmDelete(false);setNotice('');}}>Edit list</button><button type="button" className="list-action list-action-secondary" onClick={()=>{setConfirmDelete(!confirmDelete);setEditing(false);}}>Delete list</button></div></div>
  {confirmDelete&&<div className="list-delete-confirm"><p>Delete “{list.name}” from this device? Other lists and previously shared links will stay available.</p><button className="list-action" type="button" onClick={onDelete}>Yes, delete this list</button> <button className="list-action" type="button" onClick={()=>setConfirmDelete(false)}>Keep list</button></div>}
- {editing&&<form id="list-name-editor" className="list-name-editor" onSubmit={rename} onKeyDown={event=>{if(event.key==='Escape'){event.preventDefault();closeEditor();}}}><label htmlFor="rename-list">List name</label><div className="list-name-row"><input autoFocus id="rename-list" name="name" defaultValue={list.name} maxLength={listNameLimit} required/><button className="list-action" type="submit">Save changes</button><button className="list-action list-action-secondary" type="button" onClick={closeEditor}>Cancel</button></div></form>}
  <div className="list-tools list-share-tools"><button className="list-action share-list" type="button" disabled={!list.slugs.length} onClick={share}>Share list</button><p className="list-share-note">A shared link is a fixed snapshot. Later changes won’t change that link.</p></div>
  {notice&&<p className="save-notice" role="status">{notice}</p>}{shareLink&&<div className="manual-share"><label htmlFor="share-link">Shareable link</label><input id="share-link" value={shareLink} readOnly onFocus={e=>e.currentTarget.select()}/></div>}
  <ListContents name={list.name} slugs={list.slugs} listId={list.id}/></>;
