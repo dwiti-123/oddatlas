@@ -71,3 +71,6 @@
 .list-action:hover:not(:disabled)::before{transform:translate(2px,3px) skewY(-1deg)}
 .list-action:active:not(:disabled){transform:translate(3px,4px)}
 .list-action:active:not(:disabled)::before{transform:none}
+
+/* Keep collection and saved-list cards aligned without clipping place names. */
+.place-card{display:flex;flex-direction:column;height:100%}.place-card>a{display:flex;flex-direction:column;flex:1;min-width:0}.place-card h3{min-height:2.3em;overflow-wrap:anywhere}.place-card .card-meta{min-height:3.2em}.place-card>a>p{margin:0 0 16px;font-size:14px;line-height:1.6;color:#596368;flex:1;min-height:6.4em}.place-card .card-category{margin-top:auto}.place-card .card-photo{flex-shrink:0}.place-card .card-category+*{flex-shrink:0}
