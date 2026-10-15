@@ -23,12 +23,12 @@ function Viewport({selected,viewToken,places}:{selected:MapPlace|undefined;viewT
  return null;
 }
 
-function PlaceMarker({place,selected,onSelect}:{place:MapPlace;selected:boolean;onSelect:(slug:string)=>void}){
+function PlaceMarker({place,selected,onSelect,viewToken}:{place:MapPlace;selected:boolean;onSelect:(slug:string)=>void;viewToken:number}){
  const marker=useRef<LeafletCircleMarker>(null);
- useEffect(()=>{if(selected)marker.current?.openPopup();},[selected]);
+ useEffect(()=>{if(selected)marker.current?.openPopup();},[selected,viewToken]);
  const color=place.stay?'#243c31':'#a43d29';
  return <CircleMarker ref={marker} center={[place.latitude,place.longitude]} radius={selected?11:8} pathOptions={{color:'#fff',weight:2,fillColor:color,fillOpacity:1}} eventHandlers={{click:()=>onSelect(place.slug)}}>
-  <Popup minWidth={210} maxWidth={270} autoPan={false}>
+  <Popup minWidth={210} maxWidth={270} autoPan keepInView autoPanPadding={[18,18]}>
    <div className="atlas-popup"><img src={place.image} alt={place.alt} width="250" height="150" loading="lazy"/>{place.imageKind==='illustration'&&<span className="atlas-image-kind">Concept illustration</span>}<p className="eyebrow">{place.country}</p><h2>{place.name}</h2><VisitStayTag stay={place.stay} className="inline-access"/><p>{place.hook}</p><Link href={`/places/${place.slug}`} className="text-link">Read the story ↗</Link></div>
   </Popup>
  </CircleMarker>;
@@ -40,6 +40,6 @@ export default function AtlasMapCanvas({places,selectedSlug,onSelect,viewToken}:
  return <><MapContainer center={[18,15]} zoom={1} minZoom={0} maxZoom={18} scrollWheelZoom={false} className="atlas-leaflet" aria-label="World map of the Odd Atlas collection">
   <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" attribution={'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'} eventHandlers={{tileerror:()=>setTileError(true)}}/>
   <Viewport selected={selected} viewToken={viewToken} places={places}/>
-  {places.map(p=><PlaceMarker key={p.slug} place={p} selected={p.slug===selectedSlug} onSelect={onSelect}/>)}
+  {places.map(p=><PlaceMarker key={p.slug} place={p} selected={p.slug===selectedSlug} onSelect={onSelect} viewToken={viewToken}/>)}
  </MapContainer>{tileError&&<p className="atlas-tile-notice" role="status">Some map tiles could not load. The place list and story links still work.</p>}</>;
 }
