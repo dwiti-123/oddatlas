@@ -103,3 +103,10 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - OpenStreetMap tile policy: https://operations.osmfoundation.org/policies/tiles/ — official HTTPS tile URL, visible attribution, normal browser caching/referrer, no bulk fetch or offline prefetch.
 - Installed Next.js lazy-loading guide: browser-only dynamic import lives inside a Client Component; the directory list and context stay server-rendered.
 - Location coordinates, folklore/history distinctions and image licences use the existing place records and their individual source links; no new location claims added.
+
+## 2026-10-15 — Lists and translation research
+- Installed Next.js page API documentation: asynchronous searchParams for shared-list URLs.
+- https://next-intl.dev/docs/routing/configuration — locale detection, preference cookies; translations supplied as messages.
+- https://developers.weglot.com/javascript/javascript — hosted automatic translation integration, an alternative to curated messages.
+
+- https://www.weglot.com/pricing and https://www.weglot.com/technical-presentation — hosted automatic translation plans and client-side versus server-side integration choices; research only.
