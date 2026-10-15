@@ -157,3 +157,17 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - Installed Next.js use-client and page documentation; existing Radix/shadcn alert-dialog component. Native HTML drag/drop, keyboard placement and localStorage; no new package or external service added.
 
 - Final production preview verified local assets and noindex metadata; detailed prompt briefs and asset sizes remain in docs/adventure-wall-prototype.md.
+
+## Adventure Wall refinement — 2026-10-15
+The approved generated wall concept informed the explorer silhouette and stationery interactions. Ink seals and the updated walker are original inline SVG/CSS in components/adventure-wall.tsx and app/adventure-wall/wall.css. No additional external images, packages or sources were used.
+
+Wall focus adjustment (2026-10-15): original CSS only; no new assets, packages or external references.
+
+## Direct wall interaction — 2026-10-15
+Original React, pointer-event and SVG implementation; no new external assets or dependencies. The panorama remains the previously documented generated illustration. Hashima's example now mirrors an actual typed note, without an attached sticker.
+
+## Shared wall and reusable footer — 2026-10-15
+- Hashima visiting blog: https://www.discover-nagasaki.com/en/featured-topics/gunkanjima-landing-tour (operator directory, departure locations, visitor preparations); https://www.gunkan-jima.net/en/ (operator itinerary, landing conditions and refund terms); https://www.japan.travel/en/spot/752/ (guided visitor access). Read live on 15 October 2026. Existing verified Hashima photograph reused with its attribution and licence. No keyword-volume claims.
+- Interactive footer follow-up: installed Next.js documentation at node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md for the serializable client boundary. Reused existing wall assets and controls; no new external design source or package.
+- Supabase official documentation: https://supabase.com/docs/guides/auth/auth-anonymous, https://supabase.com/docs/guides/getting-started/api-keys, https://supabase.com/docs/guides/database/postgres/row-level-security, https://supabase.com/docs/guides/database/functions. Used for anonymous identity, publishable keys, RLS and constrained database functions.
+- Runtime: @supabase/supabase-js. Local test-only PostgreSQL engine: @electric-sql/pglite. No additional imagery or design template. Shared footer reuses the existing documented generated panorama.

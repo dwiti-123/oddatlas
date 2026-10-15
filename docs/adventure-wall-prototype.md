@@ -29,3 +29,11 @@ Asset sizes after compression: map ~215KB, sticker sprite ~409KB, landscape ~306
 - `node scripts/test-adventure-wall.mjs`: storage parsing, malformed data, text bounds, coordinate bounds, ID/vote deduplication, capacity and serialization round trip.
 - Production build and lint; desktop/mobile UI flows and no horizontal page overflow.
 - Screenshots and final browser findings are recorded in docs/design-log.md.
+
+### Refinement: ink seals and focused drawers
+The tray reveals one type at a time; three examples leave room for contributions. Stamp records use their existing kind/art fields and now render as native circular SVG ink seals. Notes and stickers retain the peel effect; tickets slide and seals press. The larger mustard/brick explorer turns inside the frame and pauses while composing or placing a trace. No new runtime package or bitmap asset was required. See the design log for validation.
+
+### Current flow: direct paper and freehand ink
+Supersedes the writing popup and walking explorer described above. Pick/tap or drag a piece onto the map. Notes are edited on the paper with Type/Handwrite modes, Undo, Clear, Post and Cancel. Tickets expose an optional destination choice on the ticket; seals/stickers post without a form. The landscape is static. Wishes remain device-only.
+
+Handwriting uses optional noteMode and ink fields on the existing v1 trace record: up to 32 strokes, each bounded to 160 numeric points in normalized 0–100 coordinates. Existing records remain readable. No raw SVG or data URLs are persisted. Browser storage failures retain the existing session-only fallback. Handwriting has a typed keyboard alternative.
