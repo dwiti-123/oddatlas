@@ -36,22 +36,26 @@
 /* Multiple personal lists use the same quiet editorial controls as the collection. */
 .new-list-form{max-width:620px;margin:30px 0}.new-list-form>label,.list-picker form>label{display:block;font-size:13px;margin-bottom:8px}.new-list-form input,.list-picker form input{min-width:0;width:100%;border:1px solid var(--input);background:transparent;padding:10px 12px;min-height:44px}.personal-lists{display:flex;flex-wrap:wrap;gap:12px;border-block:1px solid var(--border);padding:22px 0;margin:30px 0}.personal-lists button{border:1px solid var(--border);background:transparent;text-align:left;padding:14px 18px;max-width:100%;min-width:160px;cursor:pointer}.personal-lists button[aria-pressed=true]{border-color:var(--primary);background:#f0e7df}.personal-lists button span{display:block;overflow-wrap:anywhere}.personal-lists small,.list-picker-options small{display:block;color:#596368;margin-top:5px;font-size:12px}.list-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-top:32px}.list-heading h2{font-family:Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.2;overflow-wrap:anywhere;margin:0}.list-delete{font-size:13px;background:none;border:0;white-space:nowrap;cursor:pointer}.list-delete-confirm{padding:18px;border:1px solid var(--border);margin-top:20px}.device-list-note{font-size:13px;color:#596368;max-width:700px;margin:44px 0 0}.list-picker{border-radius:2px!important;max-height:85dvh;overflow:auto;background:#faf9f5!important}.list-picker h2{font-family:Georgia,serif;font-size:30px;line-height:1.2;padding-right:20px}.list-picker-options{display:grid;gap:8px;max-height:32dvh;overflow:auto}.list-picker-options label{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);cursor:pointer;overflow-wrap:anywhere}.list-picker-options input{width:18px;height:18px;flex-shrink:0;accent-color:#a43d29}.list-picker-options span{min-width:0}.list-picker .save-notice{margin:0}.list-picker button:focus-visible,.personal-lists button:focus-visible,.list-action:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
 @media(max-width:700px){.list-heading{align-items:start}.personal-lists button{min-width:0;flex:1 1 140px}.list-picker .list-name-row{flex-wrap:wrap}.list-picker .list-name-row input{flex:1 1 150px}.device-list-note{margin-top:30px}}
-/* Square pop buttons: a level face over a tilted, hard-edged ink layer. */
-.list-action{--button-face:#a43d29;--button-hover:#903421;--button-ink:#623326;position:relative;isolation:isolate;border:1px solid transparent;border-radius:0;background:transparent;color:#fffaf3;box-shadow:none;transform:translate(0,0);transition:transform 140ms ease}
-.list-action::before,.list-action::after{content:"";position:absolute;inset:-1px;pointer-events:none;border-radius:0;transition:transform 140ms ease,background-color 140ms ease}
-.list-action::before{z-index:-2;background:var(--button-ink);transform:translate(6px,7px) skewY(-3deg);transform-origin:left center}
+/* Quiet tactile actions keep attention on the editorial content. */
+.list-action{--button-face:#a43d29;--button-hover:#903421;--button-ink:#623326;position:relative;isolation:isolate;border:1px solid transparent;border-radius:0;background:transparent;color:#fffaf3;box-shadow:none;transform:none;transition:transform 120ms ease}
+.list-action::before,.list-action::after{content:"";position:absolute;inset:-1px;pointer-events:none;transition:transform 120ms ease,background-color 120ms ease}
+.list-action::before{z-index:-2;background:var(--button-ink);transform:translate(2px,2px)}
 .list-action::after{z-index:-1;background:var(--button-face);border:1px solid var(--button-ink)}
-.list-action:hover:not(:disabled){background:transparent;color:#fffaf3;border-color:transparent;box-shadow:none;transform:translate(2px,2px)}
-.list-action:hover:not(:disabled)::before{transform:translate(4px,5px) skewY(-2deg)}
+.list-action:hover:not(:disabled){background:transparent;color:#fffaf3;border-color:transparent;transform:translate(1px,1px)}
+.list-action:hover:not(:disabled)::before{transform:translate(1px,1px)}
 .list-action:hover:not(:disabled)::after{background:var(--button-hover)}
-.list-action:active:not(:disabled){transform:translate(6px,7px);box-shadow:none}
-.list-action:active:not(:disabled)::before{transform:translate(0,0) skewY(0)}
-.list-action-secondary{--button-face:#f4eee4;--button-hover:#e8e2d7;--button-ink:#526052;color:#243c31}
-.list-action-secondary:hover:not(:disabled){color:#243c31}
+.list-action:active:not(:disabled){transform:translate(2px,2px)}
+.list-action:active:not(:disabled)::before{transform:none}
+.list-action-secondary{--button-face:#faf9f5;--button-hover:#eee9e1;--button-ink:#a3a69e;color:#243c31}
+.list-action-secondary::before{display:none}.list-action-secondary:hover:not(:disabled){color:#243c31;transform:none}.list-action-secondary:active:not(:disabled){transform:translateY(1px)}
 .list-action:disabled{transform:none;box-shadow:none}.list-action:disabled::before{display:none}
-.list-heading-actions{display:flex;flex-wrap:wrap;gap:14px;padding:0 4px 4px 0;flex-shrink:0}.list-name-editor{margin:24px 0;padding:24px;border:1px solid var(--border);background:#f4f0e8;max-width:850px}.list-name-editor>label{display:block;font-size:13px;margin-bottom:10px}.list-name-editor .list-name-row{align-items:start;padding:0 4px 4px 0}.list-name-editor input{flex:1;min-width:120px}.list-share-tools{grid-template-columns:auto;margin-top:24px}.list-share-tools .share-list{justify-self:start}.new-list-form .list-name-row,.list-picker .list-name-row{padding:0 4px 4px 0}
-@media(max-width:700px){.list-heading{flex-direction:column;gap:18px}.list-name-editor{padding:18px}.list-name-editor .list-name-row{flex-wrap:wrap}.list-name-editor input{flex-basis:100%}}
+.list-heading{align-items:start;gap:24px}.list-heading h2{min-width:0;flex:1;margin:0}
+.list-heading-actions{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;flex-shrink:0;padding:2px 3px 3px 0}
+.list-heading-actions .list-action{padding:9px 16px;min-height:44px;font-size:14px}
+.list-quiet-delete{min-height:44px;padding:9px 12px;border:0;background:transparent;color:#67635c;font-size:14px;cursor:pointer;white-space:nowrap}.list-quiet-delete:hover{color:#8c3326;text-decoration:underline;text-underline-offset:4px}.list-quiet-delete:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.list-snapshot-note{margin:14px 0 22px}.list-delete-confirm{margin-bottom:18px}.list-field-error{font-family:Arial,sans-serif;font-size:13px;color:#a43d29;line-height:1.5;margin:8px 0 0}
+.inline-list-title{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:24px;width:100%;min-width:0}.inline-title-field{min-width:0}
+.inline-title-field textarea{display:block;width:100%;min-width:0;min-height:40px;overflow:hidden;resize:none;background:transparent;border:0;border-bottom:1px dashed var(--primary);border-radius:0;padding:0 0 4px;font-family:Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.2;color:var(--foreground);outline:none;overflow-wrap:anywhere}.inline-title-field textarea:focus{border-bottom-style:solid}.inline-title-field textarea[aria-invalid=true]{border-bottom-width:2px}
+.new-list-form .list-name-row,.list-picker .list-name-row{padding:0 3px 3px 0}
+@media(max-width:700px){.list-heading{flex-direction:column;gap:12px}.list-heading-actions{gap:10px}.list-heading-actions .list-action{padding-inline:16px}.inline-list-title{grid-template-columns:minmax(0,1fr);gap:12px}.list-snapshot-note{margin-top:12px}.list-quiet-delete{padding-inline:12px}}
 @media(prefers-reduced-motion:reduce){.list-action,.list-action::before,.list-action::after{transition:none}}
-/* Edit the title in place, using the same editorial typography. */
-.inline-list-title{display:flex;align-items:baseline;gap:22px;flex:1;min-width:0}.inline-list-title>input{min-width:0;width:100%;flex:1;background:transparent;border:0;border-bottom:1px dashed var(--primary);border-radius:0;padding:0 0 4px;font-family:Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.2;color:var(--foreground);outline:none}.inline-list-title>input:focus{border-bottom:2px solid var(--primary)}
-@media(max-width:700px){.inline-list-title{width:100%;flex-wrap:wrap;gap:18px}.inline-list-title>input{flex-basis:100%}}

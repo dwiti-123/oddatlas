@@ -218,3 +218,10 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Kept the sharp tilted button style, local storage and shared snapshots unchanged. Separate branch codex/inline-list-title.
 
 - Validation: production webpack build and lint passed. Browser confirmed editing replaces the title in place, current name/focus, Escape cancellation/focus return, Enter save, reload persistence, original name restored, and 1280px/390px layouts without horizontal overflow. Screenshots: inline-list-desktop.png and inline-list-mobile.png.
+
+## 2026-10-15 — Refine list action hierarchy and responsive editing
+- User approved one mobile action row and a quieter editorial treatment. Desktop actions sit beside the title; mobile uses one compact Share/Edit/Delete row with 44px targets. Share retains a 2px tactile shadow; Edit is outlined cream and Delete is understated text.
+- While editing, normal actions are absent and only Save/Cancel remain. This prevents stale-name sharing and accidental draft loss through Delete. A wrapping title textarea grows with content and width changes; Enter saves, Shift+Enter inserts a line, Escape cancels.
+- Added visible whitespace-name errors and corrected singular place counts in list tabs and the place picker. Removed superseded heavy-button/editor CSS. No dependencies or storage schema changes. Branch codex/refined-list-actions.
+
+- Validation: production webpack build and lint passed. Browser measured Share/Edit/Delete on the same row at 320px, each 44px high, with no horizontal overflow; checked 390px, 820px and 1280px layouts. Confirmed blank-name alerts, wrapping/resizing titles, keyboard Cancel, Enter save/reload, original name restored, Share/Delete absent while editing, copied current-name links and delete cancellation. Browser console clean. Screenshots: refined-list-desktop.png and refined-list-mobile.png.

@@ -130,3 +130,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - User feedback and installed Next.js forms guide. Implemented as a labelled native input styled like the existing heading; no new dependency or external visual source.
 
 - Title editing preserves native form submission and keyboard behaviour rather than using editable HTML.
+
+## 2026-10-15 — Responsive list UX refinement
+- User-approved senior UI review findings and existing editorial styles; installed Next.js forms documentation consulted. Native textarea, ResizeObserver and CSS handle the refinement; no external asset or package added.
+
+- Final browser evidence includes action geometry, keyboard flows and content-height checks for long list names.
