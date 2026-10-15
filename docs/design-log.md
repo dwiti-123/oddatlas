@@ -160,3 +160,7 @@ Research and direction selected. First homepage implemented; visual QA pending.
 - Kept visible H1 headings, stories, descriptions, routes and design unchanged. Existing metadata also uses these titles for social previews and Article headlines.
 - Titles range from 56 to 69 characters including ` | Odd Atlas`; this is an editorial length check, not a guarantee of Google’s display width or wording.
 - Validation: production build and its TypeScript check passed. Inspected all 16 generated HTML files; each contains the exact updated title and its unchanged visible H1. No deployment or main-branch changes.
+
+## 15 October 2026 — Matching place titles
+
+Feature branch: `codex/place-title-consistency`, based on the preserved discovery draft. Place H1 headings now use the same title helper as metadata, social previews and Article headlines. Only the search title adds the brand suffix; map markers and cards retain short place names. Long headings use a restrained responsive type scale. Validation is performed with the integrated feature build.
