@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   {url:`${base}/`,lastModified:new Date('2026-10-13')},
   {url:`${base}/sources`,lastModified:new Date('2026-10-08')},
   {url:`${base}/guides/haunted-places`,lastModified:new Date('2026-10-13')},
+  {url:`${base}/blog/how-to-visit-hashima-island`,lastModified:new Date('2026-10-15')},
   {url:`${base}/explore/map-view`,lastModified:new Date('2026-10-15')},
   ...allPlaceRoutes().map(p=>({url:`${base}/places/${p.slug}`,lastModified:new Date('2026-10-14'),images:[`${base}${placeImage(p)}`]})),
   ...directoryCategories.map(c=>({url:`${base}/category/${c.slug}`,lastModified:new Date('2026-10-14')})),
