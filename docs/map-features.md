@@ -32,3 +32,5 @@ The unfinished named saved-list draft remains in its pre-existing named Git stas
 Production build, lint and TypeScript are required. Inspect rendered HTML for matching H1/title text, all initial location links and the map sitemap entry. Browser verification covers desktop, 390px mobile, search, both access labels, category filters, no results/reset, list-to-marker selection, popup links, attribution and the mobile toggle. Final evidence is recorded in the design log.
 
 Before publishing, review the earlier discovery draft as well as the individual feature commits. The cumulative branch contains those previous local changes. Existing dependency security findings are a separate outstanding task; these map additions do not constitute a full security update.
+
+Final validation passed: production build/TypeScript, lint, 25 sitemap HTTP routes, 16 matching place titles/headings, 15 server-rendered map cards, desktop/mobile/tablet layout and map/list interaction checks. Two edge cases found during testing (clipped popups and animation on a hidden canvas) were corrected on the map feature branch before finalisation.
