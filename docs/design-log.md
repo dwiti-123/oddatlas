@@ -188,3 +188,12 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Translation researched separately; no translation library installed.
 
 - Validation: lint passed; production webpack build passed after Turbopack worker startup failures. Browser checks passed for renaming/reload, fixed shared snapshots, invalid/duplicate slug filtering, personal-list isolation, native share completion, and a 390px layout with no horizontal overflow. Encoding/bounds checks passed; console had no errors. Screenshots: docs/research/named-list-mobile.png and shared-list-desktop.png.
+
+## 2026-10-15 — Multiple lists on this device
+- User approved separate named lists, device-only persistence, an immediate list picker, and clearing create/rename fields after submission.
+- One versioned localStorage record now keeps each unique list ID, name and place membership together. Existing saved places and name migrate into the first list; old keys are retained as a fallback, never reimported after an intentional empty collection.
+- Reused the existing Radix/shadcn dialog for accessible list selection. A place can belong to multiple lists, changes save immediately, and list-specific removal leaves other lists intact. Duplicate names are supported.
+- Sharing remains an encoded fixed snapshot, with an explicit copyable link. Deletion asks for confirmation inside the page. No accounts, new packages, or translation changes.
+- Added storage regression coverage for migration, duplicate names, rename/reload, independent membership, deletion, and unavailable storage.
+
+- Final validation: production build (Next.js webpack) and lint passed. Storage regression checks passed. Browser verified migration of the existing My weekend collection, field clearing, create-from-place, multi-list membership, rename/reload, remembered selection, copied sharing, snapshot stability, list-specific removal, delete/cancel, and 390px layouts without overflow. Test-created lists were removed; the original collection was preserved. Screenshots: multiple-lists-desktop.png, multiple-lists-mobile.png, multiple-lists-picker-mobile.png.

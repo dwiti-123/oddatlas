@@ -3,7 +3,7 @@ import { Header,Footer } from '@/components/site-shell';
 import { SavedCollection } from '@/components/saved-collection';
 import { places } from '@/lib/places';
 import { cleanListName } from '@/lib/shared-list';
-export const metadata:Metadata={title:'Your list',robots:{index:false,follow:true}};
+export const metadata:Metadata={title:'Your lists',robots:{index:false,follow:true}};
 export default async function SavedPage({searchParams}:{searchParams:Promise<Record<string,string|string[]|undefined>>}) {
  const query=await searchParams;
  const raw=typeof query.places==='string'?query.places:undefined;
