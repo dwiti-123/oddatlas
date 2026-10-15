@@ -48,3 +48,6 @@ next-env.d.ts
 # Local build archives and TypeScript cache
 *.tar.gz
 *.tsbuildinfo
+
+# Public configuration template (no credentials).
+!.env.example

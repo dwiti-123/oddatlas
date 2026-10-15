@@ -1,0 +1,39 @@
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import {Header,Footer} from '@/components/site-shell';
+import {findPlace} from '@/lib/places';
+import {placeImage,siteUrl} from '@/lib/discovery';
+import styles from './story.module.css';
+
+const title='How to Visit Hashima Island from Nagasaki';
+const description='Planning a Hashima Island tour from Nagasaki? Choose a Gunkanjima landing tour, find your departure point and prepare for weather changes.';
+const path='/blog/how-to-visit-hashima-island';
+const sources=[
+ {name:'Nagasaki Tourism — landing tours, departure points and visitor preparations',url:'https://www.discover-nagasaki.com/en/featured-topics/gunkanjima-landing-tour'},
+ {name:'Yamasa Shipping — itineraries, landing conditions and refunds',url:'https://www.gunkan-jima.net/en/'},
+ {name:'Japan National Tourism Organization — Hashima visitor guide',url:'https://www.japan.travel/en/spot/752/'},
+];
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:'article'},twitter:{card:'summary_large_image',title,description}};
+function Ref({number}:{number:number}){return <a className={styles.reference} href={`#reference-${number}`} aria-label={`Source ${number}: ${sources[number-1].name}`}>[{number}]</a>;}
+export default function HashimaVisitingBlog(){
+ const place=findPlace('hashima')!;
+ const image=placeImage(place);
+ const structured={'@context':'https://schema.org','@type':'BlogPosting',headline:title,description,mainEntityOfPage:`${siteUrl}${path}`,image:`${siteUrl}${image}`,author:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},publisher:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},citation:sources.map(source=>source.url),about:{'@type':'Place',name:'Hashima Island',alternateName:'Gunkanjima'}};
+ return <><Header/><main id="main" className={styles.page}>
+ <header className={`${styles.opening} wrap`}><div className="breadcrumb"><Link href="/">Home</Link> / <Link href="/places/hashima">Hashima</Link> / Visiting guide</div><p className="eyebrow">The field journal / Japan</p><h1>{title}</h1><p className={styles.dek}>The boat, the landing, and the small details worth knowing before you meet Japan’s battleship island.</p><p className={styles.byline}>By Odd Atlas · Sources checked <time dateTime="2026-10-15">15 October 2026</time> · 4 min read</p></header>
+ <figure className={`${styles.figure} wrap`}><img src={image} alt={place.alt} width={1440} height={960} fetchPriority="high"/><figcaption className="photo-caption">Photograph by <a href={place.photoUrl}>{place.credit}</a> · <a href={place.licenseUrl}>{place.license}</a> · Cropped for display</figcaption></figure>
+ <div className={styles.body}><article>
+ <p className={styles.lead}>From the sea, Hashima looks like a concrete battleship. That silhouette gives it its better-known nickname: Gunkanjima, or Battleship Island. Getting close takes a boat trip from Nagasaki—and a little flexibility.</p>
+ <div className={styles.answer}><p className="eyebrow">The short answer</p><p>To visit Hashima Island, reserve a tour with a Nagasaki boat operator. Choose a landing tour if you want to step ashore, but remember that landing depends on conditions on the day. The official Nagasaki visitor guide lists operators and their departure locations. <Ref number={1}/></p></div>
+ <nav className={styles.contents} aria-label="In this guide"><span className="eyebrow">Before you book</span><a href="#choose-tour">Choosing a tour</a><a href="#departure">Finding your boat</a><a href="#access">What you can explore</a><a href="#weather">If you cannot land</a><a href="#packing">What to bring</a></nav>
+ <section id="choose-tour"><h2>Which Hashima Island tour should you book?</h2><p>Start with one distinction: a sightseeing cruise and a landing tour are different experiences. A cruise lets you see the island from the water. A landing tour includes the opportunity to go ashore when conditions permit. Check the actual itinerary before paying; photographs of abandoned buildings do not tell you which areas your ticket includes.</p><p>Compare whether landing is included, check-in deadlines, language support, the total price and cancellation terms. Yamasa Shipping publishes its itinerary, prices and conditions directly. Other operators have their own arrangements, so use the company’s booking information for your chosen departure. <Ref number={2}/></p></section>
+ <section id="departure"><h2>Where do Gunkanjima tours leave from?</h2><p>Do not head to the waterfront assuming every boat leaves from the same pier. Operators use different reception and boarding locations. Your check-in point may also differ from where you board. Save both locations from your confirmation and plan your route to reception first.</p><p>Check-in time is earlier than departure time. Arriving just before the boat leaves may already be too late. <Ref number={1}/></p></section>
+ <section id="access"><h2>Can you explore the abandoned buildings?</h2><p>Expect a managed heritage visit rather than an opportunity to wander through empty apartments. Japan’s national tourism organisation describes access through guided tours and designated visitor areas. The ruins may be the reason you came, but a ticket does not give you unrestricted access to the island’s buildings. <Ref number={3}/></p><p>For the story behind those buildings, read our <Link href="/places/hashima">Hashima Island history and sources</Link> before travelling. The island’s past deserves attention alongside its striking skyline.</p></section>
+ <section id="weather"><h2>What happens if the boat cannot land?</h2><p>A confirmed booking does not guarantee that you will step ashore. Wind, waves, visibility and safety assessments can prevent landing. Yamasa states that the captain makes the final decision on the day. Conditions around the island can differ from those inside Nagasaki Harbour.</p><p>A trip may become a sightseeing cruise, or the sailing itself may be cancelled. These outcomes can have different refund arrangements. Read your operator’s terms rather than assuming an unsuccessful landing means a full refund. <Ref number={2}/></p><p className={styles.tip}>Our planning suggestion: if landing matters most to you, leave some flexibility in your Nagasaki itinerary. A second opportunity is useful, although it still cannot guarantee access.</p></section>
+ <section id="packing"><h2>What should you bring?</h2><p>Pack for an exposed boat trip and a walking visit:</p><ul><li>Comfortable, flat footwear</li><li>Drinking water</li><li>A raincoat if rain is forecast</li><li>A hat and sun protection</li></ul><p>The official visitor guide says umbrellas and parasols are prohibited and there are no toilets on the island. Prepare before boarding and follow your operator’s instructions. <Ref number={1}/></p></section>
+ <p className={styles.ending}>Hashima rewards a realistic expectation: you are visiting a fragile former community, with access shaped by the sea. Give the journey room to change, and let the island’s history matter as much as its skyline.</p>
+ <section className={styles.sources}><p className="eyebrow">Read the originals</p><h2>Sources & booking information</h2><ol className="sources-list">{sources.map((source,index)=><li id={`reference-${index+1}`} key={source.url}><a href={source.url}>{source.name}</a></li>)}</ol><p className="source-context">This is a researched planning guide, not a first-hand trip report. Sources checked 15 October 2026. Confirm current schedules, prices and access conditions with your chosen operator before booking.</p></section>
+ <Link className="text-link" href="/places/hashima">Explore Hashima’s story ↗</Link>
+ </article></div><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structured).replace(/</g,'\\u003c')}}/>
+ </main><Footer/></>;
+}
