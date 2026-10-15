@@ -10,11 +10,17 @@ import { VisitStayTag } from './visit-stay-tag';
 function Viewport({selected,viewToken,places}:{selected:MapPlace|undefined;viewToken:number;places:MapPlace[]}){
  const map=useMap();
  useEffect(()=>{
-  const observer=new ResizeObserver(()=>map.invalidateSize({pan:false}));
+  const observer=new ResizeObserver(()=>{
+   const container=map.getContainer();
+   if(!container.clientWidth||!container.clientHeight){map.stop();map.closePopup();return;}
+   map.invalidateSize({pan:false});
+  });
   observer.observe(map.getContainer());
   return ()=>observer.disconnect();
  },[map]);
  useEffect(()=>{
+  const container=map.getContainer();
+  if(!container.clientWidth||!container.clientHeight){map.stop();map.closePopup();return;}
   map.invalidateSize({pan:false});
   if(selected)map.flyTo([selected.latitude,selected.longitude],7,{animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,duration:.8});
   else if(places.length)map.fitBounds(places.map(p=>[p.latitude,p.longitude] as [number,number]),{padding:[35,35],maxZoom:5,animate:false});
@@ -24,8 +30,9 @@ function Viewport({selected,viewToken,places}:{selected:MapPlace|undefined;viewT
 }
 
 function PlaceMarker({place,selected,onSelect,viewToken}:{place:MapPlace;selected:boolean;onSelect:(slug:string)=>void;viewToken:number}){
+ const map=useMap();
  const marker=useRef<LeafletCircleMarker>(null);
- useEffect(()=>{if(selected)marker.current?.openPopup();},[selected,viewToken]);
+ useEffect(()=>{if(selected&&map.getContainer().clientWidth&&map.getContainer().clientHeight)marker.current?.openPopup();},[selected,viewToken,map]);
  const color=place.stay?'#243c31':'#a43d29';
  return <CircleMarker ref={marker} center={[place.latitude,place.longitude]} radius={selected?11:8} pathOptions={{color:'#fff',weight:2,fillColor:color,fillOpacity:1}} eventHandlers={{click:()=>onSelect(place.slug)}}>
   <Popup minWidth={210} maxWidth={270} autoPan keepInView autoPanPadding={[18,18]}>
@@ -37,7 +44,7 @@ function PlaceMarker({place,selected,onSelect,viewToken}:{place:MapPlace;selecte
 export default function AtlasMapCanvas({places,selectedSlug,onSelect,viewToken}:{places:MapPlace[];selectedSlug:string|null;onSelect:(slug:string)=>void;viewToken:number}){
  const [tileError,setTileError]=useState(false);
  const selected=places.find(p=>p.slug===selectedSlug);
- return <><MapContainer center={[18,15]} zoom={1} minZoom={0} maxZoom={18} scrollWheelZoom={false} className="atlas-leaflet" aria-label="World map of the Odd Atlas collection">
+ return <><MapContainer center={[18,15]} zoom={1} minZoom={0} maxZoom={18} trackResize={false} scrollWheelZoom={false} className="atlas-leaflet" aria-label="World map of the Odd Atlas collection">
   <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" attribution={'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'} eventHandlers={{tileerror:()=>setTileError(true)}}/>
   <Viewport selected={selected} viewToken={viewToken} places={places}/>
   {places.map(p=><PlaceMarker key={p.slug} place={p} selected={p.slug===selectedSlug} onSelect={onSelect} viewToken={viewToken}/>)}
