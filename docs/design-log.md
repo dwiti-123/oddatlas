@@ -225,3 +225,9 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Added visible whitespace-name errors and corrected singular place counts in list tabs and the place picker. Removed superseded heavy-button/editor CSS. No dependencies or storage schema changes. Branch codex/refined-list-actions.
 
 - Validation: production webpack build and lint passed. Browser measured Share/Edit/Delete on the same row at 320px, each 44px high, with no horizontal overflow; checked 390px, 820px and 1280px layouts. Confirmed blank-name alerts, wrapping/resizing titles, keyboard Cancel, Enter save/reload, original name restored, Share/Delete absent while editing, copied current-name links and delete cancellation. Browser console clean. Screenshots: refined-list-desktop.png and refined-list-mobile.png.
+
+## 2026-10-15 — Consistent list buttons and deletion modal
+- User approved one cream, sharp-border button style for Share/Edit/Delete, with equal spacing, height and press behaviour. Delete gets a brick hover/focus cue without a different shape.
+- Replaced inline delete confirmation with the existing Radix/shadcn AlertDialog: named title/description, focus trap, Cancel-first default focus, Escape cancellation and trigger focus restoration. No new dependency. Branch codex/consistent-list-buttons.
+
+- Validation: production webpack build and lint passed. Browser confirmed identical default face/border/padding/44px height/shadow on Share/Edit/Delete, one-row mobile layout, modal Cancel-first focus, Cancel/Escape dismissal with trigger focus restoration, and actual deletion of a temporary test list only. Original list preserved after reload; checked 320px/390px/1280px layouts. Screenshots: consistent-list-mobile.png, consistent-list-desktop.png and list-delete-modal-mobile.png.

@@ -135,3 +135,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - User-approved senior UI review findings and existing editorial styles; installed Next.js forms documentation consulted. Native textarea, ResizeObserver and CSS handle the refinement; no external asset or package added.
 
 - Final browser evidence includes action geometry, keyboard flows and content-height checks for long list names.
+
+## 2026-10-15 — Delete confirmation
+- Existing components/ui/alert-dialog.tsx and installed Next.js forms documentation consulted. User feedback defines the unified button treatment; no external assets or dependencies added.
+
+- Delete confirmation uses the existing AlertDialog components without adding an installer or package.
