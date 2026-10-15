@@ -164,3 +164,7 @@ Research and direction selected. First homepage implemented; visual QA pending.
 ## 15 October 2026 — Matching place titles
 
 Feature branch: `codex/place-title-consistency`, based on the preserved discovery draft. Place H1 headings now use the same title helper as metadata, social previews and Article headlines. Only the search title adds the brand suffix; map markers and cards retain short place names. Long headings use a restrained responsive type scale. Validation is performed with the integrated feature build.
+
+## 15 October 2026 — Visit/stay labels
+
+Feature branch: `codex/visit-stay-labels`, stacked on title consistency. A shared component gives every card and detail page the same accessible text and colours: terracotta Visit only, forest green You can stay here. Overnight stays remain temporary bookings; no residency claim. Saved cards inherit the shared component. Map cards will reuse it. Existing source records support the stay flag; no new external source used.

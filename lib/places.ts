@@ -104,7 +104,7 @@ const foundationPlaces = [
  { slug:'mirrorcube',name:'The Mirrorcube',region:'Harads',country:'Sweden',category:'stays',categoryName:'Extraordinary stays',stay:true,
  hook:'A mirrored hotel room that reflects the forest around it.',alt:'The Mirrorcube at Treehotel among snow-covered trees in Harads',storyTitle:'A room that almost disappears',
  story:'At Treehotel in Harads, the Mirrorcube uses reflective exterior walls to blend into the surrounding trees. Inside is a small guest room for one or two people, with a double bed and a balcony.',
- today:'An operating hotel room, rather than a permanent residence. “You can live here” means a bookable temporary stay for this entry.',
+ today:'An operating hotel room, rather than a permanent residence. “You can stay here” means a bookable temporary stay for this entry.',
  access:'Book through Treehotel. The operator lists a toilet in the room and shower access in a nearby building. Confirm availability, current facilities, and accessibility directly before booking.',legend:'',
  sources:[{title:'Treehotel — official accommodation information',url:'https://treehotel.se/treerooms/mirrorcube/'},{title:'Treehotel — official website',url:'https://treehotel.se/'}],credit:'steffen l',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:The_Mirrorcube,_Treehotel_in_Harads,_Sweden_1_-_Jan_3,_2019.jpg',photoDate:'2019' },
 ];

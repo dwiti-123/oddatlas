@@ -29,3 +29,5 @@
 @media(max-width:700px){.discovery-index{grid-template-columns:1fr}.directory-links{gap:14px}.location-map iframe{height:280px}.quiz-options{gap:10px}.discovery-opening{padding-top:20px}}
 
 .detail-top .place-story-title{font-size:clamp(36px,5.1vw,64px);max-width:1080px;line-height:1.12;letter-spacing:-1.5px}
+
+.stay-tag{background:#f0d8ce;color:#6a2a1e;font-weight:600}.stay-tag.stay{background:#243c31;color:#fff}.stay-tag.inline-access{position:static;display:inline-block;white-space:normal}
