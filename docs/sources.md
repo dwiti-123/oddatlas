@@ -145,3 +145,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - User feedback; local CSS refinement only, no external reference or dependency.
 
 - Validation used the local production preview and computed button geometry/colours; no new external source.
+
+## 2026-10-15 — Tilted shadow adjustment
+- User visual feedback; CSS-only change using the existing button layers, with no new assets or dependencies.
+
+- Validated against the local production preview; no external visual asset used.

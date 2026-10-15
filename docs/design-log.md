@@ -238,3 +238,8 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 
 - User then noted that the faces blended into the page. Increased the shared cream fill contrast and darkened the common border/shadow, preserving identical styling across the row.
 - Validation: production webpack build passed. Browser measured identical 80x44px faces on desktop and mobile, matching fill/border colours, a single row and no horizontal overflow at 320px. Screenshot: equal-contrast-buttons-mobile.png.
+
+## 2026-10-15 — Slightly deeper tilted shadows
+- User requested a larger dark shadow area and a small tilt. Shared button shadow now offsets 3px right/4px down with a 2-degree skew; hover and press still compress the layer. Equal button dimensions and face colours are unchanged. Branch codex/tilted-list-button-shadows.
+
+- Validation: production webpack build passed. Browser confirmed identical tilted shadow transforms on all three 80x44px buttons, desktop/mobile appearance, and no horizontal overflow at 320px. Used and removed a temporary preview list because the current collection was empty. Screenshot: tilted-button-shadows-mobile.png.

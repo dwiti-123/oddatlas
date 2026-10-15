@@ -64,3 +64,10 @@
 .list-delete-modal{border-radius:0!important;background:#faf9f5!important;max-height:85dvh;overflow:auto}.list-delete-modal h2{font-family:Georgia,serif;font-size:30px;line-height:1.2}.list-delete-modal p{line-height:1.6;overflow-wrap:anywhere}.list-delete-modal .list-heading-actions{justify-content:flex-end;gap:12px}.list-delete-modal .list-action{height:auto;min-height:44px;padding:9px 16px;border:1px solid transparent;border-radius:0;background:transparent;color:#243c31;font-size:14px;font-weight:400}.list-delete-modal .list-action-delete:hover,.list-delete-modal .list-action-delete:focus-visible{color:#a43d29}
 /* Equal-sized list actions fit one row down to a 320px viewport. */
 .list-heading-actions[aria-label="List actions"] .list-action{width:80px;height:44px;min-height:44px;padding:9px 0;flex:0 0 80px;text-align:center}
+/* A slightly deeper tilted ink layer beneath the equal-sized action faces. */
+.list-action{--button-ink:#3e493d}
+.list-action-secondary{--button-ink:#3e493d}
+.list-action::before{transform:translate(3px,4px) skewY(-2deg);transform-origin:left center}
+.list-action:hover:not(:disabled)::before{transform:translate(2px,3px) skewY(-1deg)}
+.list-action:active:not(:disabled){transform:translate(3px,4px)}
+.list-action:active:not(:disabled)::before{transform:none}
