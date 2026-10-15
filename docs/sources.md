@@ -95,3 +95,11 @@ Uses existing project components and previously sourced place text. No new exter
 # Place search title refinement — 14 October 2026
 
 Titles use only the existing sourced stories in `lib/places.ts`; no new factual claims or external sources added. Native Next.js `generate-metadata.md` was consulted to confirm that absolute titles avoid duplicating the root title suffix. Source links for history, folklore and operator information remain on each entry.
+
+## Map implementation references — 15 October 2026
+
+- React Leaflet v5 installation: https://react-leaflet.js.org/docs/start-installation/ and map API: https://react-leaflet.js.org/docs/api-map/. Used for React 19 integration, MapContainer and useMap. Installed stable exact package versions rather than documentation prerelease examples.
+- Leaflet reference: https://leafletjs.com/reference.html — map flyTo, fitBounds, CircleMarker and popup behaviour.
+- OpenStreetMap tile policy: https://operations.osmfoundation.org/policies/tiles/ — official HTTPS tile URL, visible attribution, normal browser caching/referrer, no bulk fetch or offline prefetch.
+- Installed Next.js lazy-loading guide: browser-only dynamic import lives inside a Client Component; the directory list and context stay server-rendered.
+- Location coordinates, folklore/history distinctions and image licences use the existing place records and their individual source links; no new location claims added.

@@ -168,3 +168,7 @@ Feature branch: `codex/place-title-consistency`, based on the preserved discover
 ## 15 October 2026 — Visit/stay labels
 
 Feature branch: `codex/visit-stay-labels`, stacked on title consistency. A shared component gives every card and detail page the same accessible text and colours: terracotta Visit only, forest green You can stay here. Overnight stays remain temporary bookings; no residency claim. Saved cards inherit the shared component. Map cards will reuse it. Existing source records support the stay flag; no new external source used.
+
+## 15 October 2026 — Explore map
+
+Feature branch: `codex/explore-map`, stacked on visit/stay labels. Added a separate map/list experience with existing sourced coordinates, category/access/search filters, marker popups, story links, locator notes and mobile Map/List controls. Leaflet loads only on this route, with visible OpenStreetMap attribution. Existing homepage composition and Bhangarh story/access information are retained. A sidebar list and noscript links preserve non-map navigation. Production and browser evidence will be recorded after verification.

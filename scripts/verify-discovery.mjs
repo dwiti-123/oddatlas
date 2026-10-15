@@ -15,7 +15,7 @@ for(const url of urls){
  assert(canonical,`${pathname}: canonical missing`);
  assert.equal(new URL(canonical[1]).href,new URL(url).href,`${pathname}: wrong canonical`);
  if(pathname.startsWith('/places/')){
-  assert(html.includes('<h1>'),`${pathname}: missing H1`);
+  assert(/<h1(?:\s[^>]*)?>/.test(html),`${pathname}: missing H1`);
   assert(html.includes('application/ld+json'),`${pathname}: missing schema`);
   assert(html.includes('Interactive locator map'),`${pathname}: missing map`);
   assert(html.includes('known for?'),`${pathname}: question heading missing`);
