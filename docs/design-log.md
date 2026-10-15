@@ -204,3 +204,10 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Scoped to saved-list actions and the existing list picker; no additional package or changes to stored data. Feature branch: codex/list-edit-buttons.
 
 - Validation: production webpack build, lint and existing device-storage regression checks passed. Browser checks confirmed prefilled/focused editing, Cancel without mutation, save/reload persistence, restored original name, Escape focus return, desktop and 390px mobile layout with no horizontal overflow. Screenshots: list-edit-desktop.png and list-edit-mobile.png.
+
+## 2026-10-15 — Sharp tilted pop-button refinement
+- User supplied VengeanceUI Pop Button as a motion reference, requesting sharp rather than soft corners and a tilted shadow.
+- Inspected the registry: one React component, no dependencies. Adapted the layered press effect directly in existing CSS: square face, skewed hard-edged lower ink layer, hover compression and a flush press; retained editorial colours and reduced-motion support.
+- No registry installer or new package needed. Separate branch codex/sharp-pop-buttons.
+
+- Validation: production webpack build passed; desktop and 390px browser checks confirmed square faces, transformed hard-edged lower layers, working edit/cancel controls and no horizontal overflow. Screenshots: sharp-pop-desktop.png and sharp-pop-mobile.png.

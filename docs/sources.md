@@ -120,3 +120,8 @@ Titles use only the existing sourced stories in `lib/places.ts`; no new factual 
 - User-described two-colour pressed-button reference; implemented in CSS using the existing editorial palette. Installed Next.js forms guide consulted. No external visual assets used.
 
 - Native CSS box-shadow and transform implement the pressed state; no animation library or external script added.
+
+## 2026-10-15 — Pop-button reference
+- https://raw.githubusercontent.com/Ashutoshx7/VengeanceUI/main/public/r/pop-button.json — layered raised-button motion reference supplied by the user. Independently adapted using local CSS with square corners and a tilted lower layer; no dependency installed.
+
+- Only the visual layering concept was used; the final CSS uses the Odd Atlas colours, independent pseudo-element construction and reduced-motion rules.
