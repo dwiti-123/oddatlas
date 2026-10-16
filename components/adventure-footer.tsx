@@ -5,7 +5,7 @@ import { FooterWall } from './footer-wall';
 import { places } from '@/lib/places';
 
 export function AdventureFooter({onWall=false}:{onWall?:boolean}){
- return <div className={styles.footer}>
+ return <div className={styles.footer} id={onWall?undefined:'leave-a-trace'}>
   <div className={styles.invitation}><div><p>{onWall?'A few places. A thousand possible stories.':'Leave a little trace.'}</p>{!onWall&&<span>A note, a ticket, a stamp. Something of you, somewhere in the world.</span>}</div><Link href={onWall?'/#places':'/adventure-wall'}>{onWall?'Find your next place':'Open the full wall'} <span aria-hidden="true">↗</span></Link></div>
   {!onWall&&<FooterWall places={places.map(({slug,name,country})=>({slug,name,country}))}/>}
   <div className={styles.landscape}><Image src="/images/adventure-wall/landscape.webp" width={1800} height={600} sizes="100vw" alt="Illustrated island ruins, desert houses, fort arches and mountains"/></div>
