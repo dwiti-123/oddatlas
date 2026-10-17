@@ -284,6 +284,20 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Validation: production webpack build/TypeScript and lint passed. Device-storage tests and local PostgreSQL shared-wall tests passed, including anonymous read, denied unauthenticated writes, cross-user mutation denial, report privacy, moderation hiding, payload bounds and rate limits. Production desktop/mobile checks verified small-paper controls, private posting/cancel, handwriting input, one common footer on homepage/place pages and no page overflow. No production browser warnings/errors. Supabase project connection, Auth configuration and cross-browser remote visibility remain unverified because the environment values/migration have not been supplied/applied. Existing user-created private traces were preserved; no automatic upload occurred.
 - Preview evidence: docs/research/shared-wall-small-paper-desktop.png, shared-landscape-footer-desktop.png, shared-landscape-footer-mobile.png. Database setup instructions: docs/shared-wall-setup.md.
 
+## 2026-10-17 — Five-role typography system
+- User approved the reported five-role scale. Preserved contact/category work as local commit 0d92815, then created codex/consistent-typography. Added app/typography.css with display, section, card, body and support tokens, exact desktop/mobile endpoints and fluid intermediate sizing.
+- Replaced bespoke sizes in global, wall, map, footer and blog CSS with role tokens; removed 51 redundant responsive size declarations. Mapped existing shadcn text utilities to the same roles. Logos and decorative SVG seal lettering remain exceptions. Contact us stays at supporting size, per the latest request.
+- Increased tiny functional wall and footer copy to the supporting role; allowed navigation/captions to wrap and expanded paper tools rather than shrinking text. Removed whole-trace scaling so text is not visually reduced below its role. Heading leading is shared; reading leading stays comfortable.
+- No new dependency or external design source. Read installed Next.js CSS documentation. Validation follows; no push or deployment.
+
+## 2026-10-17 — Contact, place suggestions and category URLs
+- Follow-up: user requested hiding the displayed email address. Replaced it with a single clickable Contact us heading; the destination remains in the mailto href. This hides the address from page copy, not from inspection of the link. Existing request email action retained.
+- Follow-up sizing: reduced Contact us from 32px serif heading styling to a 14px sans-serif text link, matching the quieter footer actions. Email destination unchanged.
+- Approved implementation on codex/contact-place-requests. Added a shared footer contact section with the user-provided email and a Request a place action beside the collection heading and in the footer. mailto links open a draft only; no email is sent by the site. Suggestions request a source, preferred credit name and permission before public credit.
+- Replaced homepage client-only category tabs with crawlable category links, reusing existing static category URLs/canonicals. Category pages use the same navigation with aria-current; All places returns to /#places. Search still filters the homepage collection. URL changes are for navigation and discoverability, not a ranking guarantee.
+- Responsive navigation wraps instead of using a horizontal scrollbar. Reused established colours and typography; no dependencies or external design sources. Read installed Next.js Link documentation.
+- Validation passed: targeted ESLint, production webpack build (34 routes), desktop/390px category screenshots, correct active ghost category and five cards, matching canonical, Back navigation, all category route selections and All places return, search (Hashima: one result), mailto address/decoded draft fields, and footer layout at 390px/320px with no document overflow. Email actions were inspected without launching a mail client or sending email. Evidence: docs/research/category-navigation-desktop.png, category-navigation-mobile.png, contact-footer-desktop.png and contact-footer-mobile.png. Local preview port 5177; no push/deployment.
+
 ## 2026-10-16 — Direct access to all blogs
 - User requested a blog section for direct access to all articles. Saved the completed Island of the Dolls work locally as 01e6cd6 and created codex/blog-directory. Added /blog, a server-rendered editorial index with two photographed article cards, descriptions, real image credits and CollectionPage/ItemList data.
 - Header and shared discovery footer link directly to /blog. Both article breadcrumbs link back. A single lib/blog.ts registry drives the listing and sitemap entries. Kept the existing ivory/serif treatment and reused assets; no package or external design source.
@@ -323,3 +337,18 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Verified two isolated anonymous visitor sessions against the real project. Typed and handwritten test posts could be read with an unauthenticated public client, drawing strokes were preserved, and a second visitor could not move or remove the first visitor's traces (P0001 as expected).
 - Soft-removed both temporary test traces using their owner session and verified neither appeared in the public feed. Test anonymous Auth identities were not administratively deleted; no elevated credentials were used. No user-created private traces were uploaded or modified.
 - Rebuilt the local Next.js preview successfully with the supplied public environment values. Browser confirmation showed Shared traveller’s wall and Refresh wall after loading, without a shared-feed error. Production domain/deployment remains unchanged.
+
+## 2026-10-17 — Tighter card description spacing
+- Reduced description reservation from four lines to two and bottom margin from 16px to 10px. Longer text remains fully visible; flex layout keeps labels aligned within each row.
+- Kept card numbering beside the country metadata to prevent uneven title positions after the typography update.
+- Verified the final desktop row has equal heights and label positions; mobile has no horizontal overflow and uses the 10px margin. Evidence: docs/research/compact-card-spacing-desktop.png. Local only.
+
+## 2026-10-17 — Request button breathing room
+- Added a scoped 16px top margin to the footer Request a place button. Collection toolbar spacing is unchanged.
+- Verified desktop and mobile computed spacing and no horizontal overflow. Evidence: docs/research/request-place-margin-mobile.png.
+
+- Follow-up: increased only the button's top margin to 24px so the suggestion paragraph has more breathing room; section padding is unchanged.
+
+- Reverted the Request a place top-margin additions at the user's request; restored original button spacing.
+
+- Final footer button fix: applied a dedicated CSS Module class with 16px margin above only the bottom Request a place link. The open wall tab required a reload before the new styles appeared. Verified actual paragraph-to-button gap is 16px on desktop/mobile with no mobile overflow. Screenshot: docs/research/footer-request-button-gap.png.
