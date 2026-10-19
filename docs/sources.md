@@ -172,3 +172,18 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 - Interactive footer follow-up: installed Next.js documentation at node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md for the serializable client boundary. Reused existing wall assets and controls; no new external design source or package.
 - Supabase official documentation: https://supabase.com/docs/guides/auth/auth-anonymous, https://supabase.com/docs/guides/getting-started/api-keys, https://supabase.com/docs/guides/database/postgres/row-level-security, https://supabase.com/docs/guides/database/functions. Used for anonymous identity, publishable keys, RLS and constrained database functions.
 - Runtime: @supabase/supabase-js. Local test-only PostgreSQL engine: @electric-sql/pglite. No additional imagery or design template. Shared footer reuses the existing documented generated panorama.
+
+### 2026-10-19 — Search presentation refinement
+- Google title guidance: https://developers.google.com/search/docs/appearance/title-link
+- Google snippet guidance: https://developers.google.com/search/docs/appearance/snippet
+- Reused the Dolls guide's existing Mexico City Tourism Cuemanco route citation: https://www.mexicocity.cdmx.gob.mx/venues/lago-de-xochimilco-embarcadero-de-cuemanco/?lang=en . This change reorganizes previously sourced information; it does not claim a fresh operator verification.
+- No new external images, packages or design references.
+
+### 2026-10-19 — Deep Sleep and Hashima guides
+- Go Below itinerary and FAQ (indexed snapshot; direct fetch failed): https://www.go-below.co.uk/deep-sleep.asp
+- Visit Wales: https://www.visitwales.com/activity/activity/go-below-underground-adventures-541721
+- Nagasaki Tourism history: https://www.discover-nagasaki.com/en/sightseeing/51797
+- Nagasaki Tourism landing guide: https://www.discover-nagasaki.com/en/featured-topics/gunkanjima-landing-tour
+- Yamasa Shipping: https://www.gunkan-jima.net/en/
+- JNTO: https://www.japan.travel/en/spot/752/
+- Reused existing licensed Hashima photograph and clearly labelled Deep Sleep concept illustration. No new image licence or package.
