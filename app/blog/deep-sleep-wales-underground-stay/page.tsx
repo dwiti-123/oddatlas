@@ -1,0 +1,37 @@
+import type {Metadata} from 'next';
+import Link from 'next/link';
+import {Header,Footer} from '@/components/site-shell';
+import {findPlace} from '@/lib/places';
+import {placeImage,siteUrl} from '@/lib/discovery';
+import styles from '../how-to-visit-hashima-island/story.module.css';
+
+const title='Deep Sleep, Wales: What to Know Before an Underground Stay';
+const description='Planning a Deep Sleep hotel experience in Wales? Understand the guided mine journey, underground camp and booking questions before choosing your night.';
+const path='/blog/deep-sleep-wales-underground-stay';
+const sources=[
+ {name:'Go Below — Deep Sleep itinerary and frequently asked questions',url:'https://www.go-below.co.uk/deep-sleep.asp'},
+ {name:'Visit Wales — Go Below Underground Adventures',url:'https://www.visitwales.com/activity/activity/go-below-underground-adventures-541721'},
+];
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:'article'},twitter:{card:'summary_large_image',title,description}};
+function Ref({number}:{number:number}){return <a className={styles.reference} href={`#reference-${number}`} aria-label={`Source ${number}: ${sources[number-1].name}`}>[{number}]</a>;}
+export default function DeepSleepGuide(){
+ const place=findPlace('deep-sleep')!;
+ const image=placeImage(place);
+ const structured={'@context':'https://schema.org','@type':'BlogPosting',headline:title,description,dateModified:'2026-10-19',mainEntityOfPage:`${siteUrl}${path}`,image:`${siteUrl}${image}`,author:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},publisher:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},citation:sources.map(s=>s.url)};
+ return <><Header/><main id="main" className={styles.page}>
+ <header className={`${styles.opening} wrap`}><div className="breadcrumb"><Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / <Link href="/places/deep-sleep">Deep Sleep</Link> / Visiting guide</div><p className="eyebrow">The field journal / Wales</p><h1>{title}</h1><p className={styles.dek}>The bed is underground. The journey there is part of the night.</p><p className={styles.byline}>By Odd Atlas · Sources reviewed <time dateTime="2026-10-19">19 October 2026</time> · 3 min read</p></header>
+ <section className={`${styles.essentials} wrap`} aria-labelledby="deep-sleep-essentials"><h2 id="deep-sleep-essentials">Before you book</h2><dl><div><dt>The setting</dt><dd>A former slate mine beneath the mountains of Eryri, North Wales.</dd></div><div><dt>The journey</dt><dd>A guided approach on foot, with a challenging underground route.</dd></div><div><dt>The booking</dt><dd>Check Go Below’s itinerary and requirements before reserving.</dd></div></dl><p>Source: <a href={sources[1].url}>Visit Wales</a>. This is an adventure stay, with arrangements set by the operator.</p></section>
+ <figure className={`${styles.figure} wrap`}><img src={image} alt={place.alt} width={1440} height={960} fetchPriority="high"/><figcaption className="photo-caption">Concept illustration, not a photograph of Deep Sleep. <a href={sources[0].url}>See actual accommodation images from Go Below.</a></figcaption></figure>
+ <div className={styles.body}><article>
+ <p className={styles.lead}>Some unusual stays begin when you open a door. Deep Sleep begins earlier, with the decision to follow a guide into a mountain. Before choosing it for the photograph or the story you will tell afterward, consider whether the journey itself is how you want to spend your evening.</p>
+ <div className={styles.answer}><p className="eyebrow">The short answer</p><p>Often searched for as the Deep Sleep hotel, this is Go Below’s guided overnight camp in a disused Welsh slate mine. Visit Wales places its cabins and grotto 1,375 feet beneath the mountains and describes an adventurous approach of around two hours. <Ref number={2}/></p></div>
+ <nav className={styles.contents} aria-label="In this guide"><span className="eyebrow">Plan the night</span><a href="#experience">The experience</a><a href="#journey">Getting underground</a><a href="#comfort">Camp comforts</a><a href="#booking">Booking questions</a></nav>
+ <section id="experience"><h2>Is Deep Sleep a hotel?</h2><p>Go Below explicitly describes it as a remote-camp adventure rather than conventional hotel accommodation. Think of the bed as one part of an organised overnight trip. <Ref number={1}/></p><p>That distinction helps set expectations. Our suggestion is to choose it because you want the whole experience, including getting there and returning, rather than treating the underground setting as a room upgrade.</p></section>
+ <section id="journey"><h2>How do you reach Deep Sleep?</h2><p>The operator lists a meeting point at its Tanygrisiau base near Blaenau Ffestiniog. A mountain walk precedes the guided descent, which includes steps, bridges and scrambling. You carry your belongings in a backpack. <Ref number={1}/></p><p>Our planning advice: confirm the meeting instructions before arranging transport. Ask the operator directly about any aspect of the route that concerns you; a photograph cannot establish whether the journey suits your needs.</p></section>
+ <section id="comfort"><h2>What is sleeping underground like?</h2><p>Go Below lists private cabins and a grotto, bedding and meals, with an instructor remaining underground overnight. Its FAQ describes cool conditions and recommends warm clothing; it also lists a camp toilet and Wi-Fi, while noting there is no mobile reception. <Ref number={1}/></p><p>Our suggestion is to decide which comforts matter most to you and ask about them before booking. “Underground” describes the setting, but it does not answer every question about how you will feel spending a night there.</p></section>
+ <section id="booking"><h2>What should you check before booking Deep Sleep?</h2><p>Use Go Below’s current booking information for prices, available dates, age requirements and fitness expectations. Confirm what your chosen option includes and its cancellation terms. <Ref number={1}/></p><p>Our checklist for the conversation:</p><ul><li>Is the complete route suitable for everyone in your party?</li><li>What clothing and luggage does the operator recommend?</li><li>Can any dietary or other requirements be accommodated?</li><li>Where and when does the experience begin and end?</li></ul><p>Keep the answers with your booking confirmation. These are suggested questions, not guarantees about what is available.</p></section>
+ <p className={styles.ending}>The appeal is easy to understand: a night far from an ordinary bedroom. The worthwhile decision is more personal—whether the walk, the descent and the return are as inviting to you as the bed at the end.</p>
+ <section className={styles.sources}><p className="eyebrow">Read the originals</p><h2>Sources & booking information</h2><ol className="sources-list">{sources.map((source,index)=><li id={`reference-${index+1}`} key={source.url}><a href={source.url}>{source.name}</a></li>)}</ol><p className="source-context">A researched guide, not a first-hand stay or review. Sources reviewed 19 October 2026. The operator page was available through a search snapshot; confirm current details directly. Planning suggestions are our own.</p></section>
+ <Link className="text-link" href="/places/deep-sleep">Explore the Deep Sleep place entry ↗</Link>
+ </article></div><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structured).replace(/</g,'\\u003c')}}/></main><Footer/></>;
+}

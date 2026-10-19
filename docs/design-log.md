@@ -352,3 +352,14 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Reverted the Request a place top-margin additions at the user's request; restored original button spacing.
 
 - Final footer button fix: applied a dedicated CSS Module class with 16px margin above only the bottom Request a place link. The open wall tab required a reload before the new styles appeared. Verified actual paragraph-to-button gap is 16px on desktop/mobile with no mobile overflow. Screenshot: docs/research/footer-request-button-gap.png.
+
+## 2026-10-19 — Search presentation and visiting guide discovery
+- Implemented on codex/search-presentation. Search metadata now resolves through the same helpers as H1 and structured data, using existing reviewed searchDetails for Bhangarh, Hashima and Dhanushkodi and specific descriptions for other places. Added location-led titles for Dolls, Deep Sleep, Skylodge and Mirrorcube; retained existing URLs.
+- Clarified Dolls location and local name in the opening. Added a sourced three-part visiting summary above the guide photo, reusing already published route information and its original review date. Added homepage previews for both existing guides via the blog registry.
+- Validation: production webpack build and targeted ESLint passed. Generated HTML checks confirmed matching title/H1 and descriptions for seven affected place pages. Desktop/mobile checks showed no horizontal overflow, visiting summary before photo and valid guide links. Evidence: docs/research/dolls-essentials-desktop.png, dolls-essentials-mobile.png and home-visiting-guides-desktop.png. Local only; no push or deployment. Search performance remains an experiment, with insufficient impressions to claim a CTR gain.
+
+## 2026-10-19 — Deep Sleep article and expanded Hashima guide
+- Article work continues on codex/deep-sleep-hashima-guides; the earlier uncommitted search-presentation changes are retained in the working tree. Created a practical Deep Sleep guide and expanded the existing Hashima URL to avoid a duplicate article.
+- Deep Sleep distinguishes the guided camp from a conventional hotel, labels its concept illustration, cites Go Below and Visit Wales and avoids volatile prices. Direct operator fetch returned 404 in the research tool; an indexed operator snapshot supplied the FAQ, so the article discloses that limitation.
+- Hashima adds history, booking comparison questions and visiting essentials. Updated its source-review date after checking official tourism and operator sources. Registered Deep Sleep in blog discovery and sitemap, linked from its place page and fixed blog image captions to distinguish illustrations from photographs.
+- Desktop/mobile browser checks passed for both articles without overflow; internal section/source anchors resolve. Screenshots: docs/research/deep-sleep-guide-desktop.png, deep-sleep-guide-mobile.png and hashima-guide-expanded-desktop.png. Local only; not pushed or deployed.
