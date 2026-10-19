@@ -29,8 +29,17 @@ const searchCopy:Record<string,{title?:string;description:string}>={
 // One resolution path feeds the visible heading, metadata and structured data.
 export const placeTitle = (place:Place) => searchCopy[place.slug]?.title ?? searchDetails[place.slug]?.title ?? place.discovery?.title ?? `${place.name}: Its Story in ${place.country}`;
 export const placeDescription = (place:Place) => searchCopy[place.slug]?.description ?? searchDetails[place.slug]?.description ?? place.hook;
-export const reviewedDate = (place:Place) => searchDetails[place.slug]?.reviewed ?? '2026-10-08';
+export const reviewedDate = (place:Place) => searchDetails[place.slug]?.reviewed;
 export const allPlaceRoutes = () => allPlaces;
+
+const relatedStories:Record<string,string[]>={
+ hashima:['kayakoy','kolmanskop'],
+ kayakoy:['hashima','kuldhara'],
+ kuldhara:['kayakoy','dhanushkodi'],
+ 'island-of-the-dolls':['bhangarh','kuldhara'],
+};
+export const relatedPlaces = (place:Place) => (relatedStories[place.slug]??[])
+ .map(slug=>allPlaces.find(entry=>entry.slug===slug)).filter((entry):entry is Place=>!!entry);
 
 // Only prose about the location counts: headings, navigation and credits are excluded.
 export function locationWordCount(place:Place) {

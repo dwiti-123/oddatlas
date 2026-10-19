@@ -1,0 +1,5 @@
+url,primary_query,secondary_queries,indexed_status,current_title,updated_title,impressions,clicks,ctr,average_position,report_start,report_end,last_editorial_update,next_action
+https://www.oddatlas.world/places/hashima,why was hashima island abandoned,hashima island;hashima japan,unverified,"Hashima Island (Gunkanjima): History & Visiting from Nagasaki",unchanged,,,,,,,2026-10-19,Export query-page data and inspect live URL
+https://www.oddatlas.world/places/island-of-the-dolls,island of the dolls mexico,xochimilco island of the dolls,unverified,"Island of the Dolls, Mexico: Xochimilco’s Story & Legends",unchanged,,,,,,,2026-10-19,Separate story queries from visiting guide queries
+https://www.oddatlas.world/places/kayakoy,fethiye kayaköy,kayakoy ghost village,unverified,Kayaköy: Why Are This Turkish Village’s Houses Empty?,unchanged,,,,,,,2026-10-19,Observe location-query performance before changing title
+https://www.oddatlas.world/places/kuldhara,why was kuldhara abandoned,kuldhara history,unverified,Why Was Kuldhara Abandoned? Behind the Curse Legend,unchanged,,,,,,,2026-10-19,Assess need for an early uncertainty-aware answer
