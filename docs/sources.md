@@ -187,3 +187,9 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 - Yamasa Shipping: https://www.gunkan-jima.net/en/
 - JNTO: https://www.japan.travel/en/spot/752/
 - Reused existing licensed Hashima photograph and clearly labelled Deep Sleep concept illustration. No new image licence or package.
+
+### 2026-10-19 — Focused technical SEO audit
+- Google sitemap dates and canonical URL guidance: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+- Google breadcrumb structured data: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
+- Google crawlable links: https://developers.google.com/search/docs/crawling-indexing/links-crawlable
+- Installed Next.js sitemap and generateMetadata documentation. No new travel facts or media sources; source-review dates were not refreshed by this technical audit.
