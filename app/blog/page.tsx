@@ -6,7 +6,7 @@ import {findPlace} from '@/lib/places';
 import {placeImage,siteUrl} from '@/lib/discovery';
 import styles from './journal.module.css';
 const title='The Odd Atlas Blog: Guides for Curious Travellers';
-const description='Practical guides to unusual places. Explore Deep Sleep in Wales, Hashima Island tours and Island of the Dolls visits with clear context and original sources.';
+const description='Practical visiting guides to unusual places, from Kayaköy and Kuldhara to Hashima, the Island of the Dolls and Deep Sleep. Plan with original sources.';
 export const metadata:Metadata={title,description,alternates:{canonical:'/blog'},openGraph:{title,description,url:'/blog',type:'website'}};
 export default function BlogPage(){
  const schema={'@context':'https://schema.org','@type':'CollectionPage',name:title,url:`${siteUrl}/blog`,mainEntity:{'@type':'ItemList',itemListElement:blogPosts.map((post,index)=>({'@type':'ListItem',position:index+1,name:post.title,url:`${siteUrl}/blog/${post.slug}`}))}};
