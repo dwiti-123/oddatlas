@@ -49,7 +49,7 @@ for(const url of urls){
 }
 if(new Set(urls).size!==urls.length)failures.push('Duplicate sitemap URLs');
 const report={scope:'Local production HTML only; not live deployment, Google indexing, CWV or rankings',pages:rows.length,failures:[...new Set(failures)],rows};
-fs.writeFileSync('docs/research/seo-audit-2026-10-19.json',JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(process.argv[2]??'docs/research/seo-audit-2026-10-19.json',JSON.stringify(report,null,2)+'\n');
 console.log(`${report.pages} sitemap pages checked; ${report.failures.length} failures`);
 for(const failure of report.failures)console.error(failure);
 process.exitCode=report.failures.length?1:0;

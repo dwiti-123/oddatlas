@@ -193,3 +193,12 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 - Google breadcrumb structured data: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
 - Google crawlable links: https://developers.google.com/search/docs/crawling-indexing/links-crawlable
 - Installed Next.js sitemap and generateMetadata documentation. No new travel facts or media sources; source-review dates were not refreshed by this technical audit.
+
+### 2026-10-20 — Kayaköy and Kuldhara practical guides
+- Türkiye Culture Ministry location, road access and historical context: https://www.kulturportali.gov.tr/turkiye/mugla/gezilecekyer/kayakoy
+- Official museum directory: https://muze.gov.tr/muze-detay?DistId=KYK&SectionId=KYK02
+- Turkish Museums ticket categories, facilities and seasonal listings: https://www.turkishmuseums.com/museum/detail/2187-mugla-kayakoy-archaeological-site/2187/4
+- The museum pages show conflicting closing times; the guide records that conflict rather than selecting one as guaranteed. Ticket figures are dated snapshots.
+- Rajasthan Tourism taxi access, protected status and folklore: https://www.tourism.rajasthan.gov.in/kuldhara.html
+- Jaisalmer destination guide: https://www.tourism.rajasthan.gov.in/jaisalmer.html
+- No verified current Kuldhara admission price or timetable was found in these sources. Existing place photos and attribution reused; no new imagery.
