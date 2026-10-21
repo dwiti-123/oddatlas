@@ -202,3 +202,13 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 - Rajasthan Tourism taxi access, protected status and folklore: https://www.tourism.rajasthan.gov.in/kuldhara.html
 - Jaisalmer destination guide: https://www.tourism.rajasthan.gov.in/jaisalmer.html
 - No verified current Kuldhara admission price or timetable was found in these sources. Existing place photos and attribution reused; no new imagery.
+
+### 2026-10-21 — Query alignment
+- User-supplied Search Console query table; date range and average positions not provided. No search-volume claims inferred.
+- Google title links: https://developers.google.com/search/docs/appearance/title-link
+- Google SEO Starter Guide: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- Geography reused from existing sourced place entries. Source-review dates were not advanced by this editorial wording change.
+
+## 2026-10-21 — Visible abandonment answers
+- Hashima: JNTO https://www.japan.travel/en/spot/752/ checked for mine closure around 1974, changed energy needs and resident departure.
+- Kuldhara: Rajasthan Tourism https://www.tourism.rajasthan.gov.in/kuldhara.html checked for the attributed local legend. Existing Current Science research and correspondence re-read: https://www.researchgate.net/publication/312385113_Deserted_Nineteenth_Century_Paliwal_Villages_around_Jaisalmer_Western_Rajasthan_IndiaHistorical_Evidence_of_Palaeoseismicity and https://www.researchgate.net/publication/323797999_Kuldhara_Devastation_and_the_Great_Exodus. Disagreement is retained; no definitive cause asserted.

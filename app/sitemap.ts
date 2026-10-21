@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  return [
   {url:`${base}/`,lastModified:new Date(pageModifiedDates.home)},
   {url:`${base}/sources`,lastModified:new Date(pageModifiedDates.sources)},
-  {url:`${base}/guides/haunted-places`,lastModified:new Date('2026-10-13')},
+  {url:`${base}/guides/haunted-places`,lastModified:new Date('2026-10-21')},
   {url:`${base}/blog`,lastModified:new Date(pageModifiedDates.blog)},
   ...blogPosts.map(post=>({url:`${base}/blog/${post.slug}`,lastModified:new Date(post.modified)})),
   {url:`${base}/explore/map-view`,lastModified:new Date('2026-10-15')},
