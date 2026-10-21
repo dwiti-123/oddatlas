@@ -14,14 +14,14 @@ const entries = places.filter(p => p.category === 'mystery');
 export default function HauntedPlacesGuide() {
  const structured = {
   '@context':'https://schema.org', '@type':'CollectionPage', name:title, description,
-  url:'https://www.oddatlas.world/guides/haunted-places', dateModified:'2026-10-13',
+  url:'https://www.oddatlas.world/guides/haunted-places', dateModified:'2026-10-21',
   mainEntity:{'@type':'ItemList',itemListElement:entries.map((p,i)=>({'@type':'ListItem',position:i+1,name:p.name,url:`https://www.oddatlas.world/places/${p.slug}`}))},
  };
  return <><Header /><main id="main" className="guide-page wrap">
   <div className="breadcrumb"><Link href="/#places">The collection</Link> / Field guide</div>
   <p className="eyebrow">Five places / history & local legends</p>
   <h1>Haunted & mysterious<br /><em>places you can visit.</em></h1>
-  <p className="guide-intro">A ruined fort, a canal island, an underground ossuary and two places with stories after dark. Start with what draws you in, then look at what visiting actually involves.</p>
+  <p className="guide-intro">Exploring haunted places? Compare a ruined fort, a canal island, an underground ossuary and two places with stories after dark. Start with what draws you in, then look at what visiting actually involves.</p>
   <p className="guide-context">“Haunted” describes a reputation, not a verified fact. Some entries have ghost legends; the Paris Catacombs belong here for their documented, unsettling history. This is a curated collection, not a ranking of paranormal claims.</p>
   <section className="guide-overview" aria-labelledby="choose-place"><h2 id="choose-place">Which kind of visit?</h2>
    <ul>{entries.map(p=><li key={p.slug}><a href={`#${p.slug}`}>{p.name}</a><span>{p.country} · {p.stay?'Hotel stays and separate tours':'Visit only'}</span></li>)}</ul>
