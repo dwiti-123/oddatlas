@@ -69,7 +69,7 @@ const collectionAdditions = [
  story:'Go Below’s Deep Sleep is an overnight adventure camp reached through the workings of a former slate mine. The operator places it 1,375 vertical feet below the mountains of Eryri, also known as Snowdonia. The journey underground is part of the stay, with a guide leading the descent and remaining at the camp overnight.',
  today:'A guided underground experience with sleeping cabins and a grotto. Guests reach the camp on a journey through the mine, accompanied by an instructor who remains overnight.',
  access:'Book directly with Go Below. The descent includes steep sections, stairways and scrambles. Confirm age, fitness, equipment and medical suitability with the operator. The overnight trip returns to the surface the following morning.',legend:'',
- sources:[{title:'Go Below — Deep Sleep overnight experience',url:'https://www.go-below.co.uk/deep-sleep.asp'}]},
+ sources:[{title:'Go Below — Deep Sleep overnight experience',url:'https://www.go-below.co.uk/en/adventures/deep-sleep/'}]},
  {slug:'palacio-de-sal',name:'Palacio de Sal',region:'Near Uyuni',country:'Bolivia',category:'stays',stay:true,
  hook:'A salt-built stay beside the vast white landscape of Salar de Uyuni.',alt:'Concept illustration of a salt-block bedroom with a view of salt flats',storyTitle:'A night shaped by salt',
  story:'On the edge of Salar de Uyuni, Palacio de Sal makes salt part of the architecture as well as the surrounding landscape. The contrast is its draw: an inhabited interior beside a vast salt flat that can appear almost without scale.',
@@ -141,7 +141,7 @@ const storySources:Record<string,{title:string;url:string}> = {
  mirrorcube:{title:'Treehotel — The Mirrorcube',url:'https://treehotel.se/treerooms/mirrorcube/'},
  whichaway:{title:'White Desert — Whichaway Camp',url:'https://white-desert.com/camps/whichaway-camp'},
  whichawaySheet:{title:'White Desert — Whichaway location fact sheet (2023)',url:'https://white-desert.com/wp-content/uploads/2023/07/Whichaway-flyer-2023.pdf'},
- deepSleep:{title:'Go Below — Deep Sleep overnight adventure and FAQ',url:'https://www.go-below.co.uk/deep-sleep.asp'},
+ deepSleep:{title:'Go Below — Deep Sleep overnight adventure and FAQ',url:'https://www.go-below.co.uk/en/adventures/deep-sleep/'},
  slateHistory:{title:'UNESCO — The Slate Landscape of Northwest Wales',url:'https://whc.unesco.org/en/list/1633'},
  saltHistory:{title:'Palacio de Sal — the founder and the hotel’s move',url:'https://palaciodesal.com.bo/en/first-salt-hotel/'},
  saltHotel:{title:'Palacio de Sal — official hotel information',url:'https://palaciodesal.com.bo/en/'}
