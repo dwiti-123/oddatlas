@@ -54,9 +54,20 @@ export const historyAnswers:Record<string,{
 
 const relatedStories:Record<string,string[]>={
  hashima:['kayakoy','kolmanskop'],
+ dhanushkodi:['kuldhara','kayakoy'],
  kayakoy:['hashima','kuldhara'],
  kuldhara:['kayakoy','dhanushkodi'],
- 'island-of-the-dolls':['bhangarh','kuldhara'],
+ kolmanskop:['hashima','kuldhara'],
+ 'island-of-the-dolls':['bhangarh','port-arthur'],
+ bhangarh:['island-of-the-dolls','port-arthur'],
+ 'paris-catacombs':['port-arthur','bhangarh'],
+ 'port-arthur':['stanley-hotel','paris-catacombs'],
+ 'stanley-hotel':['port-arthur','island-of-the-dolls'],
+ skylodge:['deep-sleep','whichaway'],
+ mirrorcube:['palacio-de-sal','skylodge'],
+ whichaway:['skylodge','deep-sleep'],
+ 'deep-sleep':['skylodge','mirrorcube'],
+ 'palacio-de-sal':['mirrorcube','whichaway'],
 };
 export const relatedPlaces = (place:Place) => (relatedStories[place.slug]??[])
  .map(slug=>allPlaces.find(entry=>entry.slug===slug)).filter((entry):entry is Place=>!!entry);
