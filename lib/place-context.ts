@@ -1,0 +1,11 @@
+// Original source-backed explanations. Do not infer live access from a site description.
+export const placeContext:Record<string,{answers:{question:string;text:string;url:string;source:string}[]}>= {
+ dhanushkodi:{answers:[
+  {question:'Are Dhanushkodi’s ruins and lighthouse the same attraction?',text:'They are different features of the same coastal area. The lighthouse authority places the modern lighthouse near the old railway station and church. It was commissioned on 14 May 2022 and supports navigation for fishing boats. Seeing the ruins does not establish that the lighthouse gallery is open during your visit.',url:'https://dgll.nic.in/DGLL-light-house-location/about-chennai/dhanushkodi-lighthouse',source:'Directorate General of Lighthouses and Lightships'},
+  {question:'How far is Dhanushkodi from Rameswaram?',text:'The district guide gives about 18 km for Dhanushkodi; the lighthouse authority gives 19 km for its lighthouse. These describe different destinations, so choose your exact stop before arranging transport. Treat the distances as approximate, rather than assuming every map pin marks the same entrance.',url:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/',source:'Ramanathapuram District; lighthouse distance in the source above'},
+ ]},
+ 'palacio-de-sal':{answers:[
+  {question:'Is Palacio de Sal inside the Uyuni salt flat?',text:'The current hotel is on the edge of Salar de Uyuni. Its own history describes a move from an earlier location within the salt flat to its edge. Pictures and accounts of the original hotel should not be used to infer the location of today’s stay.',url:'https://palaciodesal.com.bo/en/first-salt-hotel/',source:'Palacio de Sal: official hotel history'},
+  {question:'Does staying at Palacio de Sal include a salt-flat tour?',text:'A hotel booking and an excursion are different arrangements to confirm. The hotel’s location beside the salar does not establish what a particular reservation includes. Ask the operator about transport, excursions and meeting points before treating a room booking as a complete itinerary.',url:'https://palaciodesal.com.bo/en/first-salt-hotel/',source:'Official location and history; booking questions are Odd Atlas planning advice'},
+ ]},
+};
