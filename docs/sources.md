@@ -212,3 +212,13 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 ## 2026-10-21 — Visible abandonment answers
 - Hashima: JNTO https://www.japan.travel/en/spot/752/ checked for mine closure around 1974, changed energy needs and resident departure.
 - Kuldhara: Rajasthan Tourism https://www.tourism.rajasthan.gov.in/kuldhara.html checked for the attributed local legend. Existing Current Science research and correspondence re-read: https://www.researchgate.net/publication/312385113_Deserted_Nineteenth_Century_Paliwal_Villages_around_Jaisalmer_Western_Rajasthan_IndiaHistorical_Evidence_of_Palaeoseismicity and https://www.researchgate.net/publication/323797999_Kuldhara_Devastation_and_the_Great_Exodus. Disagreement is retained; no definitive cause asserted.
+
+## 2026-10-23 — Topical-map planning
+- Google link best practices: https://developers.google.com/search/docs/crawling-indexing/links-crawlable. Descriptive crawlable links support discovery and help readers understand relationships.
+- Google helpful-content guidance: https://developers.google.com/search/docs/fundamentals/creating-helpful-content. Used to prioritise useful research gaps over duplicative pages. No new destination facts published.
+- Metrics retain the source periods from the owner's two 21 October exports; see docs/topical-map.md and the earlier comparison.
+
+## 2026-10-23 — Practical context and browse navigation
+- Dhanushkodi: https://ramanathapuram.nic.in/tourist-place/dhanushkodi/ (district's approximate 18 km and road access) and https://dgll.nic.in/DGLL-light-house-location/about-chennai/dhanushkodi-lighthouse (19 km lighthouse locator, nearby church/station, commissioning date and fishing navigation role). Gallery description is not represented as verified current public opening.
+- Palacio de Sal: https://palaciodesal.com.bo/en/first-salt-hotel/ confirms its relocation from within Salar de Uyuni to the edge. Booking/excursion questions are editorial planning advice, not verified package inclusions.
+- EntityMap specification reviewed: https://entitymap.org/spec/v1.0. This independent publisher-assertion format is not evidence of search-engine adoption; omitted from the public implementation to avoid adding a duplicate machine-oriented content layer without a confirmed consumer.
