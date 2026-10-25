@@ -9,7 +9,7 @@ const title='Deep Sleep, Wales: What to Know Before an Underground Stay';
 const description='Planning a Deep Sleep hotel experience in Wales? Understand the guided mine journey, underground camp and booking questions before choosing your night.';
 const path='/blog/deep-sleep-wales-underground-stay';
 const sources=[
- {name:'Go Below — Deep Sleep itinerary and frequently asked questions',url:'https://www.go-below.co.uk/deep-sleep.asp'},
+ {name:'Go Below — Deep Sleep itinerary and frequently asked questions',url:'https://www.go-below.co.uk/en/adventures/deep-sleep/'},
  {name:'Visit Wales — Go Below Underground Adventures',url:'https://www.visitwales.com/activity/activity/go-below-underground-adventures-541721'},
 ];
 export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:'article'},twitter:{card:'summary_large_image',title,description}};

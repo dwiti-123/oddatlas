@@ -405,3 +405,48 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 - Added /browse, a static HTML index generated from the existing category/place/blog registries. Linked it from the global discovery footer and included it in the XML sitemap. No duplicate country pages, extra keyword variants, new dependencies or design overhaul.
 - Completed audience/intent mapping and AI-assisted gap review in docs/topical-map.md. The latest supplied report is pre-release, so query-to-page attribution, live indexing and ranking improvements remain unverified. Skipped experimental entitymap.json after reviewing the independent specification; no established consumer requirement justifies publishing another duplicate content representation now.
 - Modification dates advance only for story navigation/content changes; source-review dates remain scoped to the information actually reviewed. Validation: production webpack build and targeted ESLint passed. Windows denied a generated build folder on the first run; the permitted retry passed. All 32 sitemap pages passed the audit (docs/research/seo-audit-2026-10-23.json). Verified 15 browse destinations, 30 related links, source citations, modification dates and metadata in static HTML. Desktop and 390px browser checks passed for browse and Dhanushkodi with no horizontal overflow; Palacio context also verified in-browser. Local preview on port 5190. No push or deployment.
+
+## 24 October 2026 — Hashima visit planning
+- Branch: `codex/hashima-visit-planning`. Scope: Hashima only, preserving the original story data, title, photograph and full-story disclosure.
+- Added an editorial planning section after the full story: access update, adult ticket examples, half-day planning advice, check-in, payment and booking links. Reused it in the existing visiting guide to keep operator facts consistent.
+- A 21 October operator notice reports landings suspended from 22 October, reopening undecided. Normal landing fares are explicitly conditional, distinct from the alternative sightseeing fare. No live availability or invented whole-trip budget.
+- Sources: official operator pages, checked 24 October; Japanese Concierge fare calendar translated. Booking remains external. Validation recorded after build and browser checks.
+
+- Validation: final production build passed; targeted ESLint passed; generated HTML audit checked 32 sitemap pages with zero failures. Hashima page and guide contain prices/dates and valid section anchors; exactly one full-story disclosure remains. Desktop and 390px mobile reviewed; no horizontal overflow; story expands with all three original chapters. Evidence: docs/research/hashima-planning-desktop.png and hashima-planning-mobile.png. Local preview: port 5192. Not published.
+
+
+## 24 October 2026 — Hashima field-guide prototype for review
+- User feedback: practical information was still buried in article paragraphs. Hashima only is the approval prototype; do not roll this layout out to other places or the blog yet.
+- Kept the existing hero, type scale, restrained brick accent, source data and full-story disclosure. Shortened the visible introduction; added a ruled at-a-glance block before the full story.
+- Replaced the place-page planning article with two experience cards (water / conditional landing), clear adult totals, matching action styles, an operator comparison, a three-step half-day itinerary and concise booking constraints.
+- Facts reuse the official operator research checked today; no new prices or availability claims. The reported closure is prominent before booking actions. Original story opening and all three chapters remain.
+
+- Validation: production build, targeted ESLint and generated HTML SEO audit passed (32 pages, zero failures). HTML checks confirm glance → full-story → trip options order, all three original story chapters, one disclosure and valid anchors. Other sampled places do not contain the prototype. Desktop/mobile visual verification remains pending: the request to restart the local preview was declined. No rollout, commit, push or deployment.
+
+
+## 24 October 2026 — action-first wording and USD estimates
+- User feedback: closure explanation and equal-weight unavailable options obscured what a traveller can do.
+- Lead with the published sightseeing cruise, one price/duration block and one main booking action. Keep a short landing-status line; future landing fares are collapsed. No claim of live sailing availability.
+- Use plain labels, bold key steps, a compact fact grid and an explicit operator booking action. The story data and full-story reveal remain unchanged. The existing blog retains article layout with shorter shared practical copy.
+- USD is the common comparison currency, with exact JPY payable amounts retained. Estimates use a dated 23 October rate (JPY156.87/USD), rounded to whole dollars; no new service, package or live-rate API.
+
+- Validation: production build and ESLint passed; SEO audit checked 32 pages with zero failures. Desktop (1280px) and mobile (390px) screenshots verified the main trip card and button; no horizontal overflow. Full story and future-landing disclosures both open/close correctly. Saved docs/research/hashima-simple-desktop.png and hashima-simple-mobile.png. Preview running on port 5192. Not pushed or deployed.
+
+
+## 24 October 2026 — shared place-page scanning hierarchy
+- User approved applying the UX review to other place pages. Branch `codex/place-page-scanning` carries the earlier uncommitted Hashima prototype; no main/dev changes.
+- Added three concise essentials before the photograph, direct planning/story shortcuts and a smaller mobile H1 using the existing type scale. H1 text, search titles and canonicals remain aligned.
+- Removed the large duplicate Hashima summary and repeated access block. Planning now has a subtle muted background. All places use the same hierarchy, with their existing cited access sentences presented as a short list and an official source action. Hashima retains the researched booking card.
+- Full-story text and sources remain intact; the original opening and historical answer now sit within the expandable story. Existing SEO questions remain available under an optional visiting-questions disclosure.
+- No guessed prices/durations on other places. Short facts come from existing records; editorial update dates change while source-review dates remain unchanged.
+
+- Final validation: production build and targeted ESLint passed; SEO audit checked 32 sitemap routes with zero failures. All 16 generated place pages have one essentials row, one full-story disclosure, valid planning/story targets and no duplicate IDs or broken local anchors. Desktop and mobile review covered Hashima, Bhangarh and Deep Sleep; no horizontal overflow. Native story shortcut opens and focuses the story. Mobile essentials fit within the first 844px viewport (Hashima bottom507px; Deep Sleep bottom474px). Screenshots in docs/research/place-scanning-*.png. Local preview port5192; not committed, pushed or deployed.
+
+
+## 24 October2026 — complete field-guide format across all places
+- User clarified that shared page headers alone were insufficient: all places should have Hashima’s detailed format. Added a shared experience card, explicit price unit or quote action, duration, three-step plan, practical notes and original-source list for each of the other15 places.
+- Published prices are compared in USD with dated rates and original amounts. Do not manufacture current quotes where operator prices are date-dependent, contradictory or inaccessible. Timing suggestions are labelled.
+- Corrected Go Below’s moved source URL; full-story prose remains intact. Stanley’s primary planning path is its USD35 tour rather than suggesting a USD35 hotel stay. Cabin and room price labels distinguish them from per-person tickets.
+- Source ledger documents Paris503, Skylodge mixed-year prices, Kolmanskop conflicting gate hours and Whichaway expedition pricing scope. No live availability claim or booking transaction.
+
+- Validation: production build passed; SEO audit32routes/zero failures. All16generated place pages have one experience card, three planning steps, a full story, practical sources, unique IDs and valid fragment links. Mobile DOM checks covered Bhangarh, Kolmanskop, Bodie, Mirrorcube, Stanley, Catacombs, Kayakoy, Skylodge and Palacio; no horizontal overflow. Deep Sleep and Whichaway mobile screenshots and Dhanushkodi desktop layout reviewed. Evidence: docs/research/full-trip-*.json and full-trip-dhanushkodi-desktop.png. Local branch codex/place-page-scanning, preview5192. Not pushed or deployed.
