@@ -1,0 +1,43 @@
+.opening { padding-top: 24px; }
+.opening .title { font-size: var(--type-display); margin-block: 8px 16px; }
+.opening .crumb { margin-bottom: 18px; }
+.essentials { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; max-width: 780px; margin: 20px 0 0; border-block: 1px solid var(--border); padding-block: 12px; }
+.essentials > div { min-width: 0; }
+.essentials dt { color: var(--muted-foreground); font-size: var(--type-support); }
+.essentials dd { margin: 4px 0 0; font-size: var(--type-body); font-weight: 600; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; }
+.actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; font-size: var(--type-support); padding: 9px 16px; border: 1px solid var(--foreground); }
+.actions .primary { background: var(--foreground); color: var(--background); }
+.actions .primary:hover { background: var(--primary); border-color: var(--primary); }
+.actions a:not(.primary):hover { background: var(--secondary); }
+.opening .actions :global(.save-control) { margin-top: 0; }
+.opening .actions :global(.save-place) { padding-block: 9px; }
+.body article .shortStory { margin-bottom: 24px; }
+.body article .shortStory p { margin-bottom: 20px; }
+.body article .plan { background: var(--muted); border-top: 2px solid var(--primary); padding: 24px; margin: 0 0 38px; scroll-margin-top: 24px; }
+.plan h2 { margin: 0 0 16px; }
+.body article .plan p { margin-bottom: 16px; }
+.plan :global(.eyebrow) { color: var(--primary); }
+.plan ul { list-style: disc; padding-left: 1.2rem; margin-block: 0 20px; }
+.plan li { padding-block: 5px; }
+.official { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 48px; border: 1px solid var(--foreground); padding: 10px 16px; background: var(--foreground); color: var(--background); font-size: var(--type-support); font-weight: 600; }
+.official:hover { background: var(--primary); border-color: var(--primary); }
+.body article .plan .review { font-size: var(--type-support); color: var(--muted-foreground); margin: 16px 0 0; }
+.questions { border-top: 1px solid var(--border); margin-top: 24px; }
+.questions summary { padding-block: 14px; min-height: 48px; cursor: pointer; font-weight: 600; }
+.body article .questions section { margin: 16px 0 24px; }
+.body .questions h3 { font-size: var(--type-card); margin: 0 0 12px; line-height: 1.3; }
+.body article .historyContext p { margin-bottom: 16px; }
+.historyContext h3 { font-size: var(--type-card); line-height: 1.3; margin: 0 0 12px; }
+@media(max-width:700px) {
+ .opening .title { font-size: var(--type-section); line-height: 1.18; letter-spacing: -.7px; }
+ .opening :global(.eyebrow) { margin-bottom: 10px; letter-spacing: 1px; }
+ .essentials { gap: 10px; margin-top: 16px; }
+ .essentials dd { font-size: var(--type-support); overflow-wrap: anywhere; }
+ .actions { gap: 8px; }
+ .actions a { padding-inline: 12px; }
+ .body article .plan { padding: 20px 16px; }
+ .official { width: 100%; }
+}
+
+.plan > :global(#plan-hashima) { margin: 0; }

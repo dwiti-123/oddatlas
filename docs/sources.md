@@ -222,3 +222,45 @@ Original React, pointer-event and SVG implementation; no new external assets or 
 - Dhanushkodi: https://ramanathapuram.nic.in/tourist-place/dhanushkodi/ (district's approximate 18 km and road access) and https://dgll.nic.in/DGLL-light-house-location/about-chennai/dhanushkodi-lighthouse (19 km lighthouse locator, nearby church/station, commissioning date and fishing navigation role). Gallery description is not represented as verified current public opening.
 - Palacio de Sal: https://palaciodesal.com.bo/en/first-salt-hotel/ confirms its relocation from within Salar de Uyuni to the edge. Booking/excursion questions are editorial planning advice, not verified package inclusions.
 - EntityMap specification reviewed: https://entitymap.org/spec/v1.0. This independent publisher-assertion format is not evidence of search-engine adoption; omitted from the public implementation to avoid adding a duplicate machine-oriented content layer without a confirmed consumer.
+
+## Hashima practical planning — checked 24 October 2026
+- Gunkanjima Cruise: https://www.gunkanjima-cruise.jp/en/ — normal online adult fare ¥3,600 + ¥650 facility entry through March 2027; April 2027 revision; reception, schedule, cash and minimum age.
+- Its dated landing closure notice, linked from the homepage (21 October 2026), reports suspension from 22 October with reopening undecided; alternative sightseeing trip ¥3,600 adult, about 2h20 via Takashima. The page URL slug contains an older month/day: the displayed date, heading and body are the evidence used.
+- https://www.gunkanjima-cruise.jp/en/about/ — direct booking/payment, restrictions, weather and refund conditions.
+- https://www.gunkanjima-cruise.jp/reserve_input.php?lang=en — reservation page specifies Japanese guiding only. No booking submitted.
+- https://www.gunkanjima-concierge.com/cgi/web/ — Japanese calendar lists standard adult ¥5,500 + ¥650, specific days +¥500, museum included and credit-card-only payment. Normal pricing does not establish current landing access or availability.
+- Half-day allowance and optional extra night are Odd Atlas editorial suggestions; prices exclude travel to Nagasaki, meals and accommodation. Historical sources and full story are unchanged.
+
+- Hashima field-guide prototype: layout reuses the 24 October operator research above; no new factual claims or source-review dates introduced. Half-day plan remains explicitly editorial; published departure/check-in times are attributed to Gunkanjima Cruise.
+
+- USD estimates: Investing.com USD/JPY Historical Data, https://www.investing.com/currencies/usd-jpy-historical-data — 23 October 2026 row: JPY156.87 per USD, checked 24 October. JPY3600≈USD23, JPY4250≈USD27, JPY6150≈USD39, JPY6650≈USD42. Bank conversion can differ. Bank of Japan PDF was inaccessible; not used as verified evidence.
+
+- Shared place-page essentials (24 October layout update): labels in lib/place-essentials.ts summarise each existing record’s access/story and cited sources. No new price, timetable or fresh source-review claim. Stanley hotel stay action uses the hotel homepage rather than its separate tour page.
+
+
+## Full practical guides for every place — 24 October2026
+
+See docs/research/place-trip-source-audit-2026-10-24.md for per-place price evidence, exchange-rate links and source-access limitations.
+- Ramanathapuram District — access and distances: https://ramanathapuram.nic.in/tourist-place/dhanushkodi/
+- Ministry museum service — opening and ticket office: https://muze.gov.tr/muze-detay?DistId=KYK&SectionId=KYK02
+- Culture Ministry — site and distance from Fethiye: https://www.kulturportali.gov.tr/turkiye/mugla/gezilecekyer/kayakoy
+- Rajasthan Tourism — location and taxi access: https://www.tourism.rajasthan.gov.in/kuldhara.html
+- Rajasthan Tourism — Bhangarh visitor restrictions: https://www.tourism.rajasthan.gov.in/bhangarh-fort.html
+- Ghost Town Tours — 2026/27 rates and tour schedule: https://kolmanskuppe.com/tours-prices/
+- Operator-linked ticket service: https://www.webtickets.com.na/v2/EventCategories.aspx?itemid=1502439554
+- Bank of Namibia — NAD/ZAR one-to-one peg: https://www.bon.com.na/Informations/FAQ/Roles-of-the-Bank.aspx
+- California State Parks — fees, directions and conditions: https://parks.ca.gov/?page_id=509
+- Mexico City Tourism — Xochimilco: https://www.mexicocity.cdmx.gob.mx/locations/xochimilco/?lang=en
+- Paris Catacombs — official site and indexed full tariff: https://www.catacombes.paris.fr/
+- Museum — conditions before visiting: https://www.catacombes.paris.fr/en/visit/please-read-your-visit
+- Port Arthur Historic Site — Ghost Tour rates and access: https://portarthur.org.au/ghost-tour/
+- The Stanley — Ghost Tour price and conditions: https://www.stanleyhotel.com/tours/the-stanley-ghost-tours/
+- The Stanley — hotel stays: https://www.stanleyhotel.com/
+- Natura Vive — packages, suggested itinerary and inclusions: https://naturavive.com/web/skylodge-adventure-suites/
+- Treehotel — Mirrorcube rate and facilities: https://treehotel.se/treerooms/mirrorcube/
+- White Desert — Whichaway camp: https://white-desert.com/camps/whichaway-camp
+- White Desert — rates and preparation process: https://white-desert.com/prices
+- Go Below — cabin price, duration and age: https://www.go-below.co.uk/en/adventures/deep-sleep-cabin/
+- Go Below — overnight experience and FAQs: https://www.go-below.co.uk/en/adventures/deep-sleep/
+- Palacio de Sal — hotel information: https://palaciodesal.com.bo/en/
+- Palacio de Sal — direct booking: https://palaciodesal.com.bo/en/booking/
