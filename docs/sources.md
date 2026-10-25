@@ -264,3 +264,14 @@ See docs/research/place-trip-source-audit-2026-10-24.md for per-place price evid
 - Go Below — overnight experience and FAQs: https://www.go-below.co.uk/en/adventures/deep-sleep/
 - Palacio de Sal — hotel information: https://palaciodesal.com.bo/en/
 - Palacio de Sal — direct booking: https://palaciodesal.com.bo/en/booking/
+
+
+## Island of the Dolls and Deep Sleep guides — checked 25 October 2026
+- https://mexicocity.cdmx.gob.mx/venues/lago-de-xochimilco-embarcadero-de-cuemanco/?lang=en — official Cuemanco route list: four hours for Island of the Dolls; hourly boat charging rather than passenger charging; dock address. Successfully read through web tool.
+- https://www.xochimilco.cdmx.gob.mx/turismo-2/ — borough publishes MX$750/hour for tourist/ecological boat rides and maximum 18 passengers. Direct Python request returned 403; full page text was available through live web fetch/search. Combined with the separate four-hour route as an explicitly labelled MX$3,000 boat-only calculation, not a confirmed route/package quote. Island admission not verified.
+- https://www.xochimilco.cdmx.gob.mx/como-llegar/ — borough transport directions via Tasqueña and Tren Ligero to Xochimilco; not represented as a direct rail journey to Cuemanco.
+- https://mexicocity.cdmx.gob.mx/venues/isla-de-las-munecas/ — original tourism/legend reference retained; ordinary HTTP fetch returned 200. Don Julián story presented as folklore. No claim of a verified replica-island inventory.
+- https://ca.investing.com/currencies/usd-mxn-historical-data — pricing provider lists 23 October 2026 closing USD/MXN 18.6700. Rounded USD budget examples: MX$3,000 ≈ US$160, two sharing ≈ US$80 each, four sharing ≈ US$40 each. Original pesos and conversion date disclosed.
+- https://www.go-below.co.uk/en/adventures/deep-sleep/ — directly read current HTTP 200 itinerary and FAQs: 17 hours; 14+; £399 cabin / £599 Grotto; 30-minute approach followed by about two hours underground descent; equipment, meals, bedding, heated rooms, toilet, Wi-Fi, 10°C mine, packing, fitness and overnight leaders. Current calendar shows 5 pm departures; no hardcoded live availability. Older deep-sleep.asp snapshot has different journey timings and was not used for current itinerary.
+- https://www.go-below.co.uk/en/adventures/deep-sleep-cabin/ — directly read HTTP 200 cabin page: £399, two single beds, 17 hours, 14+, Tanygrisiau, dated availability. Price presented per cabin for up to two, not per person. Grotto mentioned only as a choice, not a room inventory.
+- GBP→USD estimate reuses the already sourced 23 October rate in lib/place-trip-plans.ts (1.34 USD/GBP): https://wise.com/us/currency-converter/gbp-to-usd-rate/history/23-10-2026. No fresh-rate claim.

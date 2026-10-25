@@ -1,0 +1,54 @@
+[
+  {
+    "name": "dolls",
+    "device": "desktop",
+    "status": 200,
+    "h1": "Island of the Dolls, Mexico: Boat Costs and How to Visit",
+    "title": "Island of the Dolls, Mexico: Boat Costs and How to Visit | Odd Atlas",
+    "overflow": false,
+    "duplicateIds": [],
+    "brokenFragments": [],
+    "costVisible": true,
+    "errors": [],
+    "costAnchorTop": 59
+  },
+  {
+    "name": "dolls",
+    "device": "mobile",
+    "status": 200,
+    "h1": "Island of the Dolls, Mexico: Boat Costs and How to Visit",
+    "title": "Island of the Dolls, Mexico: Boat Costs and How to Visit | Odd Atlas",
+    "overflow": false,
+    "duplicateIds": [],
+    "brokenFragments": [],
+    "costVisible": true,
+    "errors": [],
+    "costAnchorTop": 63
+  },
+  {
+    "name": "deep-sleep",
+    "device": "desktop",
+    "status": 200,
+    "h1": "Deep Sleep, Wales: Cost, Booking and the Underground Journey",
+    "title": "Deep Sleep, Wales: Cost, Booking and the Underground Journey | Odd Atlas",
+    "overflow": false,
+    "duplicateIds": [],
+    "brokenFragments": [],
+    "costVisible": true,
+    "errors": [],
+    "costAnchorTop": 62
+  },
+  {
+    "name": "deep-sleep",
+    "device": "mobile",
+    "status": 200,
+    "h1": "Deep Sleep, Wales: Cost, Booking and the Underground Journey",
+    "title": "Deep Sleep, Wales: Cost, Booking and the Underground Journey | Odd Atlas",
+    "overflow": false,
+    "duplicateIds": [],
+    "brokenFragments": [],
+    "costVisible": true,
+    "errors": [],
+    "costAnchorTop": 61
+  }
+]
