@@ -474,3 +474,25 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 Added a small editorial-style opt-in panel and persistent preferences control, without changing page layouts. Chose explicit action events over autocapture; recordings remain disabled. Shared-list URLs are sanitized and custom events exclude user content. Setup and event definitions: docs/posthog-setup.md. Validation recorded after build and browser checks.
 
 Validation: final Next.js production build and targeted ESLint passed. Intercepted local-browser checks passed for opt-in, rejection, withdrawal, Do Not Track, three pageviews across three navigations, saves, story opens, blog links, and external-source links. Payloads excluded the test private list name. Desktop/mobile screenshots inspected; mobile has no horizontal overflow. Real project ingestion still requires the user-provided project key and a new deployment.
+
+
+## Focused Hashima update — 27 October 2026
+- Branch: codex/hashima-verified-comparison, based on main after PostHog release. Broader AEO drafts and audit records preserved in a named stash on their original branch.
+- Put the sourced abandonment answer in Hashima's visible short story and aligned the history title, metadata and schema. Original short-story prose and full-story chapters remain intact; the answer is no longer duplicated inside the disclosure.
+- Added a compact operator comparison to the existing visiting guide, using the same type scale, colours, thin rules and reading column. Mobile rows become stacked groups; meeting points and detailed terms use accessible native disclosures with working anchor links.
+- Chose neutral published-price comparison rather than a cheapest/best ranking. Clearly separated sightseeing from landing totals and checked newer Japanese tariffs where English pages differed.
+- Added direct links between the place plan, comparison and visible history answer. Updated only relevant editorial dates; background review dates and the existing FX date remain scoped.
+- No publication, deployment or ranking/citation outcome claimed. Validation follows below.
+
+Validation: targeted ESLint and final production build passed. Generated-HTML SEO audit checked 32 sitemap pages with zero failures. Desktop (1440px) and mobile (390px) production-browser checks passed: visible history outside the disclosure, three preserved full-story chapters, three operator rows, working comparison/deep links, keyboard toggles, no horizontal overflow, duplicate IDs, broken fragment links or page errors. With JavaScript disabled, the history answer, operator table and all full-story chapters remain in server HTML. Six screenshots inspected. Evidence: docs/research/hashima-comparison-checks-2026-10-27.json and seo-hashima-comparison-2026-10-27.json. Local preview: port 5195. No push or deployment.
+
+
+## General travel budget calculator — 27 October 2026
+- Feature branch codex/travel-budget-calculator follows the focused Hashima commit, preserving separate feature histories.
+- Added one general tool with user-entered daily/per-person and shared costs, independent day/night counts, optional buffer, equal split and itemised results. No destination price feed or FX service is used.
+- Starts with blank costs, with a clearly labelled illustrative example. Supports explicit device-local saving, reload restoration and plain-text copying with a manual fallback. It is separate from place lists. Invalid inputs do not produce plausible totals.
+- Retained editorial colours, type scale, square controls and thin rules. Results stack under inputs on narrow screens. Added header/footer/home links and a canonical sitemap entry. Tablet header wrapping accommodates the extra navigation link.
+- Analytics records only explicit save/copy actions after existing consent, never entered amounts or budget contents.
+- Requested release path: feature → dev → main after production, interaction and sitewide responsive checks. Evidence follows below.
+
+Validation: final production build and lint across app/components/lib/hooks passed. Calculator browser tests cover arithmetic, equal splitting, currency relabelling, persistence, copy success/fallback, invalid inputs, unavailable storage and no-JavaScript instructions. Responsive audit: 35 public routes at 390/768/1440px plus representative 320/1024px checks, 121 checks, no horizontal overflow or browser errors. Key interaction smoke checks passed for search, categories, list save/rename/share/delete confirmation, random discovery, full quiz/restart, map filtering/selection, Hashima disclosures and real 404 status. No public wall contribution was posted. Generated SEO audit: 33 sitemap pages, zero failures. Referenced local image files verified. Visual review prompted a scoped explanation-spacing fix; final calculator checks passed afterwards. Reports are in docs/research/*2026-10-27.json.

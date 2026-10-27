@@ -1,0 +1,27 @@
+{
+  "scope": "Local production browser QA; not Google indexing or AI citations",
+  "checks": [
+    {
+      "device": "desktop",
+      "status": "passed",
+      "historyVisible": true,
+      "fullStoryChapters": 3,
+      "operatorRows": 3,
+      "deepLinks": true,
+      "keyboard": true,
+      "overflow": false
+    },
+    {
+      "device": "mobile",
+      "status": "passed",
+      "historyVisible": true,
+      "fullStoryChapters": 3,
+      "operatorRows": 3,
+      "deepLinks": true,
+      "keyboard": true,
+      "overflow": false
+    }
+  ],
+  "noJavaScriptContent": true,
+  "errors": []
+}

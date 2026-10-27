@@ -1,0 +1,14 @@
+{
+  "scope": "Local production key interaction smoke checks; public wall posting not exercised",
+  "checks": [
+    "Home search",
+    "Category navigation",
+    "Device list save, rename persistence, share and delete confirmation",
+    "Random place generator",
+    "Five-question quiz and restart",
+    "Map search, list view and place selection",
+    "Hashima operator disclosure",
+    "Unknown route returns 404"
+  ],
+  "errors": []
+}

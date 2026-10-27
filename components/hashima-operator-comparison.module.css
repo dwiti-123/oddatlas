@@ -1,0 +1,35 @@
+.comparison { scroll-margin-top: 28px; }
+.comparison .access { border-left: 2px solid var(--primary); padding-left: 18px; font-size: var(--type-support); }
+.table { width: 100%; border-collapse: collapse; margin-block: 24px; table-layout: fixed; }
+.table caption { text-align: left; color: var(--muted-foreground); font-size: var(--type-support); margin-bottom: 12px; }
+.table th, .table td { text-align: left; vertical-align: top; padding: 18px 12px; border-bottom: 1px solid var(--border); font-size: var(--type-support); line-height: 1.65; overflow-wrap: anywhere; }
+.table thead th { border-top: 1px solid var(--foreground); font-weight: 600; }
+.table th:first-child { padding-left: 0; width: 25%; }
+.table th:nth-child(2) { width: 35%; }
+.table th:last-child, .table td:last-child { padding-right: 0; }
+.comparison .table p { font-size: var(--type-support); line-height: 1.65; margin: 0 0 18px; }
+.comparison .table p:last-child { margin-bottom: 0; }
+.table strong, .table span, .table small { display: block; }
+.table small { font-size: inherit; color: var(--muted-foreground); }
+.detailsLink { display: block; margin-top: 12px; }
+.comparison .note, .comparison .sources li { font-size: var(--type-support); line-height: 1.7; color: var(--muted-foreground); }
+.operator { border-top: 1px solid var(--border); scroll-margin-top: 28px; }
+.operator:last-of-type { border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.operator summary { cursor: pointer; min-height: 48px; padding-block: 16px; font-weight: 600; display: flex; gap: 16px; justify-content: space-between; font-size: var(--type-support); }
+.operator[open] summary span { transform: rotate(45deg); }
+.operator dl { margin: 0 0 20px; }
+.operator dl > div { margin-bottom: 16px; }
+.operator dt { font-weight: 600; font-size: var(--type-support); }
+.operator dd { margin: 4px 0 0; font-size: var(--type-body); }
+.operator > a { display: inline-block; padding-block: 8px; min-height: 44px; }
+.operator .sources { margin: 0 0 24px; padding-left: 20px; }
+@media(max-width:600px) {
+ .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .table tbody, .table tr, .table th, .table td { display: block; width: 100%; }
+ .table tr { border-top: 1px solid var(--border); padding-block: 18px; }
+ .table th, .table td { padding: 0; border: 0; }
+ .table th:first-child { width: 100%; margin-bottom: 14px; font-size: var(--type-card); }
+ .table td[data-label]::before { content: attr(data-label); display: block; font-weight: 600; margin-bottom: 8px; }
+ .table td + td { margin-top: 18px; }
+ .table tr:last-child { border-bottom: 1px solid var(--border); }
+}
