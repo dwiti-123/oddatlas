@@ -12,7 +12,7 @@ export const categoryFor = (place:Place) => directoryCategories.find(c=>c.catego
 export const entriesFor = (slug:string) => places.filter(p=>p.category===findCategory(slug)?.category);
 export const placeImage = (place:Place) => `/images/${place.slug}-${place.country.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-${place.imageKind==='illustration'?'concept-illustration':'location-photo'}.webp`;
 const searchCopy:Record<string,{title?:string;description:string}>={
- hashima:{description:'Hashima Island was abandoned after its coal mine closed around 1974. Read why the community left, what remains and how to visit from Nagasaki.'},
+ hashima:{title:'Why Was Hashima Island Abandoned? History of Gunkanjima',description:'Hashima’s mine closed in January 1974 as Japan shifted from coal to oil. Read why residents left by April, explore the full story and compare visiting options.'},
  'island-of-the-dolls':{title:'Island of the Dolls, Mexico: Xochimilco’s Story & Legends',description:'Why do dolls hang from trees in Xochimilco? Explore the Island of the Dolls’ story, local legends and what to know before visiting from Mexico City.'},
  'deep-sleep':{title:'Deep Sleep, Wales: Inside an Underground Stay',description:'Explore Deep Sleep in Wales: an underground overnight experience reached through a former slate mine, with the journey and operator information explained.'},
  skylodge:{title:'Skylodge Adventure Suites, Peru: A Cliffside Stay',description:'Sleep in a transparent capsule on a Sacred Valley cliff. Explore Skylodge Adventure Suites, the journey involved and where to check operator arrangements.'},
@@ -40,9 +40,9 @@ export const historyAnswers:Record<string,{
 }>={
  hashima:{
   question:'Why was Hashima Island abandoned?',
-  answer:'Hashima Island was abandoned after its coal mines closed around 1974 as Japan’s energy needs changed. The mining settlement lost the industry that sustained its homes, schools and shops, and its residents left. The concrete buildings remained exposed to the sea and weather. The empty skyline is the aftermath of an industrial closure, rather than an unexplained disappearance.',
-  sources:[{label:'Japan National Tourism Organization: mining and abandonment',url:'https://www.japan.travel/en/spot/752/'}],
-  guide:{href:'/blog/how-to-visit-hashima-island',label:'Plan a Hashima Island visit from Nagasaki'},
+  answer:'Hashima Island was abandoned after its coal mine closed in January 1974, as Japan’s energy demand shifted from coal to oil. Without the mine that supported the settlement, residents left; the island was uninhabited by 20 April 1974. Its empty apartment blocks are the remains of an industrial community, not an unexplained disappearance.',
+  sources:[{label:'Nagasaki City: the shift from coal to oil (Japanese)',url:'https://www.city.nagasaki.lg.jp/nagazine/hakken1007/index1.html'},{label:'Gunkanjima Digital Museum: closure and departure dates (Japanese)',url:'https://www.gunkanjima-museum.jp/data/286/detail/'}],
+  guide:{href:'/blog/how-to-visit-hashima-island',label:'Compare Hashima tours, costs and booking'},
  },
  kuldhara:{
   question:'Why was Kuldhara abandoned?',
