@@ -41,3 +41,5 @@
 }
 
 .plan > :global(#plan-hashima) { margin: 0; }
+
+.shortStory { scroll-margin-top: 28px; }

@@ -293,3 +293,12 @@ See docs/research/place-trip-source-audit-2026-10-24.md for per-place price evid
 
 ## PostHog integration — 27 October 2026
 Official Next.js SDK guide: https://posthog.com/docs/libraries/next-js ; configuration reference: https://posthog.com/docs/libraries/js/config . Used for consent-gated client initialization, explicit pageviews and disabling automatic collection.
+
+
+## Hashima comparison and visible history answer — 27 October 2026
+- Nagasaki City history: https://www.city.nagasaki.lg.jp/nagazine/hakken1007/index1.html — January 1974 closure amid the coal-to-oil transition and April depopulation.
+- Gunkanjima Digital Museum, former-resident account: https://www.gunkanjima-museum.jp/data/286/detail/ — closure on 15 January and uninhabited by 20 April 1974. Paraphrased in the visible answer; original full story retained.
+- Gunkanjima Cruise: https://www.gunkanjima-cruise.jp/en/ and its linked 21 October notice — dated alternative sightseeing fare, reception and published landing tariff through March 2027. https://www.gunkanjima-cruise.jp/en/about/ — direct-booking customer cancellation and payment. Future April 2027 prices are not presented as current.
+- Yamasa current Japanese landing page: https://www.gunkan-jima.net/ ; corporate tariff: https://www.yamasa-kaiun.net/ . Used the tariff effective October 2025, not the older English-page fare. English reception/language reference: https://www.gunkan-jima.net/en/ . The Japanese non-landing policy specifies the facility fee plus 10% of boat fare; readers must confirm the applicable fare and booking terms. No guide availability is guaranteed.
+- Concierge Standard plan: https://www.gunkanjima-concierge.com/plan_joriku/standard.html ; terms: https://www.gunkanjima-concierge.com/plan_joriku/notes.html ; reception: https://www.gunkanjima-concierge.com/access/ ; price calendar: https://www.gunkanjima-concierge.com/cgi/web/ . The English /en/ route returned 403, so Japanese official pages were used and labelled. English guiding is not verified or claimed.
+- Comparison totals are arithmetic from published adult individual fares and facility charges, not transactions, live inventory, or confirmed operating dates. Sightseeing conversions are labelled separately from standalone sightseeing tariffs. USD comparisons retain the existing dated 23 October conversion, not a newly checked FX quote.

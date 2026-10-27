@@ -474,3 +474,14 @@ Final feature validation: lint and production build passed. Existing HTTP verifi
 Added a small editorial-style opt-in panel and persistent preferences control, without changing page layouts. Chose explicit action events over autocapture; recordings remain disabled. Shared-list URLs are sanitized and custom events exclude user content. Setup and event definitions: docs/posthog-setup.md. Validation recorded after build and browser checks.
 
 Validation: final Next.js production build and targeted ESLint passed. Intercepted local-browser checks passed for opt-in, rejection, withdrawal, Do Not Track, three pageviews across three navigations, saves, story opens, blog links, and external-source links. Payloads excluded the test private list name. Desktop/mobile screenshots inspected; mobile has no horizontal overflow. Real project ingestion still requires the user-provided project key and a new deployment.
+
+
+## Focused Hashima update — 27 October 2026
+- Branch: codex/hashima-verified-comparison, based on main after PostHog release. Broader AEO drafts and audit records preserved in a named stash on their original branch.
+- Put the sourced abandonment answer in Hashima's visible short story and aligned the history title, metadata and schema. Original short-story prose and full-story chapters remain intact; the answer is no longer duplicated inside the disclosure.
+- Added a compact operator comparison to the existing visiting guide, using the same type scale, colours, thin rules and reading column. Mobile rows become stacked groups; meeting points and detailed terms use accessible native disclosures with working anchor links.
+- Chose neutral published-price comparison rather than a cheapest/best ranking. Clearly separated sightseeing from landing totals and checked newer Japanese tariffs where English pages differed.
+- Added direct links between the place plan, comparison and visible history answer. Updated only relevant editorial dates; background review dates and the existing FX date remain scoped.
+- No publication, deployment or ranking/citation outcome claimed. Validation follows below.
+
+Validation: targeted ESLint and final production build passed. Generated-HTML SEO audit checked 32 sitemap pages with zero failures. Desktop (1440px) and mobile (390px) production-browser checks passed: visible history outside the disclosure, three preserved full-story chapters, three operator rows, working comparison/deep links, keyboard toggles, no horizontal overflow, duplicate IDs, broken fragment links or page errors. With JavaScript disabled, the history answer, operator table and all full-story chapters remain in server HTML. Six screenshots inspected. Evidence: docs/research/hashima-comparison-checks-2026-10-27.json and seo-hashima-comparison-2026-10-27.json. Local preview: port 5195. No push or deployment.

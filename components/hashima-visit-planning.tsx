@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import {hashimaVisit as visit, hashimaFx, hashimaUsd} from '@/lib/hashima-visit';
 import styles from './hashima-visit-planning.module.css';
 
 export function HashimaAtAGlance() {
  return <section className={styles.glance} aria-labelledby="hashima-glance-title">
-  <div className={styles.glanceHeading}><h2 id="hashima-glance-title">Your visit, at a glance</h2><span>Checked 24 Oct 2026</span></div>
+  <div className={styles.glanceHeading}><h2 id="hashima-glance-title">Your visit, at a glance</h2><span>Checked 27 Oct 2026</span></div>
   <div className={styles.status}><strong>See Hashima from the water</strong><span>A boat trip from Nagasaki, with a stop at Takashima.</span></div>
   <dl className={styles.facts}>
    <div><dt>Adult ticket</dt><dd>About {hashimaUsd(3600)}<small>Operator price: ¥3,600</small></dd></div>
@@ -18,7 +19,7 @@ export function HashimaAtAGlance() {
 
 export function HashimaFieldGuide() {
  return <section id="plan-hashima" className={styles.fieldGuide} aria-labelledby="hashima-trip-title">
-  <p className="eyebrow">Plan your visit</p><h2 id="hashima-trip-title">Your boat trip to Hashima</h2>
+  <p className="eyebrow">Plan your visit</p><h2 id="hashima-trip-title">Your boat trip to Hashima</h2><p><Link className="text-link" href="/blog/how-to-visit-hashima-island#compare-tours">Compare three operators, costs and booking terms ↗</Link></p>
   <section className={styles.featuredTrip} aria-labelledby="hashima-cruise-title">
    <div className={styles.tripHeader}><div><p className={styles.kicker}>Sightseeing cruise</p><h3 id="hashima-cruise-title">See the island from the sea</h3></div><p className={styles.tripPrice}>About {hashimaUsd(3600)}<span>per adult · ¥3,600 charged in yen</span></p></div>
    <dl className={styles.featureFacts}><div><dt>Duration</dt><dd>About 2 hr 20 min</dd></div><div><dt>You’ll see</dt><dd>Hashima’s skyline + a Takashima stop</dd></div><div><dt>Departure</dt><dd>Nagasaki · 09:10 or 14:00</dd></div><div><dt>Operator</dt><dd>Gunkanjima Cruise</dd></div></dl>
@@ -32,7 +33,7 @@ export function HashimaFieldGuide() {
   </section>
   <section className={styles.beforeBooking}><h2>Know before you book</h2><ul><li><strong>Bring cash:</strong> direct Gunkanjima Cruise bookings are paid in yen on the day.</li><li><strong>Guiding is in Japanese:</strong> check language support before reserving.</li><li><strong>Ages 4 and up:</strong> ask the operator about mobility requirements.</li><li><strong>Pack walking shoes and a raincoat:</strong> umbrellas are not allowed.</li><li><strong>Check cancellation terms:</strong> weather can change the trip. <a href={visit.sources[2].url}>Operator’s terms ↗</a></li></ul></section>
   <HashimaFutureLanding/>
-  <section className={styles.practicalSources}><h2>Sources for your trip</h2><p className={styles.caption}>Operator information checked <time dateTime={visit.checked}>24 October 2026</time>. This is a researched guide, not a first-hand trip report.</p><ol className={styles.sources}>{visit.sources.map(source=><li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ol></section>
+  <section className={styles.practicalSources}><h2>Sources for your trip</h2><p className={styles.caption}>Operator information checked <time dateTime={visit.checked}>27 October 2026</time>. This is a researched guide, not a first-hand trip report.</p><ol className={styles.sources}>{visit.sources.map(source=><li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ol></section>
  </section>;
 }
 
@@ -59,6 +60,6 @@ export function HashimaVisitPlanning({showNotice=true}:{showNotice?:boolean}) {
   <HashimaFutureLanding/>
   <h2>How long do you need, and where do you check in?</h2><p>Allow half a day including check-in. Gunkanjima Cruise’s reception is at 11-22 Motofune-cho, Nagasaki. Published departures are 09:10 and 14:00, with check-in windows of 08:10–08:50 and 13:00–13:40.</p>
   <h2>What should you check before booking?</h2><p>Direct Gunkanjima Cruise bookings require cash payment and specify Japanese guiding only. The minimum age is four. Check mobility requirements and cancellation terms with the operator; bring walking shoes and a raincoat rather than an umbrella.</p>
-  <h3>Practical sources</h3><ol className={styles.sources}>{visit.sources.map(source=><li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ol><p className="source-context">Operator information checked 24 October 2026. Confirm your sailing date directly before booking.</p>
+  <h3>Practical sources</h3><ol className={styles.sources}>{visit.sources.map(source=><li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ol><p className="source-context">Operator information checked 27 October 2026. Confirm your sailing date directly before booking.</p>
  </section>;
 }
