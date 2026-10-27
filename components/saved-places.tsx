@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { captureAction } from '@/lib/analytics';
 import { useId, useState, type FormEvent } from 'react';
 import { createDeviceList, updateLists, useDeviceLists, useListsReady } from '@/lib/device-lists';
 import { listNameLimit } from '@/lib/shared-list';
@@ -12,7 +13,9 @@ export function SavePlace({slug,name,listId}: {slug:string;name:string;listId?:s
  const [notice,setNotice] = useState('');
  const inputId = useId();
  function toggle(id:string) {
+  const adding = !lists.find(list=>list.id===id)?.slugs.includes(slug);
   const persistent = updateLists(current=>current.map(list=>list.id===id?{...list,slugs:list.slugs.includes(slug)?list.slugs.filter(s=>s!==slug):[...list.slugs,slug]}:list));
+  if (adding) captureAction('place_saved',{place_slug:slug});
   setNotice(persistent?'List updated.':'Saved for this session only. Browser storage is unavailable.');
  }
  function create(event:FormEvent<HTMLFormElement>) {
@@ -20,6 +23,7 @@ export function SavePlace({slug,name,listId}: {slug:string;name:string;listId?:s
   const value = String(new FormData(form).get('name') || '').trim();
   if (!value) return;
   const result = createDeviceList(value,[slug]); form.reset();
+  captureAction('place_saved',{place_slug:slug});
   setNotice(result.persistent?'List created and place saved.':'Saved for this session only. Browser storage is unavailable.');
  }
  if (listId) return <div className="save-control"><button type="button" className="save-place" disabled={!ready} onClick={()=>toggle(listId)} aria-label={`Remove ${name} from this list`}>Remove from this list</button>{notice&&<p role="status" className="save-notice">{notice}</p>}</div>;

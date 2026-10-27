@@ -289,3 +289,7 @@ See docs/research/place-trip-source-audit-2026-10-24.md for per-place price evid
 - https://www.gunkanjima-cruise.jp/en/ — reception 11-22 Motofune-cho, check-in and departure windows. Its 21 October notice (existing URL in lib/hashima-visit.ts, read again 25 October) confirms alternative sightseeing: ¥3,600 adults / ¥1,800 children, about 2h20, Takashima stop, unchanged 09:10 / 14:00 departures, no Hashima facility fee. No reopening announced. Notice overrides the generic landing itinerary for this current example.
 - https://www.gunkanjima-cruise.jp/en/about/ — direct booking secures seats, cash on departure day, no customer cancellation charge until preceding day and 100% same-day charge, agency-specific terms. No assumption about operator-cancelled sailings.
 - Hashima USD uses existing 23 October JPY rate in lib/hashima-visit.ts; amounts and two-adult example calculated from the dated sightseeing alternative. Historical / JNTO / Yamasa source links retained with their earlier scoped background-review date; no claim of a fresh full historical review.
+
+
+## PostHog integration — 27 October 2026
+Official Next.js SDK guide: https://posthog.com/docs/libraries/next-js ; configuration reference: https://posthog.com/docs/libraries/js/config . Used for consent-gated client initialization, explicit pageviews and disabling automatic collection.

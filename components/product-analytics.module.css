@@ -1,0 +1,9 @@
+.preferences { position: relative; z-index: 60; }
+.panel { position: fixed; bottom: 1rem; left: 1rem; right: 1rem; max-width: 40rem; margin-inline: auto; padding: 1rem 1.25rem; background: #faf6ee; color: #29261f; border: 1px solid #81796b; box-shadow: 0 4px 20px #29261f22; font-size: .875rem; line-height: 1.6; }
+.panel p { margin: 0 0 .75rem; }
+.panel strong { display: block; }
+.panel > div { display: flex; flex-wrap: wrap; gap: .75rem; }
+.panel button { padding: .6rem 1rem; min-height: 44px; border: 1px solid #81796b; cursor: pointer; }
+.panel button:first-child { background: #873f30; color: #fff; border-color: #873f30; }
+.settings { display: block; margin: 1rem auto; padding: .5rem; text-decoration: underline; font-size: .75rem; cursor: pointer; }
+.preferences button:focus-visible { outline: 2px solid #873f30; outline-offset: 3px; }

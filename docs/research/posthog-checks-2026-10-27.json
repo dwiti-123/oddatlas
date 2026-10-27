@@ -1,0 +1,24 @@
+{
+  "events": [
+    "$pageview",
+    "full_story_opened",
+    "place_saved",
+    "$pageview",
+    "blog_place_clicked",
+    "$pageview",
+    "external_source_clicked"
+  ],
+  "requests": 3,
+  "errors": [],
+  "privacy": "No private list content in captured payloads",
+  "checks": [
+    "no requests before consent",
+    "no requests after rejection or withdrawal",
+    "three pageviews for three navigations",
+    "save and story events",
+    "blog to place click",
+    "mobile no overflow",
+    "external source click",
+    "Do Not Track"
+  ]
+}
