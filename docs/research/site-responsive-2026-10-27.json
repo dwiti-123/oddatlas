@@ -1,0 +1,968 @@
+{
+  "scope": "Local production default-page layouts, not every possible interaction state",
+  "routes": 35,
+  "checks": 121,
+  "widths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "failures": [],
+  "errors": [],
+  "results": [
+    {
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/browse",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/sources",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/guides/haunted-places",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-kayakoy-from-fethiye",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/visiting-kuldhara-from-jaisalmer",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/deep-sleep-wales-underground-stay",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-island-of-the-dolls",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/explore/map-view",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kolmanskop",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bhangarh",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/mirrorcube",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/hashima",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/dhanushkodi",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bodie",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kayakoy",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/island-of-the-dolls",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/paris-catacombs",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kuldhara",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/port-arthur",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/skylodge",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/whichaway",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/stanley-hotel",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/deep-sleep",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/ghost-towns",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/haunted-places",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/extraordinary-stays",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/palacio-de-sal",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/random-weird-place",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/saved",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/geography-anomaly-quiz",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/adventure-wall",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/browse",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/sources",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-kayakoy-from-fethiye",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/visiting-kuldhara-from-jaisalmer",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/guides/haunted-places",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/deep-sleep-wales-underground-stay",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/explore/map-view",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kolmanskop",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bodie",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bhangarh",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/mirrorcube",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-island-of-the-dolls",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/hashima",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kayakoy",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/dhanushkodi",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kuldhara",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/paris-catacombs",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/island-of-the-dolls",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/port-arthur",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/skylodge",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/stanley-hotel",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/whichaway",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/palacio-de-sal",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/ghost-towns",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/haunted-places",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/extraordinary-stays",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/random-weird-place",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/deep-sleep",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/geography-anomaly-quiz",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/adventure-wall",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/saved",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/browse",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/guides/haunted-places",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/visiting-kuldhara-from-jaisalmer",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/deep-sleep-wales-underground-stay",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-island-of-the-dolls",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/blog/how-to-visit-kayakoy-from-fethiye",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/explore/map-view",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bodie",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/bhangarh",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/mirrorcube",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/hashima",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/dhanushkodi",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kayakoy",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kuldhara",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/island-of-the-dolls",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/paris-catacombs",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/port-arthur",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/stanley-hotel",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/skylodge",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/whichaway",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/deep-sleep",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/palacio-de-sal",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/ghost-towns",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/haunted-places",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/category/extraordinary-stays",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/random-weird-place",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/tools/geography-anomaly-quiz",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/saved",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/adventure-wall",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/places/kolmanskop",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "offenders": []
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/places/hashima",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/saved",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/explore/map-view",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/adventure-wall",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/category/ghost-towns",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/places/hashima",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/saved",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/explore/map-view",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/adventure-wall",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "path": "/category/ghost-towns",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1
+    }
+  ]
+}

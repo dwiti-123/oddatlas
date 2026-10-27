@@ -1,0 +1,37 @@
+.calculator { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 48px; margin-block: 32px 64px; scroll-margin-top: 24px; }
+.calculator h2 { font-size: var(--type-section); line-height: var(--leading-heading); margin: 0 0 18px; }
+.inputHeading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 24px; }
+.inputHeading button { cursor: pointer; border-bottom: 1px solid var(--foreground); font-size: var(--type-support); padding-block: 8px; min-height: 44px; }
+.calculator .note, .calculator .hint { font-size: var(--type-support); line-height: 1.65; color: var(--muted-foreground); }
+.calculator .note { margin: 0 0 22px; }
+.fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.field, .currency { min-width: 0; }
+.currency { margin-block: 26px; max-width: 100%; }
+.calculator label { display: block; font-size: var(--type-support); font-weight: 600; margin-bottom: 8px; }
+.calculator input, .calculator select, .copyField { width: 100%; min-width: 0; min-height: 46px; padding: 10px 12px; border: 1px solid var(--input); border-radius: 0; background: var(--background); color: var(--foreground); }
+.calculator select { max-width: 200px; font: inherit; }
+.calculator input[aria-invalid=true] { border-color: var(--primary); }
+.calculator .hint { margin: 7px 0 0; }
+.calculator .error { color: var(--primary); font-size: var(--type-support); margin: 8px 0; }
+.result { background: var(--muted); border-top: 2px solid var(--primary); padding: 28px; align-self: start; position: sticky; top: 24px; min-width: 0; }
+.result .eyebrow { color: var(--primary); }
+.totals { display: grid; gap: 18px; margin: 24px 0; }
+.totals span { display: block; font-size: var(--type-support); }
+.totals strong { display: block; font-family: Georgia,serif; font-size: var(--type-section); font-weight: 400; overflow-wrap: anywhere; line-height: 1.3; margin-top: 5px; }
+.breakdown { margin: 24px 0; border-top: 1px solid var(--border); }
+.breakdown > div { display: flex; justify-content: space-between; gap: 18px; padding-block: 10px; border-bottom: 1px solid var(--border); font-size: var(--type-support); }
+.breakdown dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.actions { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 24px 0 16px; }
+.actions button { border: 1px solid var(--foreground); border-radius: 0; min-height: 44px; padding: 9px 8px; font-size: var(--type-support); cursor: pointer; }
+.actions button:first-child { background: var(--foreground); color: var(--background); }
+.actions button:disabled { opacity: .5; cursor: not-allowed; }
+.actions button:not(:disabled):hover { border-color: var(--primary); color: var(--primary); }
+.actions button:first-child:not(:disabled):hover { background: var(--primary); color: var(--background); }
+.status { font-size: var(--type-support); min-height: 1.6em; }
+.copyField { min-height: 240px; font-size: var(--type-support); resize: vertical; }
+.explanation h2 { margin: 36px 0 16px; }
+.explanation h2:first-child { margin-top: 0; }
+.explanation p { margin: 0 0 20px; line-height: 1.8; }
+@media(max-width:1000px) { .calculator { gap: 28px; } .result { padding: 22px; } .fields { gap: 20px; } }
+@media(max-width:800px) { .calculator { grid-template-columns: 1fr; } .result { position: static; } }
+@media(max-width:480px) { .fields { grid-template-columns: 1fr; } .calculator { margin-bottom: 40px; } .result { padding: 20px 16px; } .actions { gap: 8px; } }

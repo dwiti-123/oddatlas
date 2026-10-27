@@ -2,7 +2,7 @@
 import type { PostHog } from 'posthog-js';
 let client: PostHog | null = null;
 export function setAnalyticsClient(value: PostHog | null) { client = value; }
-export function captureAction(event: 'place_saved' | 'full_story_opened', properties: { place_slug?: string }) {
+export function captureAction(event: 'place_saved' | 'full_story_opened' | 'travel_budget_saved' | 'travel_budget_copied', properties: { place_slug?: string }) {
  client?.capture(event, properties);
 }
 // Never include shared-list names or arbitrary query parameters.

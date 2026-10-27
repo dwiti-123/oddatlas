@@ -29,6 +29,8 @@ For an EU project use `https://eu.i.posthog.com`. Copy the `api_host` from your 
 - `external_source_clicked`: external HTTP(S) links, with destination origin/path and current page path. Includes source and operator links; does not imply a booking or completed purchase.
 - `blog_place_clicked`: internal blog-to-place links, with destination slug and blog path.
 
+- `travel_budget_saved` / `travel_budget_copied`: explicit calculator save or successful clipboard actions. No budget amounts, currency, traveller counts or input contents are included.
+
 ## Verify after adding the key
 Open the site in a fresh browser context, accept analytics, and check PostHog Activity / live events for `$pageview`. Navigate to a place, open its full story, save it and click a source. Check that the events arrive once per action and that declining produces no PostHog traffic. Test with blockers disabled if live events do not appear.
 
