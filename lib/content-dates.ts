@@ -9,4 +9,4 @@ export const placeModifiedDates:Record<string,string>={
  whichaway:'2026-10-24', 'deep-sleep':'2026-10-24', 'palacio-de-sal':'2026-10-24',
  bodie:'2026-10-24',
 };
-export const pageModifiedDates={home:'2026-10-21',sources:'2026-10-19',blog:'2026-10-27'};
+export const pageModifiedDates={home:'2026-10-27',sources:'2026-10-19',blog:'2026-10-27'};

@@ -1,0 +1,19 @@
+{
+  "scope": "Local production UI checks",
+  "checks": [
+    "worked example",
+    "shared versus per-person arithmetic",
+    "currency relabels without conversion",
+    "save and reload",
+    "clipboard summary",
+    "clipboard fallback",
+    "invalid zero travellers",
+    "negative amount rejected",
+    "blank costs counted as zero",
+    "clear removes saved budget",
+    "storage unavailable fallback",
+    "no-JavaScript guidance",
+    "mobile no overflow"
+  ],
+  "errors": []
+}
