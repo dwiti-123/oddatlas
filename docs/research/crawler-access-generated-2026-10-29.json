@@ -1,0 +1,157 @@
+{
+  "checkedAt": "2026-10-29T14:51:17.427Z",
+  "base": ".next/server/app",
+  "networkChecked": false,
+  "scope": "Generated production files only. No HTTP, actual crawler requests, WAF logs, indexing or AI retrieval tested.",
+  "linkedPages": [
+    {
+      "path": "/",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/browse",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/sources",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/category/ghost-towns",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/category/haunted-places",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/category/extraordinary-stays",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog/how-to-visit-kayakoy-from-fethiye",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog/visiting-kuldhara-from-jaisalmer",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog/deep-sleep-wales-underground-stay",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog/how-to-visit-island-of-the-dolls",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/blog/how-to-visit-hashima-island",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/kolmanskop",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/bodie",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/bhangarh",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/mirrorcube",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/hashima",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/dhanushkodi",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/kayakoy",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/kuldhara",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/island-of-the-dolls",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/paris-catacombs",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/port-arthur",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/stanley-hotel",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/skylodge",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/whichaway",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/deep-sleep",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/places/palacio-de-sal",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/guides/haunted-places",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/explore/map-view",
+      "generatedFilePresent": true
+    },
+    {
+      "path": "/tools/travel-budget-calculator",
+      "generatedFilePresent": true
+    }
+  ],
+  "fetchChecks": [
+    {
+      "agent": "Generated HTML (no network request)",
+      "path": "/",
+      "generatedFilePresent": true,
+      "htmlTextLength": 5641
+    },
+    {
+      "agent": "Generated HTML (no network request)",
+      "path": "/places/hashima",
+      "generatedFilePresent": true,
+      "htmlTextLength": 7772
+    },
+    {
+      "agent": "Generated HTML (no network request)",
+      "path": "/blog/how-to-visit-hashima-island",
+      "generatedFilePresent": true,
+      "htmlTextLength": 13594
+    }
+  ],
+  "failures": []
+}
