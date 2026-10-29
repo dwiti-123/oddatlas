@@ -314,3 +314,10 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 - https://jaisalmertaxiandtour.com/taxi-services/quick-fare-guide/ — full-day city sightseeing chart: Swift Dzire/Etios INR 2,800–3,000; fort, havelis, Gadisar, Kuldhara, Bada Bagh. Starting prices vary by season and trip. No package-specific waiting allowance or all-inclusive total inferred.
 - Rejected SRM Holidays' search-title INR 1,500 as evidence for a return fare: body lists INR 2,000 one-way sedan and per-km rates without enough minimum-hire detail. No dedicated return price claimed. No admission tariff imported from third-party summaries.
 - Google Maps directions use the city and named village; users can replace the start with their own pickup. No embedded map, location collection, guaranteed ETA, or booking request.
+
+## Crawler access — 29 October 2026
+- https://developers.openai.com/api/docs/bots — OAI-SearchBot is search, ChatGPT-User supports user actions, GPTBot concerns training. Search and training choices are independent. No training-policy change made.
+- https://docs.perplexity.ai/docs/resources/perplexity-crawlers — PerplexityBot and Perplexity-User; user-agent plus current source-network verification for WAF exceptions.
+- https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler — Claude-SearchBot and Claude-User names and roles.
+- https://vercel.com/docs/bot-management — AI Bots Allow is inactive evaluation; verified bots handled by the managed protection layer. No actual project firewall setting was accessible or changed.
+- https://llmstxt.org/ — Markdown index proposal, not a guaranteed search ranking or citation mechanism. Index built from the site's existing records rather than a duplicated content list.
