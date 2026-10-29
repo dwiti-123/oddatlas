@@ -306,3 +306,11 @@ Official Next.js SDK guide: https://posthog.com/docs/libraries/next-js ; configu
 
 ## Travel budget calculator — 27 October 2026
 Original arithmetic and user-entered estimates; no external prices, exchange rates or destination claims. The worked example is illustrative and reconciles to USD 1,600 subtotal, USD 160 buffer, USD 1,760 group total and USD 880 per person. Consulted bundled Next.js metadata documentation for canonical metadata and server-rendered page content. Local saving and copy use existing browser capabilities; no additional package was installed.
+
+## Kuldhara transport guide — checked 28 October 2026
+- https://www.tourism.rajasthan.gov.in/kuldhara.html — official approximate 17 km distance, taxi recommendation and protected village context. https://www.tourism.rajasthan.gov.in/jaisalmer.html uses about 18 km. These are destination distances, not verified hotel-to-gate road mileage or journey times.
+- https://www.tourism.rajasthan.gov.in/contact-us.html — Jaisalmer Tourist Reception Centre near Gadisar Lake, 02992-252406. Rechecked published directory; no phone call made.
+- https://therajtravels.in/cab-service-in-jaisalmer.php — operator-advertised full-day circuit from INR 1,600 per vehicle, 8–9 hours, includes Kuldhara, Bada Bagh, Lodurva and Akal Wood Fossil Park. Driver charges stated included. Vehicle, fuel, entry, taxes, waiting and pickup/drop details require individual confirmation. Not a Kuldhara-only return tariff.
+- https://jaisalmertaxiandtour.com/taxi-services/quick-fare-guide/ — full-day city sightseeing chart: Swift Dzire/Etios INR 2,800–3,000; fort, havelis, Gadisar, Kuldhara, Bada Bagh. Starting prices vary by season and trip. No package-specific waiting allowance or all-inclusive total inferred.
+- Rejected SRM Holidays' search-title INR 1,500 as evidence for a return fare: body lists INR 2,000 one-way sedan and per-km rates without enough minimum-hire detail. No dedicated return price claimed. No admission tariff imported from third-party summaries.
+- Google Maps directions use the city and named village; users can replace the start with their own pickup. No embedded map, location collection, guaranteed ETA, or booking request.

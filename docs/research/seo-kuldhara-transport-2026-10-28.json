@@ -1,0 +1,341 @@
+{
+  "scope": "Local production HTML only; not live deployment, Google indexing, CWV or rankings",
+  "pages": 33,
+  "failures": [],
+  "rows": [
+    {
+      "url": "https://www.oddatlas.world/",
+      "title": "Odd Atlas — Ghost Towns, Haunted Places & Unusual Stays",
+      "description": "Explore 15 unusual places: ghost towns, places with haunted legends, and extraordinary stays. Discover their stories, sources and visiting information.",
+      "h1": "Somewhereout of the ordinary.",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/tools/travel-budget-calculator",
+      "title": "Travel Budget Calculator: Total Trip & Per-Person Costs | Odd Atlas",
+      "description": "Estimate your travel budget with shared accommodation, daily food and transport, activities and a buffer. See total and per-person costs, save locally or copy a summary.",
+      "h1": "Travel budget calculator",
+      "schema": [
+        "WebApplication"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/browse",
+      "title": "Browse All Places & Travel Guides | Odd Atlas",
+      "description": "Browse Odd Atlas’s curated ghost towns, haunted and mysterious places, extraordinary stays and sourced visiting guides, grouped by category.",
+      "h1": "Find your next strange place.",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/sources",
+      "title": "Sources & Photo Credits | Odd Atlas",
+      "description": "The research, image credits, and design references behind Odd Atlas.",
+      "h1": "Sources, not just stories.",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/guides/haunted-places",
+      "title": "Haunted & Mysterious Places You Can Visit | Odd Atlas",
+      "description": "Compare five places with ghost stories or unsettling histories: Bhangarh Fort, the Island of the Dolls, Paris Catacombs, Port Arthur and the Stanley Hotel.",
+      "h1": "Haunted & mysteriousplaces you can visit.",
+      "schema": [
+        "CollectionPage"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog",
+      "title": "The Odd Atlas Blog: Guides for Curious Travellers | Odd Atlas",
+      "description": "Practical visiting guides to unusual places, from Kayaköy and Kuldhara to Hashima, the Island of the Dolls and Deep Sleep. Plan with original sources.",
+      "h1": "A little furtherinto the story.",
+      "schema": [
+        "CollectionPage"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog/how-to-visit-kayakoy-from-fethiye",
+      "title": "Kayaköy Ghost Village: Tickets and Buses from Fethiye | Odd Atlas",
+      "description": "Visit Kayaköy from Fethiye: official bus routes 3-4 and 3-44, the listed €3 visitor ticket, opening-hour checks and a simple plan for the ruins.",
+      "h1": "Kayaköy Ghost Village: Tickets and Buses from Fethiye",
+      "schema": [
+        "BlogPosting"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog/visiting-kuldhara-from-jaisalmer",
+      "title": "Jaisalmer to Kuldhara: Distance, Transport & Visit Guide | Odd Atlas",
+      "description": "Plan Jaisalmer to Kuldhara: 17–18 km, driving directions, published taxi day-trip prices, return transport and a one-hour visit to the ruins.",
+      "h1": "Jaisalmer to Kuldhara: Distance, Transport & Visit Guide",
+      "schema": [
+        "BlogPosting"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog/deep-sleep-wales-underground-stay",
+      "title": "Deep Sleep, Wales: Cost, Booking and the Underground Journey | Odd Atlas",
+      "description": "Plan Deep Sleep in Wales: the £399 cabin for up to two, 17-hour itinerary, minimum age, meals, packing and the guided route into the mine.",
+      "h1": "Deep Sleep, Wales: Cost, Booking and the Underground Journey",
+      "schema": [
+        "BlogPosting"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog/how-to-visit-island-of-the-dolls",
+      "title": "Island of the Dolls, Mexico: Boat Costs and How to Visit | Odd Atlas",
+      "description": "Visit the Island of the Dolls from Mexico City: Cuemanco boat route, four-hour budget example, shared costs, island-entry checks and getting to the dock.",
+      "h1": "Island of the Dolls, Mexico: Boat Costs and How to Visit",
+      "schema": [
+        "BlogPosting"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/blog/how-to-visit-hashima-island",
+      "title": "Hashima Island from Nagasaki: Tour Costs and Booking | Odd Atlas",
+      "description": "Compare Hashima boat tours from Nagasaki: published adult costs, sightseeing versus landing, meeting points, museum inclusion and operator cancellation terms.",
+      "h1": "Hashima Island from Nagasaki: Tour Costs and Booking",
+      "schema": [
+        "BlogPosting"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/explore/map-view",
+      "title": "Explore the map — Ghost towns, mysteries & unusual stays | Odd Atlas",
+      "description": "Explore Odd Atlas on an interactive world map. Find ghost towns, places with strange stories and extraordinary stays, with sourced guides and visit/stay labels.",
+      "h1": "A world worthlooking closer at.",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/kolmanskop",
+      "title": "Kolmanskop: How Did the Desert Move Into a Diamond Town? | Odd Atlas",
+      "description": "Explore Kolmanskop near Lüderitz, Namibia: the diamond town reclaimed by Namib Desert sand, its history and official information for planning a visit.",
+      "h1": "Kolmanskop: How Did the Desert Move Into a Diamond Town?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/bodie",
+      "title": "Bodie Ghost Town: Did Everyone Really Leave? | Odd Atlas",
+      "description": "Explore Bodie, California: a preserved ghost town with mining history, surviving buildings and official state park information for planning a visit.",
+      "h1": "Bodie Ghost Town: Did Everyone Really Leave?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/bhangarh",
+      "title": "Bhangarh Fort: History, Haunted Legends & Visiting Guide | Odd Atlas",
+      "description": "Explore Bhangarh Fort in Rajasthan: the history behind its ruins, local curse legends, and the sunrise-to-sunset restriction to know before visiting.",
+      "h1": "Bhangarh Fort: History, Haunted Legends & Visiting Guide",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/mirrorcube",
+      "title": "Mirrorcube at Treehotel, Sweden: The Mirrored Treehouse | Odd Atlas",
+      "description": "Explore the Mirrorcube at Treehotel in Harads, Sweden: its reflective forest setting, unusual design and official information for planning a stay.",
+      "h1": "Mirrorcube at Treehotel, Sweden: The Mirrored Treehouse",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/hashima",
+      "title": "Why Was Hashima Island Abandoned? History of Gunkanjima | Odd Atlas",
+      "description": "Hashima’s mine closed in January 1974 as Japan shifted from coal to oil. Read why residents left by April, explore the full story and compare visiting options.",
+      "h1": "Why Was Hashima Island Abandoned? History of Gunkanjima",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/dhanushkodi",
+      "title": "Dhanushkodi Ghost Town: History & Visiting from Rameswaram | Odd Atlas",
+      "description": "Read the story of Dhanushkodi’s 1964 cyclone, its coastal ruins in Tamil Nadu, and practical context for visiting from Rameswaram.",
+      "h1": "Dhanushkodi Ghost Town: History & Visiting from Rameswaram",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/kayakoy",
+      "title": "Kayaköy: Why Are This Turkish Village’s Houses Empty? | Odd Atlas",
+      "description": "Explore Kayaköy near Fethiye, Türkiye: roofless village houses, a history of displacement and visitor information for understanding the ruins.",
+      "h1": "Kayaköy: Why Are This Turkish Village’s Houses Empty?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/kuldhara",
+      "title": "Why Was Kuldhara Abandoned? Behind the Curse Legend | Odd Atlas",
+      "description": "Why was Kuldhara abandoned? Explore the desert village near Jaisalmer, distinguish its curse legend from historical evidence and check visitor access.",
+      "h1": "Why Was Kuldhara Abandoned? Behind the Curse Legend",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/island-of-the-dolls",
+      "title": "Island of the Dolls, Mexico: Xochimilco’s Story & Legends | Odd Atlas",
+      "description": "Why do dolls hang from trees in Xochimilco? Explore the Island of the Dolls’ story, local legends and what to know before visiting from Mexico City.",
+      "h1": "Island of the Dolls, Mexico: Xochimilco’s Story & Legends",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/paris-catacombs",
+      "title": "Paris Catacombs: Why Are There Bones Beneath the City? | Odd Atlas",
+      "description": "Why are there bones beneath Paris? Explore the Catacombs’ history, the official visitor route and the access conditions to check before going.",
+      "h1": "Paris Catacombs: Why Are There Bones Beneath the City?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/port-arthur",
+      "title": "Port Arthur: What’s Behind Tasmania’s Ghost Stories? | Odd Atlas",
+      "description": "Explore Port Arthur in Tasmania: the former penal settlement’s history, its ghost-story tradition and official information about lantern-lit tours.",
+      "h1": "Port Arthur: What’s Behind Tasmania’s Ghost Stories?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/stanley-hotel",
+      "title": "Stanley Hotel: How Did One Night Inspire The Shining? | Odd Atlas",
+      "description": "Explore the Stanley Hotel in Estes Park, Colorado: its connection to The Shining, ghost-story tradition and official tour and stay information.",
+      "h1": "Stanley Hotel: How Did One Night Inspire The Shining?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/skylodge",
+      "title": "Skylodge Adventure Suites, Peru: A Cliffside Stay | Odd Atlas",
+      "description": "Sleep in a transparent capsule on a Sacred Valley cliff. Explore Skylodge Adventure Suites, the journey involved and where to check operator arrangements.",
+      "h1": "Skylodge Adventure Suites, Peru: A Cliffside Stay",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/whichaway",
+      "title": "Whichaway Camp: What’s It Like to Sleep in Antarctica? | Odd Atlas",
+      "description": "Explore Whichaway Camp in Antarctica: heated sleeping pods in the Schirmacher Oasis, the expedition setting and official operator information.",
+      "h1": "Whichaway Camp: What’s It Like to Sleep in Antarctica?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/deep-sleep",
+      "title": "Deep Sleep, Wales: Inside an Underground Stay | Odd Atlas",
+      "description": "Explore Deep Sleep in Wales: an underground overnight experience reached through a former slate mine, with the journey and operator information explained.",
+      "h1": "Deep Sleep, Wales: Inside an Underground Stay",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/places/palacio-de-sal",
+      "title": "Palacio de Sal: Can You Stay in a Hotel Built From Salt? | Odd Atlas",
+      "description": "Explore Palacio de Sal near Uyuni, Bolivia: a hotel built from salt beside the salt flats, with its story and official information for planning a stay.",
+      "h1": "Palacio de Sal: Can You Stay in a Hotel Built From Salt?",
+      "schema": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/category/ghost-towns",
+      "title": "Ghost towns & forgotten cities | Odd Atlas",
+      "description": "Explore abandoned settlements through the people, industries and events behind their ruins. Compare places across countries, read their sourced histories, and check how visitor access works today.",
+      "h1": "Ghost towns & forgotten cities",
+      "schema": [
+        "CollectionPage"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/category/haunted-places",
+      "title": "Haunted & mysterious places | Odd Atlas",
+      "description": "Discover places known for unsettling stories, local legends and unusual histories. Each entry distinguishes documented events from folklore, with original sources and practical visiting context.",
+      "h1": "Haunted & mysterious places",
+      "schema": [
+        "CollectionPage"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/category/extraordinary-stays",
+      "title": "Extraordinary stays | Odd Atlas",
+      "description": "Find unusual places to spend a night: a mirrored treehouse, a cliffside capsule, an underground camp and more. Explore the setting and the journey involved before checking arrangements with the operator.",
+      "h1": "Extraordinary stays",
+      "schema": [
+        "CollectionPage"
+      ],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/tools/random-weird-place",
+      "title": "Random weird place generator — Weird things to look at on Google Maps | Odd Atlas",
+      "description": "Looking for weird things to look at on Google Maps? Discover a random ghost town, mysterious place or extraordinary stay, with its map and sourced story.",
+      "h1": "Let curiositychoose the place.",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    },
+    {
+      "url": "https://www.oddatlas.world/tools/geography-anomaly-quiz",
+      "title": "Weird geography quiz — Five unusual places around the world | Odd Atlas",
+      "description": "Test your geography with five ghost towns and unusual stays. Guess the country, discover the answer and explore the sourced story behind each place.",
+      "h1": "How well do you knowthe unusual world?",
+      "schema": [],
+      "indexing": "Not verified in Search Console"
+    }
+  ]
+}
