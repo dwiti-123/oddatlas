@@ -321,3 +321,6 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 - https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler — Claude-SearchBot and Claude-User names and roles.
 - https://vercel.com/docs/bot-management — AI Bots Allow is inactive evaluation; verified bots handled by the managed protection layer. No actual project firewall setting was accessible or changed.
 - https://llmstxt.org/ — Markdown index proposal, not a guaranteed search ranking or citation mechanism. Index built from the site's existing records rather than a duplicated content list.
+## Branded search identity — 29 October 2026
+- https://developers.google.com/search/docs/appearance/site-names — homepage WebSite name/alternateName/url and consistent visible branding; site-name selection is separate from ranking position. Used Odd Atlas, the closed-form OddAtlas, and the actual lowercase domain as a backup name.
+- https://developers.google.com/search/docs/crawling-indexing/special-tags — Google ignores the meta-keyword tag for ranking. No hidden keyword list, fake typo alias, doorway page or unsupported search-action markup added.

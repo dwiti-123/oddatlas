@@ -5,6 +5,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.oddatlas.world'),
+  applicationName: 'Odd Atlas',
+  openGraph: { siteName: 'Odd Atlas' },
   title: { default:'Odd Atlas — Unusual places, carefully explored',template:'%s | Odd Atlas' },
   description: 'Explore a small collection of ghost towns, local legends, and extraordinary stays. Real photographs, clear context, and sources.',
   icons: {

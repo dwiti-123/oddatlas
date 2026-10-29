@@ -10,6 +10,8 @@ export function GET() {
   '',
   '> An independent travel directory for discovering ghost towns, places with unusual histories and local legends, and extraordinary stays.',
   '',
+  'The site name is Odd Atlas, also written OddAtlas. Its canonical website is https://www.oddatlas.world/.',
+  '',
   'Place pages contain short introductions, full stories, source links and visiting information. Visiting guides cover researched travel logistics. Documented history and local folklore are distinguished in the articles. Prices, access conditions and check dates belong to each page; operator sources provide current booking details. Odd Atlas is not a tour operator.',
   '',
   'Public stories and guides are rendered as HTML without requiring JavaScript. Full-story disclosures contain their text in the initial HTML. Maps, saved lists and the budget calculator also have interactive features. Saved-list contents are not public editorial information.',

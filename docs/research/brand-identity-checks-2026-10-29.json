@@ -1,0 +1,25 @@
+{
+  "scope": "Local production preview only. No indexing, rankings or deployment verified.",
+  "rows": [
+    {
+      "width": 390,
+      "status": 200,
+      "identitySchema": "passed",
+      "metadata": "passed",
+      "heroUnchanged": true,
+      "aboutCopy": "passed",
+      "horizontalOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "status": 200,
+      "identitySchema": "passed",
+      "metadata": "passed",
+      "heroUnchanged": true,
+      "aboutCopy": "passed",
+      "horizontalOverflow": false,
+      "pageErrors": []
+    }
+  ]
+}
