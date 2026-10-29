@@ -1,0 +1,41 @@
+{
+  "scope": "Local production preview only; no live deployment, indexing or rankings verified",
+  "results": [
+    {
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "brokenFragments": [],
+      "pageErrors": [],
+      "directions": 3,
+      "title": "Jaisalmer to Kuldhara: Distance, Transport & Visit Guide",
+      "canonical": "unchanged",
+      "schema": "passed"
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "brokenFragments": [],
+      "pageErrors": [],
+      "directions": 3,
+      "title": "Jaisalmer to Kuldhara: Distance, Transport & Visit Guide",
+      "canonical": "unchanged",
+      "schema": "passed"
+    },
+    {
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "brokenFragments": [],
+      "pageErrors": [],
+      "directions": 3,
+      "title": "Jaisalmer to Kuldhara: Distance, Transport & Visit Guide",
+      "canonical": "unchanged",
+      "schema": "passed"
+    }
+  ],
+  "noJavaScript": "passed",
+  "blogListing": "passed",
+  "sitemap": "passed"
+}
