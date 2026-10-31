@@ -12,6 +12,7 @@ export const categoryFor = (place:Place) => directoryCategories.find(c=>c.catego
 export const entriesFor = (slug:string) => places.filter(p=>p.category===findCategory(slug)?.category);
 export const placeImage = (place:Place) => `/images/${place.slug}-${place.country.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-${place.imageKind==='illustration'?'concept-illustration':'location-photo'}.webp`;
 const searchCopy:Record<string,{title?:string;description:string}>={
+ dhanushkodi:{title:'Dhanushkodi Ghost Town: History, Ruins & Visiting from Rameswaram',description:'Why is Dhanushkodi called a ghost town? Read its 1964 cyclone history, see what survives and plan the road trip from Rameswaram.'},
  hashima:{title:'Why Was Hashima Island Abandoned? History of Gunkanjima',description:'Hashima’s mine closed in January 1974 as Japan shifted from coal to oil. Read why residents left by April, explore the full story and compare visiting options.'},
  'island-of-the-dolls':{title:'Island of the Dolls, Mexico: Xochimilco’s Story & Legends',description:'Why do dolls hang from trees in Xochimilco? Explore the Island of the Dolls’ story, local legends and what to know before visiting from Mexico City.'},
  'deep-sleep':{title:'Deep Sleep, Wales: Inside an Underground Stay',description:'Explore Deep Sleep in Wales: an underground overnight experience reached through a former slate mine, with the journey and operator information explained.'},
