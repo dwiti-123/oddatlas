@@ -44,6 +44,7 @@ export default async function PlacePage({params}:Props) {
   kuldhara:{href:'/blog/visiting-kuldhara-from-jaisalmer',label:'Visiting Kuldhara from Jaisalmer'},
   'deep-sleep':{href:'/blog/deep-sleep-wales-underground-stay',label:'Planning a Deep Sleep overnight stay'},
   'island-of-the-dolls':{href:'/blog/how-to-visit-island-of-the-dolls',label:'How to visit the Island of the Dolls'},
+  dhanushkodi:{href:'/blog/visiting-dhanushkodi-from-rameswaram',label:'Plan a Dhanushkodi visit from Rameswaram'},
  } as Record<string,{href:string;label:string}>)[p.slug];
  return <><Header/><main id="main">
   <div className={`detail-top wrap ${styles.opening}`}>

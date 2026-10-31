@@ -321,3 +321,8 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 - https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler — Claude-SearchBot and Claude-User names and roles.
 - https://vercel.com/docs/bot-management — AI Bots Allow is inactive evaluation; verified bots handled by the managed protection layer. No actual project firewall setting was accessible or changed.
 - https://llmstxt.org/ — Markdown index proposal, not a guaranteed search ranking or citation mechanism. Index built from the site's existing records rather than a duplicated content list.
+## Traveller-problem research and Dhanushkodi — 29 October 2026
+- Research dossier: docs/research/traveller-problems-and-dhanushkodi-2026-10-29.md. Contains the collection coverage matrix, primary/operator evidence, source-age limits and unresolved publication gates.
+- Official background: Ramanathapuram District Dhanushkodi page; DGLL lighthouse page; PIB release 1497581; original Mausam/IMD cyclone paper linked in the dossier. These do not establish live transport tariffs or opening hours.
+- Commercial Rameswaram Tourism bus and fare pages were compared with official information. Route numbers conflict with older references; the taxi tariff excludes the current seasonal interval. Neither is treated as verified current local transport advice.
+- TNSTC-hosted SETC directory is a contact/referral lead, not evidence of a local bus timetable. The October district inspection notice does not establish closure/reopening or visitor rules. No outreach, calls, bookings or implementation performed.
