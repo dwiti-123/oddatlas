@@ -527,3 +527,9 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - The guide answers the traveller’s first decisions above the fold: approximate distance from Rameswaram, road access, the difference between the ruins/lighthouse/Arichalmunai, and a half-day planning suggestion. It links to editable Google Maps directions and the original government sources.
 - Kept uncertain transport fares, bus timetables and lighthouse opening hours out of the published facts. The government sources establish history and road context but do not provide a current complete fare/timetable; the article labels local confirmation as required.
 - Added the guide to the blog index, sitemap/llms registry through the shared blog record, and the Dhanushkodi place-page discovery link. Existing place story and practical card remain unchanged.
+
+## Hashima and Island of the Dolls GEO pass — 2 November 2026
+- Branch: codex/hashima-island-dolls-geo. Kept both full stories, URLs and shared journal layout intact.
+- Reworked both guide titles and descriptions around observed traveller questions, added clearer entity aliases (Gunkanjima/Battleship Island and Isla de las Muñecas/Xochimilco), and made two practical questions more explicit in the semantic headings.
+- Hashima now states the current boat-versus-landing answer more directly. Island of the Dolls now answers the Xochimilco location question directly. Existing source links, caveats and operator boundaries remain intact.
+- Updated BlogPosting dates, blog cards and sitemap last-modified values. This is a GEO clarity improvement, not a promise of a ranking or AI citation.
