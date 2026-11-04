@@ -533,3 +533,7 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - Reworked both guide titles and descriptions around observed traveller questions, added clearer entity aliases (Gunkanjima/Battleship Island and Isla de las Muñecas/Xochimilco), and made two practical questions more explicit in the semantic headings.
 - Hashima now states the current boat-versus-landing answer more directly. Island of the Dolls now answers the Xochimilco location question directly. Existing source links, caveats and operator boundaries remain intact.
 - Updated BlogPosting dates, blog cards and sitemap last-modified values. This is a GEO clarity improvement, not a promise of a ranking or AI citation.
+## Contextual internal links — 4 November 2026
+- Added a short, visible “Plan the journey” link block after the sourced story opening on place pages that have a visiting guide.
+- Chose descriptive, place-specific guide labels and placed the link before the long-story disclosure so search visitors can move from history to practical planning without reaching the bottom of the page.
+- Kept the existing sidebar and related-place links; the new block is a contextual next step, not a keyword-heavy link grid.
