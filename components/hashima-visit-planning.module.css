@@ -26,6 +26,22 @@
 .action { display: flex; justify-content: space-between; align-items: center; gap: .8rem; min-height: 46px; padding: .75rem 1rem; border: 1px solid var(--foreground); font-size: var(--type-support); font-weight: 600; background: var(--foreground); color: var(--background); transition: background .15s, color .15s; }
 .action:hover { background: var(--background); color: var(--foreground); }
 .fieldGuide { margin-block: 2.5rem; }
+.distinctive { margin-block: 2.5rem; border-block: 1px solid var(--border); padding-block: 1.5rem; }
+.distinctive h2 { margin: 0 0 .85rem; }
+.distinctive > p { max-width: 66ch; }
+.distinctiveFacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 1rem; }
+.distinctiveFacts > div { border-top: 2px solid var(--primary); padding-top: .75rem; }
+.distinctiveFacts dt { color: var(--muted-foreground); font-size: var(--type-support); }
+.distinctiveFacts dd { margin: .25rem 0 .45rem; font-size: var(--type-card); font-weight: 700; }
+.distinctiveFacts p { margin: 0; font-size: var(--type-support); color: var(--muted-foreground); }
+.comparison { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1.5rem; }
+.comparison h2 { margin: 0 0 .7rem; }
+.comparisonGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+.comparisonCard { border: 1px solid var(--border); padding: 1.1rem; display: flex; flex-direction: column; min-width: 0; }
+.comparisonCard h3 { margin: 0 0 .55rem; font-size: var(--type-card); line-height: 1.25; }
+.comparisonCard p { margin: 0 0 .75rem; }
+.comparisonCard .comparisonPrice { font-weight: 700; color: var(--primary); }
+.comparisonCard .action { margin-top: auto; }
 .fieldGuide h2 { margin: 0 0 1rem; }
 .fieldGuide .intro { margin: 0 0 1.5rem; }
 .tripGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
@@ -51,6 +67,7 @@
 .beforeBooking ul { padding-left: 1.2rem; margin: 0; }
 .beforeBooking li { padding-block: .4rem; }
 @media (max-width: 700px) { .tripGrid { grid-template-columns: 1fr; } .trip { padding: 1.1rem; } .facts { gap: 1rem; } }
+@media (max-width: 700px) { .distinctiveFacts, .comparisonGrid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .action { transition: none; } }
 .glance .accessLine, .notice .accessLine { margin: 1rem 0 0; font-size: var(--type-support); color: var(--muted-foreground); }
 .accessLine a, .caption a, .futureTrip a, .beforeBooking a { text-decoration: underline; text-underline-offset: 4px; }

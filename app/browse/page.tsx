@@ -3,8 +3,9 @@ import { places } from '@/lib/places';
 import { Header,Footer } from '@/components/site-shell';
 import { directoryCategories,entriesFor } from '@/lib/discovery';
 import { blogPosts } from '@/lib/blog';
+import { createSeoMetadata } from '@/lib/seo';
 
-export const metadata={title:'Browse All Places & Travel Guides',description:'Browse Odd Atlas’s curated ghost towns, haunted and mysterious places, extraordinary stays and sourced visiting guides, grouped by category.',alternates:{canonical:'/browse'}};
+export const metadata=createSeoMetadata({title:'Browse Unusual Places & Travel Guides | Odd Atlas',description:'Browse Odd Atlas’s curated ghost towns, haunted and mysterious places, extraordinary stays and sourced visiting guides, grouped by category.',path:'/browse'});
 
 export default function BrowsePage(){return <><Header/><main id="main" className="sources-page wrap">
  <p className="eyebrow">The atlas / Every detour</p><h1>Find your next strange place.</h1>
