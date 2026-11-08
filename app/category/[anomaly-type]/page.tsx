@@ -5,13 +5,14 @@ import { notFound } from 'next/navigation';
 import { Header, Footer } from '@/components/site-shell';
 import { PlaceCard } from '@/components/place-card';
 import { directoryCategories, entriesFor, findCategory, siteUrl } from '@/lib/discovery';
+import { createSeoMetadata } from '@/lib/seo';
 export const dynamic='force-static';
 export const revalidate=86400;
 export function generateStaticParams(){return directoryCategories.map(c=>({'anomaly-type':c.slug}));}
 type Props={params:Promise<{'anomaly-type':string}>};
 export async function generateMetadata({params}:Props):Promise<Metadata>{
  const category=findCategory((await params)['anomaly-type']);if(!category)notFound();
- return {title:category.title,description:category.description,alternates:{canonical:`/category/${category.slug}`},openGraph:{title:category.title,description:category.description,url:`/category/${category.slug}`}};
+ return createSeoMetadata({title:`${category.title} | Odd Atlas`,description:category.description,path:`/category/${category.slug}`});
 }
 export default async function CategoryPage({params}:Props){
  const category=findCategory((await params)['anomaly-type']);if(!category)notFound();const entries=entriesFor(category.slug);

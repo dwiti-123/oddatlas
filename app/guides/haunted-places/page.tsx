@@ -3,13 +3,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { places } from '@/lib/places';
 import { Header, Footer } from '@/components/site-shell';
+import { createSeoMetadata } from '@/lib/seo';
 
 const title = 'Haunted & Mysterious Places You Can Visit';
 const description = 'Compare five places with ghost stories or unsettling histories: Bhangarh Fort, the Island of the Dolls, Paris Catacombs, Port Arthur and the Stanley Hotel.';
-export const metadata: Metadata = {
- title, description, alternates: { canonical: '/guides/haunted-places' },
- openGraph: { title, description, url: '/guides/haunted-places', type: 'article' },
-};
+export const metadata: Metadata = createSeoMetadata({ title, description, path: '/guides/haunted-places', type: 'article' });
 const entries = places.filter(p => p.category === 'mystery');
 export default function HauntedPlacesGuide() {
  const structured = {
