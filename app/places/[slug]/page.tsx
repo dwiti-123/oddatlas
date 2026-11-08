@@ -14,6 +14,7 @@ import { FullStory } from '@/components/full-story';
 import { SavePlace } from '@/components/saved-places';
 import { Header, Footer } from '@/components/site-shell';
 import { LocationMap } from '@/components/location-map';
+import { PlaceDistinctiveFacts } from '@/components/place-distinctive-facts';
 import { findPlace, searchDetails } from '@/lib/places';
 import { allPlaceRoutes, categoryFor, placeImage, placeTitle, placeDescription, reviewedDate, siteUrl, locationWordCount, relatedPlaces, historyAnswers } from '@/lib/discovery';
 
@@ -59,6 +60,7 @@ export default async function PlacePage({params}:Props) {
    <section id={p.slug==='hashima'?'why-hashima-was-abandoned':undefined} className={`story-opening ${styles.shortStory}`}><p className="eyebrow">The short story</p><h2>{p.slug==='hashima'&&history?history.question:p.storyTitle}</h2>{p.slug==='hashima'&&history&&<><p>{history.answer}</p><p className="source-context">History answer checked 27 October 2026. Sources: {history.sources.map((source,index)=><span key={source.url}>{index>0?' · ':''}<a href={source.url}>{source.label}</a></span>)}</p></>}<p>{p.story}</p></section>
    {guide&&<section className="guide-teaser place-guide-teaser" aria-labelledby="place-guide-heading"><div><p className="eyebrow">Plan the journey</p><h2 id="place-guide-heading">Planning a visit to {p.name}?</h2></div><div><p>{p.stay?'Check the practical stay details, timing and operator arrangements before booking.':'Check the route, timing and access details before you go.'}</p><Link className="text-link" href={guide.href}>{guide.label} ↗</Link></div></section>}
    {p.longStory&&<FullStory story={p.longStory} sources={p.sources} context={history&&p.slug!=='hashima'?<div className={styles.historyContext}><h3>{history.question}</h3><p>{history.answer}</p><p className="source-context">Sources: {history.sources.map((source,index)=><span key={source.url}>{index>0?' · ':''}<a href={source.url}>{source.label}</a></span>)}</p></div>:undefined}/>}
+   <PlaceDistinctiveFacts slug={p.slug}/>
    <div className={styles.plan}>{p.slug==='hashima'?<HashimaFieldGuide/>:<PlaceTripGuide place={p} questions={seo}/>}</div>
    <PlaceContext slug={p.slug}/>
    <section><h2>What is at {p.name} today?</h2><p>{p.slug==='hashima'?p.today.replace('Parts of the island are open through organised tours.', 'Organised visits use designated paths when island landing is permitted.'):p.today}</p></section>

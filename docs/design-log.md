@@ -537,3 +537,10 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - Added a short, visible “Plan the journey” link block after the sourced story opening on place pages that have a visiting guide.
 - Chose descriptive, place-specific guide labels and placed the link before the long-story disclosure so search visitors can move from history to practical planning without reaching the bottom of the page.
 - Kept the existing sidebar and related-place links; the new block is a contextual next step, not a keyword-heavy link grid.
+
+## Traveller options and place distinctiveness — 8 November 2026
+- Branch: codex/traveler-intent-uniqueness. Preserved existing place URLs, full stories and editorial layout.
+- Added a reusable “The detail that changes the visit” section for Mirrorcube, Port Arthur and The Stanley. It surfaces operator/authority-backed capacity or visitation facts before the practical guide, with a checked date and direct source link.
+- Added a reusable “Compare current options” section for Whichaway, Skylodge and Palacio de Sal. It compares official itineraries or official booking routes, not unrelated resellers, and keeps live availability/cancellation terms with the operator.
+- Chose first-party facts: Mirrorcube’s two-person/16 m²/2010 details, Port Arthur’s 2024–25 visitor figures and site scale, and The Stanley’s 220 accommodations/13 highlighted rooms/1909 date. No annual visitor number was invented where the operator did not publish one.
+- Kept local currencies for option cards and retained the existing approximate-USD treatment for the main trip card. This gives a fast decision view without making a dynamic checkout promise.
