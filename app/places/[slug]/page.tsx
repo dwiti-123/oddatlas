@@ -11,6 +11,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { FullStory } from '@/components/full-story';
+import { StoryJump } from '@/components/story-jump';
 import { SavePlace } from '@/components/saved-places';
 import { Header, Footer } from '@/components/site-shell';
 import { LocationMap } from '@/components/location-map';
@@ -53,7 +54,7 @@ export default async function PlacePage({params}:Props) {
    <p className="eyebrow">{p.categoryName} · {p.region}, {p.country}</p>
    <h1 className={`place-story-title ${styles.title}`}>{placeTitle(p)}</h1><p className="detail-intro">{p.hook}</p>
    <dl className={styles.essentials} aria-label="Visit essentials">{placeEssentials(p).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-   <div className={styles.actions}><a className={styles.primary} href={`#${planId}`}>{(placeTripPlans[p.slug]?.kind??(p.stay?'stay':'visit'))==='stay'?'Plan a stay':'Plan a visit'} ↓</a>{p.longStory&&<a href="#full-story-text">Read the story ↓</a>}<SavePlace slug={p.slug} name={p.name}/></div>
+   <div className={styles.actions}><a className={styles.primary} href={`#${planId}`}>{(placeTripPlans[p.slug]?.kind??(p.stay?'stay':'visit'))==='stay'?'Plan a stay':'Plan a visit'} ↓</a>{p.longStory&&(p.slug==='dhanushkodi'?<StoryJump/>:<a href="#full-story-text">Read the story ↓</a>)}<SavePlace slug={p.slug} name={p.name}/></div>
   </div>
   <figure className="wrap"><img src={placeImage(p)} alt={p.alt} width="1440" height="960" className="detail-photo" fetchPriority="high"/><figcaption className="photo-caption">{p.imageKind==='illustration'?'Illustration':'Photograph'}: {p.credit} · {p.photoDate}{p.imageKind==='photo'?` · ${p.license}`:''}</figcaption></figure>
   <div className={`detail-body wrap ${styles.body}`}><article>
