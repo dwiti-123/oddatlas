@@ -1,3 +1,4 @@
+import {placeDrafts} from '@/lib/place-drafts';
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog';
 import { placeModifiedDates,pageModifiedDates } from '@/lib/content-dates';
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ...blogPosts.map(post=>({url:`${base}/blog/${post.slug}`,lastModified:new Date(post.modified)})),
   {url:`${base}/explore/map-view`,lastModified:new Date('2026-10-15')},
   ...allPlaceRoutes().map(p=>({url:`${base}/places/${p.slug}`,...(placeModifiedDates[p.slug]?{lastModified:new Date(placeModifiedDates[p.slug])}:{}),images:[`${base}${placeImage(p)}`]})),
+  ...placeDrafts.map(p=>({url:`${base}/places/${p.slug}`})),
   ...directoryCategories.map(c=>({url:`${base}/category/${c.slug}`,lastModified:new Date('2026-10-14')})),
   ...['random-weird-place','geography-anomaly-quiz'].map(slug=>({url:`${base}/tools/${slug}`,lastModified:new Date('2026-10-14')})),
  ];
