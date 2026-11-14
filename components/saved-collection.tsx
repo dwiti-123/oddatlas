@@ -1,4 +1,7 @@
 'use client';
+import {newPlaces} from '@/lib/new-places';
+import {VisitStayTag} from './visit-stay-tag';
+import {SavePlace} from './saved-places';
 import Link from 'next/link';
 import { useRef, useState, type FormEvent } from 'react';
 import { places } from '@/lib/places';
@@ -10,7 +13,9 @@ import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, 
 type Shared = {name:string;slugs:string[]};
 function ListContents({name,slugs,listId}:{name:string;slugs:string[];listId?:string}) {
  const selected=places.filter(p=>slugs.includes(p.slug));
- return <section aria-label={name}><p className="result-count" role="status">{selected.length} {selected.length===1?'place':'places'} in this list</p>{selected.length?<div className="place-grid">{selected.map(p=><PlaceCard key={p.slug} place={p} listId={listId}/>)}</div>:<div className="no-results"><h3>A little room for curiosity.</h3><p>Find somewhere unexpected, then choose this list when you save it.</p><Link className="text-link" href="/#places">Explore the collection</Link></div>}</section>;
+ const selectedNew=newPlaces.filter(p=>slugs.includes(p.slug));
+ const count=selected.length+selectedNew.length;
+ return <section aria-label={name}><p className="result-count" role="status">{count} {count===1?'place':'places'} in this list</p>{count?<div className="place-grid">{selected.map(p=><PlaceCard key={p.slug} place={p} listId={listId}/>)}{selectedNew.map(p=><article className="place-card" key={p.slug}><Link href={`/places/${p.slug}`}><div className="card-photo">{p.image&&<img src={p.image} alt={p.imageAlt??p.name} width="960" height="640" loading="lazy"/>}<VisitStayTag stay={p.stay}/></div><div className="card-meta"><span>{p.region}, {p.country}</span></div><h3>{p.name}</h3><p>{p.hook}</p></Link><div className="card-category">{p.category}</div><SavePlace slug={p.slug} name={p.name} listId={listId}/></article>)}</div>:<div className="no-results"><h3>A little room for curiosity.</h3><p>Find somewhere unexpected, then choose this list when you save it.</p><Link className="text-link" href="/#places">Explore the collection</Link></div>}</section>;
 }
 function fitTitle(field:HTMLTextAreaElement) { field.style.height='0px'; field.style.height=field.scrollHeight+'px'; }
 function ListEditor({list,onDelete}:{list:DeviceList;onDelete:()=>void}) {
@@ -62,6 +67,6 @@ export function SavedCollection({shared}:{shared?:Shared}) {
  return <><h1 className="list-title">Your personal atlases.</h1><p className="saved-intro">A weekend away, a faraway dream, a little curiosity. Keep separate lists, remembered in this browser on this device.</p>
  <form className="new-list-form" noValidate onSubmit={create}><label htmlFor="new-list-name">Create a list</label><div className="list-name-row"><input id="new-list-name" name="name" placeholder="My Rajasthan weekend" maxLength={listNameLimit} required disabled={!ready} aria-invalid={!!createError} aria-describedby={createError?'create-list-error':undefined} onChange={()=>setCreateError('')}/><button className="list-action" type="submit" disabled={!ready}>Create list</button></div>{createError&&<p id="create-list-error" className="list-field-error" role="alert">{createError}</p>}</form>
  {notice&&<p role="status" className="save-notice">{notice}</p>}
- {!ready?<p role="status">Opening your lists…</p>:lists.length?<><nav className="personal-lists" aria-label="Your saved lists">{lists.map((list,index)=><button key={list.id} type="button" aria-pressed={active?.id===list.id} onClick={()=>{selectDeviceList(list.id);setNotice('');}}><span>{list.name}</span><small>List {index+1} · {places.filter(p=>list.slugs.includes(p.slug)).length} {places.filter(p=>list.slugs.includes(p.slug)).length===1?'place':'places'}</small></button>)}</nav>{active&&<ListEditor key={active.id} list={active} onDelete={remove}/>}</>:<div className="no-results"><h2>Make room for your next adventure.</h2><p>Create your first list above, or save a place while exploring.</p><Link className="text-link" href="/#places">Explore the collection</Link></div>}
+ {!ready?<p role="status">Opening your lists…</p>:lists.length?<><nav className="personal-lists" aria-label="Your saved lists">{lists.map((list,index)=><button key={list.id} type="button" aria-pressed={active?.id===list.id} onClick={()=>{selectDeviceList(list.id);setNotice('');}}><span>{list.name}</span><small>List {index+1} · {[...places,...newPlaces].filter(p=>list.slugs.includes(p.slug)).length} {[...places,...newPlaces].filter(p=>list.slugs.includes(p.slug)).length===1?'place':'places'}</small></button>)}</nav>{active&&<ListEditor key={active.id} list={active} onDelete={remove}/>}</>:<div className="no-results"><h2>Make room for your next adventure.</h2><p>Create your first list above, or save a place while exploring.</p><Link className="text-link" href="/#places">Explore the collection</Link></div>}
  <p className="device-list-note">Lists stay on this device. Clearing browser data removes them. Shared links include the list name and places—share only what you want others to see.</p></>;
 }

@@ -1,3 +1,5 @@
+import {findPlaceDraft,placeDrafts} from '@/lib/place-drafts';
+import DraftPlacePage from '@/components/new-place-page';
 import {PlaceTripGuide} from '@/components/place-trip-guide';
 import {placeTripPlans} from '@/lib/place-trip-plans';
 import {placeEssentials} from '@/lib/place-essentials';
@@ -22,20 +24,23 @@ import { allPlaceRoutes, categoryFor, placeImage, placeTitle, placeDescription, 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 export function generateStaticParams() {
- return allPlaceRoutes().map(p=>{
+ return [...allPlaceRoutes().map(p=>{
   if(locationWordCount(p)<300)throw new Error(`${p.slug}: add at least 300 words of sourced location prose before publishing.`);
   if(!p.discovery)throw new Error(`${p.slug}: add a question title and sourced locator before publishing.`);
   return {slug:p.slug};
- });
+ }),...placeDrafts.map(({slug})=>({slug}))];
 }
 type Props = {params:Promise<{slug:string}>};
 export async function generateMetadata({params}:Props):Promise<Metadata> {
- const p=findPlace((await params).slug); if(!p)notFound();
+ const slug=(await params).slug; const added=findPlaceDraft(slug);
+ if(added){const title=`${added.name}: ${added.hook} | Odd Atlas`;return {title:{absolute:title},description:added.intro,alternates:{canonical:`/places/${added.slug}`},openGraph:{title,description:added.intro,url:`/places/${added.slug}`,type:'article',...(added.image?{images:[{url:added.image,alt:added.imageAlt??`${added.name}, ${added.country}`}]}:{})}};}
+ const p=findPlace(slug); if(!p)notFound();
  const title=placeTitle(p), description=placeDescription(p), url=`/places/${p.slug}`;
  return {title:{absolute:`${title} | Odd Atlas`},description,alternates:{canonical:url},openGraph:{title,description,url,type:'article',images:[{url:placeImage(p),alt:p.alt}]},twitter:{card:'summary_large_image',title,description,images:[placeImage(p)]}};
 }
 export default async function PlacePage({params}:Props) {
- const p=findPlace((await params).slug); if(!p)notFound();
+ const slug=(await params).slug; if(findPlaceDraft(slug))return <DraftPlacePage params={Promise.resolve({slug})}/>;
+ const p=findPlace(slug); if(!p)notFound();
  const seo=searchDetails[p.slug], category=categoryFor(p), history=historyAnswers[p.slug];
  const structured={'@context':'https://schema.org','@type':'Article',headline:placeTitle(p),description:placeDescription(p),image:`${siteUrl}${placeImage(p)}`,...(placeModifiedDates[p.slug]?{dateModified:placeModifiedDates[p.slug]}:{}),author:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},mainEntityOfPage:`${siteUrl}/places/${p.slug}`,about:{'@type':'Place',name:p.name,address:{'@type':'PostalAddress',addressRegion:p.region,addressCountry:p.country},...(p.discovery?{geo:{'@type':'GeoCoordinates',latitude:p.discovery.latitude,longitude:p.discovery.longitude}}:{})},citation:[...p.sources.map(s=>s.url),...(p.slug==='hashima'?(history?.sources.map(s=>s.url)??[]):[]),...(p.slug==='hashima'?hashimaVisit.sources.map(s=>s.url):(placeTripPlans[p.slug]?.sources??[]).map(s=>s.url))]};
  const breadcrumbs={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{name:'Home',item:siteUrl+'/'},{name:category.title,item:`${siteUrl}/category/${category.slug}`},{name:p.name,item:`${siteUrl}/places/${p.slug}`}].map((item,index)=>({'@type':'ListItem',position:index+1,...item}))};
