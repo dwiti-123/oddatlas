@@ -18,9 +18,9 @@ const searchCopy:Record<string,{title?:string;description:string}>={
  'deep-sleep':{title:'Deep Sleep, Wales: Inside an Underground Stay',description:'Explore Deep Sleep in Wales: an underground overnight experience reached through a former slate mine, with the journey and operator information explained.'},
  skylodge:{title:'Skylodge Adventure Suites, Peru: A Cliffside Stay',description:'Sleep in a transparent capsule on a Sacred Valley cliff. Explore Skylodge Adventure Suites, the journey involved and where to check operator arrangements.'},
  mirrorcube:{title:'Mirrorcube at Treehotel, Sweden: The Mirrored Treehouse',description:'Explore the Mirrorcube at Treehotel in Harads, Sweden: its reflective forest setting, unusual design and official information for planning a stay.'},
- kayakoy:{description:'Explore Kayaköy near Fethiye, Türkiye: roofless village houses, a history of displacement and visitor information for understanding the ruins.'},
+ kayakoy:{description:'Explore Kayaköy ghost village near Fethiye, Türkiye: its hillside homes, history of displacement and practical information for visiting.'},
  kuldhara:{description:'Why was Kuldhara abandoned? Explore the desert village near Jaisalmer, distinguish its curse legend from historical evidence and check visitor access.'},
- kolmanskop:{description:'Explore Kolmanskop near Lüderitz, Namibia: the diamond town reclaimed by Namib Desert sand, its history and official information for planning a visit.'},
+ kolmanskop:{description:'Explore Kolmanskop ghost town near Lüderitz, Namibia: its diamond history, sand-filled houses and tour and photography permits.'},
  'paris-catacombs':{description:'Why are there bones beneath Paris? Explore the Catacombs’ history, the official visitor route and the access conditions to check before going.'},
  'port-arthur':{description:'Explore Port Arthur in Tasmania: the former penal settlement’s history, its ghost-story tradition and official information about lantern-lit tours.'},
  'stanley-hotel':{description:'Explore the Stanley Hotel in Estes Park, Colorado: its connection to The Shining, ghost-story tradition and official tour and stay information.'},
@@ -41,8 +41,8 @@ export const historyAnswers:Record<string,{
 }>={
  hashima:{
   question:'Why was Hashima Island abandoned?',
-  answer:'Hashima Island was abandoned after its coal mine closed in January 1974, as Japan’s energy demand shifted from coal to oil. Without the mine that supported the settlement, residents left; the island was uninhabited by 20 April 1974. Its empty apartment blocks are the remains of an industrial community, not an unexplained disappearance.',
-  sources:[{label:'Nagasaki City: the shift from coal to oil (Japanese)',url:'https://www.city.nagasaki.lg.jp/nagazine/hakken1007/index1.html'},{label:'Gunkanjima Digital Museum: closure and departure dates (Japanese)',url:'https://www.gunkanjima-museum.jp/data/286/detail/'}],
+  answer:'Hashima Island, also called Gunkanjima or Battleship Island, was abandoned after its coal mine closed in January 1974. Japan was shifting from coal to oil, while flooding and the difficulty of accessing coal safely had made mining more challenging. The mine supported the island’s community; by 20 April 1974 its residents had left, leaving their homes to the sea and weather.',
+  sources:[{label:'Japan’s Meiji industrial heritage: mine closure',url:'https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html'},{label:'Nippon.com: mining challenges and island life',url:'https://www.nippon.com/en/guide-to-japan/gu900294/must-see-haikyo-a-cruise-to-the-world-heritage-island-of-gunkanjima.html'},{label:'Gunkanjima Digital Museum: closure and departure dates (Japanese)',url:'https://www.gunkanjima-museum.jp/data/286/detail/'}],
   guide:{href:'/blog/how-to-visit-hashima-island',label:'Compare Hashima tours, costs and booking'},
  },
  kuldhara:{
