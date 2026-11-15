@@ -41,8 +41,8 @@ export const historyAnswers:Record<string,{
 }>={
  hashima:{
   question:'Why was Hashima Island abandoned?',
-  answer:'Hashima Island was abandoned after its coal mine closed in January 1974, as Japan’s energy demand shifted from coal to oil. Without the mine that supported the settlement, residents left; the island was uninhabited by 20 April 1974. Its empty apartment blocks are the remains of an industrial community, not an unexplained disappearance.',
-  sources:[{label:'Nagasaki City: the shift from coal to oil (Japanese)',url:'https://www.city.nagasaki.lg.jp/nagazine/hakken1007/index1.html'},{label:'Gunkanjima Digital Museum: closure and departure dates (Japanese)',url:'https://www.gunkanjima-museum.jp/data/286/detail/'}],
+  answer:'Hashima Island, also called Gunkanjima or Battleship Island, was abandoned after its coal mine closed in January 1974. Japan was shifting from coal to oil, while flooding and the difficulty of accessing coal safely had made mining more challenging. The mine supported the island’s community; by 20 April 1974 its residents had left, leaving their homes to the sea and weather.',
+  sources:[{label:'Japan’s Meiji industrial heritage: mine closure',url:'https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html'},{label:'Nippon.com: mining challenges and island life',url:'https://www.nippon.com/en/guide-to-japan/gu900294/must-see-haikyo-a-cruise-to-the-world-heritage-island-of-gunkanjima.html'},{label:'Gunkanjima Digital Museum: closure and departure dates (Japanese)',url:'https://www.gunkanjima-museum.jp/data/286/detail/'}],
   guide:{href:'/blog/how-to-visit-hashima-island',label:'Compare Hashima tours, costs and booking'},
  },
  kuldhara:{
