@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import type { PostHog } from 'posthog-js';
+import posthog, { type PostHog } from 'posthog-js';
 import { analyticsAttribution, analyticsUrl, setAnalyticsClient } from '@/lib/analytics';
 
 const token = process.env.NEXT_PUBLIC_POSTHOG_KEY;
@@ -17,15 +17,12 @@ const host = process.env.NEXT_PUBLIC_POSTHOG_HOST;
  */
 export function ProductAnalytics() {
  const pathname = usePathname();
- const [active, setActive] = useState(0);
  const instance = useRef<PostHog | null>(null);
  const lastPage = useRef<string | null>(null);
 
  useEffect(() => {
   if (!token || !host) return;
-  let cancelled = false;
-  void import('posthog-js').then(({ default: posthog }) => {
-   if (cancelled) return;
+  try {
    if (!instance.current) {
     posthog.init(token, {
      api_host: host,
@@ -61,19 +58,24 @@ export function ProductAnalytics() {
     instance.current = posthog;
    }
    setAnalyticsClient(instance.current);
-   setActive(version => version + 1);
-  }).catch(() => { /* Analytics must never prevent browsing. */ });
-  return () => { cancelled = true; setAnalyticsClient(null); };
+   // Send the landing page immediately, without waiting for another React render.
+   const currentPath = location.pathname;
+   if (lastPage.current !== currentPath) {
+    lastPage.current = currentPath;
+    instance.current.capture('$pageview', { $current_url: analyticsUrl(location.href), $pathname: currentPath, ...analyticsAttribution() }, { send_instantly: true });
+   }
+  } catch { /* Analytics must never prevent browsing. */ }
+  return () => { setAnalyticsClient(null); };
  }, []);
 
  useEffect(() => {
-  if (!active || !instance.current || lastPage.current === pathname) return;
+  if (!instance.current || lastPage.current === pathname) return;
   lastPage.current = pathname;
-  instance.current.capture('$pageview', { $current_url: analyticsUrl(location.href), $pathname: pathname, ...analyticsAttribution() });
- }, [active, pathname]);
+  instance.current.capture('$pageview', { $current_url: analyticsUrl(location.href), $pathname: pathname, ...analyticsAttribution() }, { send_instantly: true });
+ }, [pathname]);
 
  useEffect(() => {
-  if (!active) return;
+  if (!instance.current) return;
   function click(event: MouseEvent) {
    const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
    if (!(link instanceof HTMLAnchorElement)) return;
@@ -87,7 +89,7 @@ export function ProductAnalytics() {
   }
   document.addEventListener('click', click);
   return () => document.removeEventListener('click', click);
- }, [active, pathname]);
+ }, [pathname]);
 
  return null;
 }

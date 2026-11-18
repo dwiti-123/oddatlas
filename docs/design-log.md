@@ -552,3 +552,8 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - Prepared a separate noindex editorial preview, with five entries in each requested category. Drafts are excluded from the published collection and sitemap while the stories, visitor details and image rights are reviewed.
 - Used credited Wikimedia Commons reference photos where a matching place image was identified. Macetown, Mary King’s Close, Sedlec Ossuary, Free Spirit Spheres and SunCity Camp retain clear photo placeholders pending suitable imagery and rights verification.
 - Preview uses the existing header, footer and editorial palette; each entry links to a source. Prices, schedules and access require a final source check before publication. Targeted lint and production webpack build passed; collection and Bankhead navigation reviewed in the browser.
+# 18 November 2026 — curated travel guides
+
+- Added small, linked collections for unusual stays, visitable ghost towns and regional discoveries while retaining the existing stories and footer.
+- Used existing sourced facts, added article metadata to the newer place template, and expanded Browse to include the current collection. Rates and access need date-specific confirmation.
+- Did not add an unverified Kuldhara entry fee or promise search features from FAQ markup. Regional collections are discovery guides, not itineraries.

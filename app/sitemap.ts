@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   {url:`${base}/blog`,lastModified:new Date(pageModifiedDates.blog)},
   ...blogPosts.map(post=>({url:`${base}/blog/${post.slug}`,lastModified:new Date(post.modified)})),
   {url:`${base}/explore/map-view`,lastModified:new Date('2026-10-15')},
+  ...['/lists/most-unusual-hotels-in-the-world','/lists/real-ghost-towns-you-can-visit','/destinations/india-unusual-places','/destinations/europe','/destinations/americas'].map(path=>({url:`${base}${path}`})),
   ...allPlaceRoutes().map(p=>({url:`${base}/places/${p.slug}`,...(placeModifiedDates[p.slug]?{lastModified:new Date(placeModifiedDates[p.slug])}:{}),images:[`${base}${placeImage(p)}`]})),
   ...placeDrafts.map(p=>({url:`${base}/places/${p.slug}`})),
   ...directoryCategories.map(c=>({url:`${base}/category/${c.slug}`,lastModified:new Date('2026-10-14')})),
