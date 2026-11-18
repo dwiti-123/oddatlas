@@ -19,7 +19,7 @@ const searchCopy:Record<string,{title?:string;description:string}>={
  skylodge:{title:'Skylodge Adventure Suites, Peru: A Cliffside Stay',description:'Sleep in a transparent capsule on a Sacred Valley cliff. Explore Skylodge Adventure Suites, the journey involved and where to check operator arrangements.'},
  mirrorcube:{title:'Mirrorcube at Treehotel, Sweden: The Mirrored Treehouse',description:'Explore the Mirrorcube at Treehotel in Harads, Sweden: its reflective forest setting, unusual design and official information for planning a stay.'},
  kayakoy:{description:'Explore Kayaköy ghost village near Fethiye, Türkiye: its hillside homes, history of displacement and practical information for visiting.'},
- kuldhara:{description:'Why was Kuldhara abandoned? Explore the desert village near Jaisalmer, distinguish its curse legend from historical evidence and check visitor access.'},
+ kuldhara:{title:'Kuldhara Ghost Village, Jaisalmer: History, Legend & Visiting Guide',description:'Explore Kuldhara ghost village near Jaisalmer: its history, the legend of its abandonment and how to plan a visit.'},
  kolmanskop:{description:'Explore Kolmanskop ghost town near Lüderitz, Namibia: its diamond history, sand-filled houses and tour and photography permits.'},
  'paris-catacombs':{description:'Why are there bones beneath Paris? Explore the Catacombs’ history, the official visitor route and the access conditions to check before going.'},
  'port-arthur':{description:'Explore Port Arthur in Tasmania: the former penal settlement’s history, its ghost-story tradition and official information about lantern-lit tours.'},
