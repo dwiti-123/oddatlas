@@ -321,6 +321,17 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 - https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler — Claude-SearchBot and Claude-User names and roles.
 - https://vercel.com/docs/bot-management — AI Bots Allow is inactive evaluation; verified bots handled by the managed protection layer. No actual project firewall setting was accessible or changed.
 - https://llmstxt.org/ — Markdown index proposal, not a guaranteed search ranking or citation mechanism. Index built from the site's existing records rather than a duplicated content list.
+## Skylodge booking guide — 20 November 2026
+- Natura Vive overnight packages: https://naturavive.com/web/skylodge-adventure-suites/ — inclusions, age wording, route options, sample transfers and capsule amenities. The product page’s fare table has conflicting year labels.
+- Natura Vive booking: https://naturavive.com/web/booknow/ — booking form and explicitly labeled 2026 rates in PEN, matching the figures on the overnight product page.
+- Natura Vive guide: https://naturavive.com/web/skylodge-adventure-suites-is-sleeping-400-meters-above-perus-sacred-valley-worth-it/ — general USD budget and terrain descriptions.
+
+## Whichaway and Palacio de Sal booking guides — 20 November 2026
+- White Desert: https://white-desert.com/prices — 2026–27 rates and departure preparation. The individual itineraries linked in the guide provide sample durations and camp options.
+- White Desert: https://white-desert.com/camps/whichaway-camp — six pods and in-room amenities. https://white-desert.com/itineraries/antarctica-in-a-day is a same-day return, so it is excluded from the place-page overnight comparison.
+- Palacio de Sal: https://palaciodesal.com.bo/es/habitacion/ — approximately US$297 including taxes for one room for two adults for 1 December 2026, as displayed in the hotel calendar checked 20 November.
+- Palacio de Sal: https://palaciodesal.com.bo/en/faqs/ — scheduled shuttles to Uyuni, included facilities and season descriptions. The one- and two-night suggestions are editorial itineraries.
+
 ## Traveller-problem research and Dhanushkodi — 29 October 2026
 - Research dossier: docs/research/traveller-problems-and-dhanushkodi-2026-10-29.md. Contains the collection coverage matrix, primary/operator evidence, source-age limits and unresolved publication gates.
 - Official background: Ramanathapuram District Dhanushkodi page; DGLL lighthouse page; PIB release 1497581; original Mausam/IMD cyclone paper linked in the dossier. These do not establish live transport tariffs or opening hours.

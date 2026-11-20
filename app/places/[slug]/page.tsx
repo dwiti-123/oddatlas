@@ -18,6 +18,7 @@ import { SavePlace } from '@/components/saved-places';
 import { Header, Footer } from '@/components/site-shell';
 import { LocationMap } from '@/components/location-map';
 import { PlaceDistinctiveFacts } from '@/components/place-distinctive-facts';
+import { palacioDeSalPost, skylodgePost, whichawayPost } from '@/lib/blog';
 import { findPlace, searchDetails } from '@/lib/places';
 import { allPlaceRoutes, categoryFor, placeImage, placeTitle, placeDescription, reviewedDate, siteUrl, locationWordCount, relatedPlaces, historyAnswers } from '@/lib/discovery';
 
@@ -51,6 +52,9 @@ export default async function PlacePage({params}:Props) {
   kayakoy:{href:'/blog/how-to-visit-kayakoy-from-fethiye',label:'How to visit Kayaköy from Fethiye'},
   kuldhara:{href:'/blog/visiting-kuldhara-from-jaisalmer',label:'Visiting Kuldhara from Jaisalmer'},
   'deep-sleep':{href:'/blog/deep-sleep-wales-underground-stay',label:'Planning a Deep Sleep overnight stay'},
+  skylodge:{href:`/blog/${skylodgePost.slug}`,label:'Compare Skylodge prices, routes and booking'},
+  whichaway:{href:`/blog/${whichawayPost.slug}`,label:'Compare Whichaway expeditions, prices and flights'},
+  'palacio-de-sal':{href:`/blog/${palacioDeSalPost.slug}`,label:'Plan a Palacio de Sal stay and salt-flat visit'},
   'island-of-the-dolls':{href:'/blog/how-to-visit-island-of-the-dolls',label:'How to visit the Island of the Dolls'},
   dhanushkodi:{href:'/blog/visiting-dhanushkodi-from-rameswaram',label:'Plan a Dhanushkodi visit from Rameswaram'},
  } as Record<string,{href:string;label:string}>)[p.slug];
