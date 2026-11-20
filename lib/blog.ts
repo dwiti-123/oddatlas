@@ -1,4 +1,37 @@
+export const skylodgePost = {
+ slug: 'skylodge-peru-prices-climb-and-booking-guide',
+ place: 'skylodge',
+ country: 'Peru',
+ title: 'Skylodge Adventure Suites, Peru: Prices, Climb & Booking',
+ description: 'Compare Skylodge’s cliffside overnight packages in Peru’s Sacred Valley, from per-person prices and the via ferrata climb to Cusco pickup and booking.',
+ reviewed: '2026-11-20',
+ modified: '2026-11-20',
+};
+
+export const whichawayPost = {
+ slug: 'whichaway-camp-antarctica-cost-and-booking',
+ place: 'whichaway',
+ country: 'Antarctica',
+ title: 'Whichaway Camp, Antarctica: Cost, Flights & Booking',
+ description: 'Compare White Desert expeditions that can include Whichaway Camp, with per-person prices, flights from Cape Town and how much time to set aside.',
+ reviewed: '2026-11-20',
+ modified: '2026-11-20',
+};
+
+export const palacioDeSalPost = {
+ slug: 'palacio-de-sal-uyuni-prices-and-booking',
+ place: 'palacio-de-sal',
+ country: 'Bolivia',
+ title: 'Palacio de Sal, Uyuni: Room Prices, Transfers & Booking',
+ description: 'Plan a night at Bolivia’s salt hotel with a dated room price, shuttle details from Uyuni and a simple plan for visiting the salt flats.',
+ reviewed: '2026-11-20',
+ modified: '2026-11-20',
+};
+
 export const blogPosts=[
+ skylodgePost,
+ whichawayPost,
+ palacioDeSalPost,
  {slug:'visiting-dhanushkodi-from-rameswaram',place:'dhanushkodi',country:'India',title:'Dhanushkodi from Rameswaram: Ghost Town History, Route & Visit Plan',description:'Understand Dhanushkodi’s 1964 ghost-town history, choose the right coastal stop and plan road transport from Rameswaram.',reviewed:'2026-10-31',modified:'2026-10-31'},
  {slug:'how-to-visit-kayakoy-from-fethiye',place:'kayakoy',country:'Türkiye',title:'Kayaköy Ghost Village: Tickets and Buses from Fethiye',description:'Official Fethiye bus routes, the listed visitor ticket, opening-hour checks and a hillside visit plan.',reviewed:'2026-10-25',modified:'2026-10-25'},
  {slug:'visiting-kuldhara-from-jaisalmer',place:'kuldhara',country:'India',title:'Jaisalmer to Kuldhara: Distance, Transport & Visit Guide',description:'Distance, driving directions, published taxi day-trip prices and a one-hour visit plan.',reviewed:'2026-10-28',modified:'2026-10-28'},
