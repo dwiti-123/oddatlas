@@ -557,3 +557,13 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - Added small, linked collections for unusual stays, visitable ghost towns and regional discoveries while retaining the existing stories and footer.
 - Used existing sourced facts, added article metadata to the newer place template, and expanded Browse to include the current collection. Rates and access need date-specific confirmation.
 - Did not add an unverified Kuldhara entry fee or promise search features from FAQ markup. Regional collections are discovery guides, not itineraries.
+
+## Skylodge booking guide — 20 November 2026
+- Reused the journal layout and existing credited concept illustration. Put the package price, trip duration and approach options up front so travelers can decide whether to keep reading.
+- Linked the guide and Skylodge story in both directions. The shared blog list includes the guide in the blog index, sitemap and llms.txt.
+- Production build and targeted lint passed. Checked the article at 390 px and 1440 px, including the image, canonical, structured data, booking link and horizontal overflow.
+
+## Whichaway and Palacio de Sal booking guides — 20 November 2026
+- Used the journal layout for both guides. Put itinerary costs and Cape Town buffer days first for Whichaway, and a dated room price and Uyuni shuttle information first for Palacio de Sal.
+- Added links between each place entry and its booking guide. Updated the Whichaway place comparison to show overnight options.
+- Production build and targeted lint passed. Both guides rendered at 390 px and 1440 px with working local images and no horizontal overflow. Verified booking links, canonicals, article markup and sitemap inclusion.
