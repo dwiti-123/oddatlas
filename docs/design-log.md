@@ -567,3 +567,15 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 - Used the journal layout for both guides. Put itinerary costs and Cape Town buffer days first for Whichaway, and a dated room price and Uyuni shuttle information first for Palacio de Sal.
 - Added links between each place entry and its booking guide. Updated the Whichaway place comparison to show overnight options.
 - Production build and targeted lint passed. Both guides rendered at 390 px and 1440 px with working local images and no horizontal overflow. Verified booking links, canonicals, article markup and sitemap inclusion.
+
+## Priority visitor guides — 23 November 2026
+- Kept the existing guide URLs for Dhanushkodi and Island of the Dolls. Added a choice of three mapped stops to the Rameswaram trip and compared two official boat launches for the Xochimilco trip.
+- Removed Bodie’s standalone place route. Bodie is a real California state historic park and was outside the 30-place collection.
+
+## Rummu Quarry pilot — 23 November 2026
+- Kept the same URL, story, hero and page styling. Replaced generic planning copy with an independent bus or car visit, a guided coastal trip and a water activity option. Updated the search title and description for the Tallinn day-trip intent.
+- Refined the visit copy with traveller questions, direct opening answers and a light highlight using the existing accent. The story remains in its original section.
+
+## Bankhead and Sedlec trip planning — 23 November 2026
+- Used the existing Rummu question treatment for the two place pages. Bankhead leads with the short trail, park pass and access road. Sedlec leads with the timed ticket, train and the current adult price replacing the old CZK 220 figure.
+- Preserved both stories, URLs, hero images and page styling. Retained the generic planning sections for the other entries.

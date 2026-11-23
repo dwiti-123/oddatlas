@@ -8,6 +8,7 @@ import {HashimaFieldGuide} from '@/components/hashima-visit-planning';
 import {hashimaVisit} from '@/lib/hashima-visit';
 import { PlaceContext } from '@/components/place-context';
 import { placeModifiedDates } from '@/lib/content-dates';
+import { placeDayTrips } from '@/lib/place-day-trips';
 import { VisitStayTag } from '@/components/visit-stay-tag';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -34,7 +35,11 @@ export function generateStaticParams() {
 type Props = {params:Promise<{slug:string}>};
 export async function generateMetadata({params}:Props):Promise<Metadata> {
  const slug=(await params).slug; const added=findPlaceDraft(slug);
- if(added){const title=`${added.name}: ${added.hook} | Odd Atlas`;return {title:{absolute:title},description:added.intro,alternates:{canonical:`/places/${added.slug}`},openGraph:{title,description:added.intro,url:`/places/${added.slug}`,type:'article',...(added.image?{images:[{url:added.image,alt:added.imageAlt??`${added.name}, ${added.country}`}]}:{})}};}
+ if(added){
+  const search=placeDayTrips[slug];
+  const title=`${search?.title??`${added.name}: ${added.hook}`} | Odd Atlas`;
+  const description=search?.description??added.intro;
+  return {title:{absolute:title},description,alternates:{canonical:`/places/${added.slug}`},openGraph:{title,description,url:`/places/${added.slug}`,type:'article',...(added.image?{images:[{url:added.image,alt:added.imageAlt??`${added.name}, ${added.country}`}]}:{})}};}
  const p=findPlace(slug); if(!p)notFound();
  const title=placeTitle(p), description=placeDescription(p), url=`/places/${p.slug}`;
  return {title:{absolute:`${title} | Odd Atlas`},description,alternates:{canonical:url},openGraph:{title,description,url,type:'article',images:[{url:placeImage(p),alt:p.alt}]},twitter:{card:'summary_large_image',title,description,images:[placeImage(p)]}};
