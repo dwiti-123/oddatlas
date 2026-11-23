@@ -6,7 +6,7 @@ export const placeModifiedDates:Record<string,string>={
  kuldhara:'2026-10-24', kolmanskop:'2026-11-15', 'island-of-the-dolls':'2026-11-15',
  bhangarh:'2026-10-24', 'paris-catacombs':'2026-11-15', 'port-arthur':'2026-11-15',
  'stanley-hotel':'2026-10-24', skylodge:'2026-10-24', mirrorcube:'2026-10-24',
+ bankhead:'2026-11-23', 'rummu-quarry':'2026-11-23', 'sedlec-ossuary':'2026-11-23',
  whichaway:'2026-10-24', 'deep-sleep':'2026-10-24', 'palacio-de-sal':'2026-10-24',
- bodie:'2026-10-24',
 };
 export const pageModifiedDates={home:'2026-10-27',sources:'2026-10-19',blog:'2026-10-28'};

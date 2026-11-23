@@ -26,7 +26,6 @@ const searchCopy:Record<string,{title?:string;description:string}>={
  'stanley-hotel':{description:'Explore the Stanley Hotel in Estes Park, Colorado: its connection to The Shining, ghost-story tradition and official tour and stay information.'},
  whichaway:{description:'Explore Whichaway Camp in Antarctica: heated sleeping pods in the Schirmacher Oasis, the expedition setting and official operator information.'},
  'palacio-de-sal':{description:'Explore Palacio de Sal near Uyuni, Bolivia: a hotel built from salt beside the salt flats, with its story and official information for planning a stay.'},
- bodie:{description:'Explore Bodie, California: a preserved ghost town with mining history, surviving buildings and official state park information for planning a visit.'},
 };
 // One resolution path feeds the visible heading, metadata and structured data.
 export const placeTitle = (place:Place) => searchCopy[place.slug]?.title ?? searchDetails[place.slug]?.title ?? place.discovery?.title ?? `${place.name}: Its Story in ${place.country}`;

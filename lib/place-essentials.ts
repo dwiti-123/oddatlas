@@ -10,7 +10,6 @@ const facts:Record<string,[string,string][]>={
  kayakoy:[['Experience','Hillside ruins'],['Near','Fethiye, Türkiye'],['Explore','Hillside walk']],
  kuldhara:[['Experience','Desert village'],['Near','Jaisalmer, India'],['Plan','Day visit']],
  kolmanskop:[['Experience','Ghost town'],['Near','Lüderitz, Namibia'],['Before visiting','Check permits']],
- bodie:[['Experience','Historic ghost town'],['Location','California, USA'],['Plan ahead','Bring supplies']],
  bhangarh:[['Experience','Fort ruins'],['Location','Rajasthan, India'],['Visit during','Daylight hours']],
  'island-of-the-dolls':[['Experience','Canal boat trip'],['Start from','Xochimilco'],['Before booking','Confirm exact island']],
  'paris-catacombs':[['Experience','Underground ossuary'],['Location','Paris, France'],['Entry','Official admission']],
