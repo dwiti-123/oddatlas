@@ -332,8 +332,20 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 - Palacio de Sal: https://palaciodesal.com.bo/es/habitacion/ — approximately US$297 including taxes for one room for two adults for 1 December 2026, as displayed in the hotel calendar checked 20 November.
 - Palacio de Sal: https://palaciodesal.com.bo/en/faqs/ — scheduled shuttles to Uyuni, included facilities and season descriptions. The one- and two-night suggestions are editorial itineraries.
 
+## Priority visitor guides — 23 November 2026
+- Dhanushkodi: Ramanathapuram District, the lighthouse authority and the government coastal road announcement establish the three destinations and their context. Maps links are for orientation. The half-day plan is editorial and no current road opening, timetable or fare is promised.
+- Island of the Dolls: https://mexicocity.cdmx.gob.mx/venues/embarcadero-puente-de-urrutia-ecological-xochimilco-tours/ lists the alternate four-hour route. Cuemanco’s listed duration and the borough’s hourly rate underpin the boat-only example. The alternate dock needs a separate quote.
+
 ## Traveller-problem research and Dhanushkodi — 29 October 2026
 - Research dossier: docs/research/traveller-problems-and-dhanushkodi-2026-10-29.md. Contains the collection coverage matrix, primary/operator evidence, source-age limits and unresolved publication gates.
 - Official background: Ramanathapuram District Dhanushkodi page; DGLL lighthouse page; PIB release 1497581; original Mausam/IMD cyclone paper linked in the dossier. These do not establish live transport tariffs or opening hours.
 - Commercial Rameswaram Tourism bus and fare pages were compared with official information. Route numbers conflict with older references; the taxi tariff excludes the current seasonal interval. Neither is treated as verified current local transport advice.
 - TNSTC-hosted SETC directory is a contact/referral lead, not evidence of a local bus timetable. The October district inspection notice does not establish closure/reopening or visitor rules. No outreach, calls, bookings or implementation performed.
+
+## Rummu Quarry day trip — 23 November 2026
+- [IIL timetable](https://iil.ee/wp-content/uploads/2026/04/2026.04.01-Laane-2-koondplaan-Rummu.pdf) and [fares](https://iil.ee/en/ticket-prices) support the direct bus and four-zone adult fare. [Visit Estonia](https://visitestonia.com/en/what-to-do/five-day-trips-from-tallinn-for-nature-lovers) provides the driving time and approximate walk.
+- [Quarry tickets](https://rummu.ee/tickets), [Tallinn Day Trips](https://www.traveller.ee/tour/coastal-cliffs-and-soviet-paldiski) and [Rummu Diving](https://rummudiving.ee/en/price-list-uus/) support distinct admission, coastal tour and water activity budgets.
+
+## Bankhead and Sedlec Ossuary visits — 23 November 2026
+- [Parks Canada’s Bankhead trail guide](https://publications.gc.ca/collections/collection_2021/pc/R61-114-2010-eng.pdf) gives the 1.1 km and 30-minute estimate. [BanffNow](https://parks.canada.ca/apps/parksnow) supersedes the archived guide for access. The [park fee schedule](https://parks.canada.ca/pn-np/ab/banff/visit/tarifs-fees) and [Roam Route 6](https://roamtransit.com/schedules-routes/lake-minnewanka-route-6/) support planning details.
+- [Sedlec’s visitor information](https://www.sedlec.info/en/ossuary/before-visiting/) lists CZK 180 for the adult Sedlec Area ticket. The [Czech Railways route page](https://www.cd.cz/trasy/trasy-ceska-republika/praha-kutna-hora/-30151/) lists fares from CZK 79 one way. [Kutná Hora transport](https://vhd.kutnahora.cz/getting-around-kutna-hora/) covers walking and the local bus. The CZK 338 total assumes both rail legs are available at the advertised minimum.

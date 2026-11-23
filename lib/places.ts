@@ -88,12 +88,6 @@ const foundationPlaces = [
  today:'A managed ghost-town attraction. Guided tours provide context for the buildings and their history. The changing rooms and drifting sand make the town’s physical transformation part of the visit, alongside its mining past.',
  access:'A ticket serves as your permit to visit. The operator offers scheduled guided tours and a separate day pass for amateur photographers; confirm the permitted hours and current fees before travelling from Lüderitz. Stay within the visitor boundaries: the surrounding diamond area is restricted.',legend:'',
  sources:[{title:'Ghost Town Tours — visitor information',url:'https://kolmanskuppe.com/tours-prices/'},{title:'Namibia Tourism Board — Ghost Town Tours',url:'https://visitnamibia.com.na/directory/ghost_town_tours2038/'}],credit:'Damien du Toit',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/',photoUrl:'https://commons.wikimedia.org/wiki/File:Kolmanskop_sand.jpg',photoDate:'2006' },
- { slug:'bodie',name:'Bodie',region:'California',country:'United States',category:'ghost',categoryName:'Ghost towns & forgotten cities',stay:false,
- hook:'A gold-rush town preserved with its weathered buildings and belongings.',alt:'An archival 1972 photograph of wooden and brick buildings in Bodie',storyTitle:'A town kept in the middle of leaving',
- story:'Bodie grew around gold mining before its fortunes declined. Mining ended in 1942. Since becoming a state historic park in 1962, its surviving buildings and interiors have been protected in their weathered condition.',
- today:'A California state historic park. Park staff and their families still live and work here; “ghost town” does not mean nobody remains.',
- access:'This is a visitor destination, not public accommodation. Consult California State Parks for hours, road conditions, and tours. Bring supplies: there are no commercial food or fuel facilities in town.',legend:'',
- sources:[{title:'California State Parks — Bodie',url:'https://parks.ca.gov/?page_id=509'},{title:'California State Parks — commonly asked questions',url:'https://www.parks.ca.gov/?page_id=31549'}],credit:'Dick Rowan / EPA / National Archives',license:'Public domain',licenseUrl:'https://commons.wikimedia.org/wiki/File:Ghost_Town_-_NARA_-_543342.jpg#Licensing',photoUrl:'https://commons.wikimedia.org/wiki/File:Ghost_Town_-_NARA_-_543342.jpg',photoDate:'1972' },
  { slug:'bhangarh',name:'Bhangarh Fort',region:'Rajasthan',country:'India',category:'mystery',categoryName:'Mystery & haunted places',stay:false,
  hook:'Ruined passageways and a reputation built around stories of a curse.',alt:'A sequence of stone arches inside Bhangarh Fort',storyTitle:'Stone walls, and the stories around them',
  story:'Bhangarh is a ruined fort in Rajasthan, set among hills. Its surviving architecture is one part of the attraction; its association with haunting stories is another.',
@@ -112,8 +106,6 @@ export type StoryChapter = {title:string; text:string; references:string[]; kind
 export type LongStory = {opening:string; chapters:StoryChapter[]};
 // Original editorial writing. Chapter references point to the sources read for each claim.
 const storySources:Record<string,{title:string;url:string}> = {
- bodiePark:{title:'California State Parks — Bodie State Historic Park',url:'https://www.parks.ca.gov/?page_id=509'},
- bodieFAQ:{title:'California State Parks — Bodie commonly asked questions',url:'https://www.parks.ca.gov/?page_id=31549'},
  jnto:{title:'Japan National Tourism Organization — Hashima',url:'https://www.japan.travel/en/spot/752/'},
  hashimaHeritage:{title:'UNESCO — Japan’s Meiji industrial heritage',url:'https://whc.unesco.org/en/list/1484/'},
  hashimaLife:{title:'Nippon.com — Hashima’s community, mine and closure',url:'https://www.nippon.com/en/guide-to-japan/gu900294/must-see-haikyo-a-cruise-to-the-world-heritage-island-of-gunkanjima.html'},
@@ -151,11 +143,6 @@ const storySources:Record<string,{title:string;url:string}> = {
  saltHotel:{title:'Palacio de Sal — official hotel information',url:'https://palaciodesal.com.bo/en/'}
 };
 const longStories:Record<string,LongStory> = {
- bodie:{opening:'Bodie is often imagined as a town where everyone simply vanished. Its official history tells a more gradual story: mining stopped, civic institutions closed, and a few people stayed to protect what remained.',chapters:[
-  {title:'Did everyone leave?',text:'California State Parks explains that Bodie was never completely abandoned. After the mining boom, people continued living there into the twentieth century. Mining ceased in 1942, and the school and post office closed. Caretakers remained until the town became a state park in 1962. Today, staff and their families live and work here. The distinction matters: the surviving town was protected by people, rather than preserved by an absence of people.',references:['bodieFAQ']},
-  {title:'What does preservation mean here?',text:'The park preserves the weathered town rather than presenting a rebuilt mining settlement. Visiting invites attention to the ordinary scale of a community: a street, a doorway, a building with a purpose. The empty spaces are part of its attraction, but they also mark changes in an economy that once sustained homes and work. Bodie is a historic park, so its atmosphere comes with rules and care. Look closely without assuming that a deserted appearance permits entering every building.',references:['bodiePark']},
-  {title:'What should you check before travelling?',text:'The park’s directions use State Route 270 from US 395, including a final unpaved stretch that can be rough. Its FAQ explains that snow can make access difficult and identifies summer and fall as generally more favourable visiting seasons. Conditions still require a current check. Consult the park before setting out, bring the supplies you need, and plan for a visitor destination rather than an overnight stay in the town. A map point is a starting place for planning, not a guarantee that the road is accessible.',references:['bodiePark','bodieFAQ']}
- ]},
  hashima:{opening:'From the water, Hashima looks like a ship that never sailed. The concrete silhouette is only the beginning: inside it was a community built around coal, and a history that deserves more than a photograph of empty windows.',chapters:[
   {title:'A whole world on a small island',text:'Hashima’s nickname, Gunkanjima, comes from its battleship-like outline. But this was a working settlement, not a fortress. Mitsubishi developed its coal industry, and the island supported shops, a hospital, two schools and places of worship. Families lived beside the industry that kept them there. Children went to school, people gathered at the market, and residents grew plants on rooftops. The empty buildings make more sense when you picture the ordinary routines that once fitted into this small space.',references:['jnto','hashimaLife']},
   {title:'When the coal stopped',text:'Japan was turning from coal towards oil, but Hashima’s closure was not simply the story of a fuel going out of fashion. Nippon.com reports that a mine fire in 1964 led to flooding, and that reaching the remaining coal safely became difficult. The mine closed in January 1974. With work and daily life tied to it, residents departed; by 20 April the island was uninhabited. Buildings that had held their homes were left exposed to sea and weather. Tourism returned in 2009, and Hashima became part of the Meiji industrial heritage property inscribed by UNESCO in 2015.',references:['hashimaLife','hashimaDeparture','hashimaHeritage']},
@@ -236,7 +223,6 @@ const longStories:Record<string,LongStory> = {
 export type DiscoveryDetails = {title:string; latitude:number; longitude:number; coordinateSource:string; mapNote?:string};
 // Locator points are for orientation, never a route or permission to enter.
 const discoveryDetails:Record<string,DiscoveryDetails> = {
- bodie:{title:"Bodie Ghost Town: Did Everyone Really Leave?",latitude:38.21354,longitude:-119.0156,coordinateSource:'https://www.parks.ca.gov/?page_id=509',mapNote:'Park-published directions point; follow its current road advice.'},
  hashima:{title:"Why Was Hashima Island Abandoned? Japan’s Ghost Island",latitude:32.62757,longitude:129.73832,coordinateSource:'https://www.wikidata.org/wiki/Q49640096'},
  dhanushkodi:{title:"Dhanushkodi: What Happened to India’s Coastal Ghost Town?",latitude:9.18268,longitude:79.41012,coordinateSource:'https://www.geonames.org/1272906/dhanushkodi.html'},
  kayakoy:{title:"Kayaköy: Why Are This Turkish Village’s Houses Empty?",latitude:36.57498,longitude:29.09109,coordinateSource:'https://dergipark.org.tr/tr/download/article-file/2783468'},
@@ -267,7 +253,6 @@ const all:Place[]=[...foundation,...additions].map(p=>{
 const order=['hashima','dhanushkodi','kayakoy','kuldhara','kolmanskop','island-of-the-dolls','bhangarh','paris-catacombs','port-arthur','stanley-hotel','skylodge','mirrorcube','whichaway','deep-sleep','palacio-de-sal'];
 export const allPlaces:Place[]=all;
 export const places:Place[]=order.map(slug=>{const place=all.find(p=>p.slug===slug);if(!place)throw new Error('Missing collection place: '+slug);return place;});
-// Preserve the original Bodie story URL without including it in the selected collection.
 export const findPlace=(slug:string)=>all.find(p=>p.slug===slug);
 
 export const searchDetails: Record<string, {title:string; description:string; reviewed:string; questions:{question:string;answer:string;source:string}[]}> = {
