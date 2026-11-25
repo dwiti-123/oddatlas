@@ -349,3 +349,6 @@ Original arithmetic and user-entered estimates; no external prices, exchange rat
 ## Bankhead and Sedlec Ossuary visits — 23 November 2026
 - [Parks Canada’s Bankhead trail guide](https://publications.gc.ca/collections/collection_2021/pc/R61-114-2010-eng.pdf) gives the 1.1 km and 30-minute estimate. [BanffNow](https://parks.canada.ca/apps/parksnow) supersedes the archived guide for access. The [park fee schedule](https://parks.canada.ca/pn-np/ab/banff/visit/tarifs-fees) and [Roam Route 6](https://roamtransit.com/schedules-routes/lake-minnewanka-route-6/) support planning details.
 - [Sedlec’s visitor information](https://www.sedlec.info/en/ossuary/before-visiting/) lists CZK 180 for the adult Sedlec Area ticket. The [Czech Railways route page](https://www.cd.cz/trasy/trasy-ceska-republika/praha-kutna-hora/-30151/) lists fares from CZK 79 one way. [Kutná Hora transport](https://vhd.kutnahora.cz/getting-around-kutna-hora/) covers walking and the local bus. The CZK 338 total assumes both rail legs are available at the advertised minimum.
+
+## Kuldhara and Dhanushkodi story openings — 26 November 2026
+- Surfaced existing cited evidence in the opening text: Rajasthan Tourism and the linked Current Science debate for Kuldhara, and the Ramanathapuram district visitor page and the Directorate General of Lighthouses for Dhanushkodi.
