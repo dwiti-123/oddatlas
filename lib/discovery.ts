@@ -52,6 +52,19 @@ export const historyAnswers:Record<string,{
  },
 };
 
+export const shortHistoryAnswers:Partial<Record<string, Pick<(typeof historyAnswers)[string], 'question'|'answer'|'sources'>>>={
+ kuldhara:{
+  question:historyAnswers.kuldhara.question,
+  answer:'Why Kuldhara’s residents left remains disputed. Local folklore says the villagers fled minister Salim Singh and cursed the settlement. Researchers have debated earthquake damage and historical accounts of oppression and migration.',
+  sources:historyAnswers.kuldhara.sources,
+ },
+ dhanushkodi:{
+  question:'Why is Dhanushkodi called a ghost town?',
+  answer:'A cyclone devastated the old settlement of Dhanushkodi in 1964, leaving behind the ruins that gave it the name ghost town. The remains of the church still stand near Rameswaram. The name refers to the former town. People still live and work in the surrounding area.',
+  sources:[{label:'Ramanathapuram District: Dhanushkodi',url:'https://ramanathapuram.nic.in/tourist-place/dhanushkodi/'},{label:'Directorate General of Lighthouses: Dhanushkodi',url:'https://dgll.nic.in/DGLL-light-house-location/about-chennai/dhanushkodi-lighthouse'}],
+ },
+};
+
 const relatedStories:Record<string,string[]>={
  hashima:['kayakoy','kolmanskop'],
  dhanushkodi:['kuldhara','kayakoy'],

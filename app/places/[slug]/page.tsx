@@ -21,7 +21,7 @@ import { LocationMap } from '@/components/location-map';
 import { PlaceDistinctiveFacts } from '@/components/place-distinctive-facts';
 import { palacioDeSalPost, skylodgePost, whichawayPost } from '@/lib/blog';
 import { findPlace, searchDetails } from '@/lib/places';
-import { allPlaceRoutes, categoryFor, placeImage, placeTitle, placeDescription, reviewedDate, siteUrl, locationWordCount, relatedPlaces, historyAnswers } from '@/lib/discovery';
+import { allPlaceRoutes, categoryFor, placeImage, placeTitle, placeDescription, reviewedDate, siteUrl, locationWordCount, relatedPlaces, historyAnswers, shortHistoryAnswers } from '@/lib/discovery';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -48,6 +48,7 @@ export default async function PlacePage({params}:Props) {
  const slug=(await params).slug; if(findPlaceDraft(slug))return <DraftPlacePage params={Promise.resolve({slug})}/>;
  const p=findPlace(slug); if(!p)notFound();
  const seo=searchDetails[p.slug], category=categoryFor(p), history=historyAnswers[p.slug];
+ const openingHistory=p.slug==='hashima'?history:shortHistoryAnswers[p.slug];
  const structured={'@context':'https://schema.org','@type':'Article',headline:placeTitle(p),description:placeDescription(p),image:`${siteUrl}${placeImage(p)}`,...(placeModifiedDates[p.slug]?{dateModified:placeModifiedDates[p.slug]}:{}),author:{'@type':'Organization',name:'Odd Atlas',url:siteUrl},mainEntityOfPage:`${siteUrl}/places/${p.slug}`,about:{'@type':'Place',name:p.name,address:{'@type':'PostalAddress',addressRegion:p.region,addressCountry:p.country},...(p.discovery?{geo:{'@type':'GeoCoordinates',latitude:p.discovery.latitude,longitude:p.discovery.longitude}}:{})},citation:[...p.sources.map(s=>s.url),...(p.slug==='hashima'?(history?.sources.map(s=>s.url)??[]):[]),...(p.slug==='hashima'?hashimaVisit.sources.map(s=>s.url):(placeTripPlans[p.slug]?.sources??[]).map(s=>s.url))]};
  const breadcrumbs={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{name:'Home',item:siteUrl+'/'},{name:category.title,item:`${siteUrl}/category/${category.slug}`},{name:p.name,item:`${siteUrl}/places/${p.slug}`}].map((item,index)=>({'@type':'ListItem',position:index+1,...item}))};
  const related=relatedPlaces(p);
@@ -73,7 +74,10 @@ export default async function PlacePage({params}:Props) {
   </div>
   <figure className="wrap"><img src={placeImage(p)} alt={p.alt} width="1440" height="960" className="detail-photo" fetchPriority="high"/><figcaption className="photo-caption">{p.imageKind==='illustration'?'Illustration':'Photograph'}: {p.credit} · {p.photoDate}{p.imageKind==='photo'?` · ${p.license}`:''}</figcaption></figure>
   <div className={`detail-body wrap ${styles.body}`}><article>
-   <section id={p.slug==='hashima'?'why-hashima-was-abandoned':undefined} className={`story-opening ${styles.shortStory}`}><p className="eyebrow">The short story</p><h2>{p.slug==='hashima'&&history?history.question:p.storyTitle}</h2>{p.slug==='hashima'&&history&&<><p>{history.answer}</p><p className="source-context">History answer checked 15 November 2026. Sources: {history.sources.map((source,index)=><span key={source.url}>{index>0?' · ':''}<a href={source.url}>{source.label}</a></span>)}</p></>}<p>{p.story}</p></section>
+   <section id={p.slug==='hashima'?'why-hashima-was-abandoned':undefined} className={`story-opening ${styles.shortStory}`}><p className="eyebrow">The short story</p><h2>{openingHistory?.question??p.storyTitle}</h2>
+    <p>{openingHistory?.answer??p.story}</p>
+    {openingHistory&&<p className="source-context">{p.slug==='hashima'?'History answer checked 15 November 2026. ':''}Sources: {openingHistory.sources.map((source,index)=><span key={source.url}>{index>0?' · ':''}<a href={source.url}>{source.label}</a></span>)}</p>}
+    {p.slug==='hashima'&&<p>{p.story}</p>}</section>
    {guide&&<section className="guide-teaser place-guide-teaser" aria-labelledby="place-guide-heading"><div><p className="eyebrow">Plan the journey</p><h2 id="place-guide-heading">Planning a visit to {p.name}?</h2></div><div><p>{p.stay?'Check the practical stay details, timing and operator arrangements before booking.':'Check the route, timing and access details before you go.'}</p><Link className="text-link" href={guide.href}>{guide.label} ↗</Link></div></section>}
    {curatedPath&&<p><Link className="text-link" href={curatedPath}>{p.country==='India'?'Explore three unusual places in India':p.category==='ghost'?'Compare five ghost towns and their histories':'Compare five unusual stays'} ↗</Link></p>}
    {p.longStory&&<FullStory story={p.longStory} sources={p.sources} context={history&&p.slug!=='hashima'?<div className={styles.historyContext}><h3>{history.question}</h3><p>{history.answer}</p><p className="source-context">Sources: {history.sources.map((source,index)=><span key={source.url}>{index>0?' · ':''}<a href={source.url}>{source.label}</a></span>)}</p></div>:undefined}/>}
