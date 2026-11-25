@@ -579,3 +579,6 @@ Release validation — 29 October: Kuldhara feature bb795ae was pushed and merge
 ## Bankhead and Sedlec trip planning — 23 November 2026
 - Used the existing Rummu question treatment for the two place pages. Bankhead leads with the short trail, park pass and access road. Sedlec leads with the timed ticket, train and the current adult price replacing the old CZK 220 figure.
 - Preserved both stories, URLs, hero images and page styling. Retained the generic planning sections for the other entries.
+
+## Kuldhara and Dhanushkodi story openings — 26 November 2026
+- Reused the short-story section to answer the Search Console history questions in visible text. Kept the existing full stories, page titles, URLs and styling.

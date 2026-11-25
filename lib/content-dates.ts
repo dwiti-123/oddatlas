@@ -2,8 +2,8 @@
 // Update only after meaningful content, metadata, structured-data or link changes.
 // Omit lastmod for a new record until its editorial date is recorded here.
 export const placeModifiedDates:Record<string,string>={
- hashima:'2026-11-15', dhanushkodi:'2026-11-13', kayakoy:'2026-11-15',
- kuldhara:'2026-10-24', kolmanskop:'2026-11-15', 'island-of-the-dolls':'2026-11-15',
+ hashima:'2026-11-15', dhanushkodi:'2026-11-26', kayakoy:'2026-11-15',
+ kuldhara:'2026-11-26', kolmanskop:'2026-11-15', 'island-of-the-dolls':'2026-11-15',
  bhangarh:'2026-10-24', 'paris-catacombs':'2026-11-15', 'port-arthur':'2026-11-15',
  'stanley-hotel':'2026-10-24', skylodge:'2026-10-24', mirrorcube:'2026-10-24',
  bankhead:'2026-11-23', 'rummu-quarry':'2026-11-23', 'sedlec-ossuary':'2026-11-23',
